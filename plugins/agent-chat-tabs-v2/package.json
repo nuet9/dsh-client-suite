@@ -1,0 +1,42 @@
+{
+  "name": "@local/agent-chat-tabs-v2",
+  "version": "2.0.11",
+  "private": true,
+  "type": "module",
+  "description": "Switch between the main conversation and native subagent chats without stopping work.",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml",
+    "client.js",
+    "index.js",
+    "task-context-policy.js",
+    "silent-notifications.js",
+    "silent-notification-stream.js",
+    "chat-preferences.js"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-file-upload",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-client-ui-subagent",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}

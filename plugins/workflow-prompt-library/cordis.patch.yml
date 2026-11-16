@@ -1,0 +1,3 @@
+- insert:
+    - id: local-workflow-prompt-library
+      name: '@local/workflow-prompt-library'

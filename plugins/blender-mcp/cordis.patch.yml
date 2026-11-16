@@ -1,0 +1,14 @@
+- insert:
+    - id: blender-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: blender
+        transport: stdio
+        command: '__DSH_SUITE_BLENDER_MCP_PATH_21__'
+        args: ['-m', 'blender_mcp.server', '--host', '127.0.0.1', '--port', '9876']
+        cwd: '__DSH_SUITE_BLENDER_MCP_PATH_22__'
+        env:
+          DISABLE_TELEMETRY: '1'
+          BLENDER_MCP_DISABLE_TELEMETRY: '1'
+        failOnStartupError: true
+        toolCallTimeoutMs: 120000

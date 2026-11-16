@@ -1,0 +1,8 @@
+- insert:
+    - id: browser-use-registry
+      name: '@deepseek-ai/dsh-browser-use'
+    - id: browser-use-chrome-devtools-mcp
+      name: '@deepseek-ai/dsh-experimental-browser-use-chrome-devtools-mcp'
+      config:
+        mode: attach
+        endpoint: http://127.0.0.1:9222

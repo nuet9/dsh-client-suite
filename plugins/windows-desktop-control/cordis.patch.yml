@@ -1,0 +1,15 @@
+- insert:
+    - id: windows-desktop-control
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: windows_desktop
+        transport: stdio
+        command: '__DSH_SUITE_WINDOWS_DESKTOP_CONTROL_PATH_25__'
+        args: ['-m', 'windows_mcp', 'serve']
+        cwd: '__DSH_SUITE_WINDOWS_DESKTOP_CONTROL_PATH_26__'
+        env:
+          ANONYMIZED_TELEMETRY: 'false'
+          WINDOWS_MCP_DISABLE_FLASH: 'true'
+          WINDOWS_MCP_SCREENSHOT_BACKEND: 'pillow'
+        toolCallTimeoutMs: 60000
+        failOnStartupError: true

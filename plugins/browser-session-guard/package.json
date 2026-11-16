@@ -1,0 +1,25 @@
+{
+  "name": "@local/browser-session-guard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Session-owned page routing for the persistent background browser.",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml",
+    "index.js",
+    "ownership.js"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+# Uses the existing optional-terminal-registry, subprocess and sandbox services.
+- id: optional-persistent-terminals
+  insert:
+    - id: dev-shell-environment-bash
+      name: '@deepseek-ai/dsh-terminal-bash'
+      config:
+        backendType: dev-bash
+        shellDialect: bash
+        shellPath: '__DSH_SUITE_DEV_SHELL_ENVIRONMENT_PATH_15__'
+        shellArgs: ['--noprofile', '--norc', '-i']

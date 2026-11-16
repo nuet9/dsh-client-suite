@@ -1,0 +1,16 @@
+- insert:
+    - id: playwright-extension-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: playwright_browser
+        transport: stdio
+        command: '__DSH_SUITE_PLAYWRIGHT_EXTENSION_MCP_PATH_11__'
+        args:
+          - '__DSH_SUITE_PLAYWRIGHT_EXTENSION_MCP_PATH_12__'
+          - --browser
+          - chrome
+          - --user-data-dir
+          - '__DSH_SUITE_PLAYWRIGHT_EXTENSION_MCP_PATH_13__'
+        cwd: '__DSH_SUITE_PLAYWRIGHT_EXTENSION_MCP_PATH_14__'
+        toolCallTimeoutMs: 60000
+        failOnStartupError: false

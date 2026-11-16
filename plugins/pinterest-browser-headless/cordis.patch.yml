@@ -1,0 +1,16 @@
+- id: playwright-extension-mcp
+  name: '@deepseek-ai/dsh-mcp-client'
+  config:
+    serverName: playwright_browser
+    transport: stdio
+    command: '__DSH_SUITE_PINTEREST_BROWSER_HEADLESS_PATH_27__'
+    args:
+      - '__DSH_SUITE_PINTEREST_BROWSER_HEADLESS_PATH_28__'
+      - --headless
+      - --browser
+      - chrome
+      - --user-data-dir
+      - '__DSH_SUITE_PINTEREST_BROWSER_HEADLESS_PATH_29__'
+    cwd: '__DSH_SUITE_PINTEREST_BROWSER_HEADLESS_PATH_30__'
+    toolCallTimeoutMs: 60000
+    failOnStartupError: false

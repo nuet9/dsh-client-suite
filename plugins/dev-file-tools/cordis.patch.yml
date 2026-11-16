@@ -1,0 +1,4 @@
+- insert:
+    - id: local-dev-file-tools
+      name: '@local/dev-file-tools'
+      config: {}

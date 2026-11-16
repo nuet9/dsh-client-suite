@@ -1,0 +1,1 @@
+{"meta":{"title":"Claude throughput correction","description":"Corrects buffered Claude speed and hides unreliable latency samples; preserves other models and the built-in statistics controls."}}

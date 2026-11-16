@@ -1,0 +1,25 @@
+{
+  "name": "@local/session-search-resilience",
+  "version": "1.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Isolate corrupt logs from session search while preserving original records",
+  "exports": {
+    ".": "./index-v2.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "NOTICE",
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml",
+    "index-v2.js"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@local/inspector-fetch-compat",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Restore developer inspector without incompatible global fetch capture",
+  "exports": {
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+- insert:
+    - id: local-internal-folder-browser
+      name: '@local/internal-folder-browser'
+      config: {}

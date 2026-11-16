@@ -1,0 +1,9 @@
+- id: optional-session-query-sqlite
+  disabled: true
+- id: optional-session-search
+  insert:
+    - id: local-session-search-resilience
+      name: '@local/session-search-resilience'
+      config:
+        path: ':memory:'
+        openAt: first-search

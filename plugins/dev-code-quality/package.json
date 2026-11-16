@@ -1,0 +1,31 @@
+{
+  "name": "@local/dev-code-quality",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "TS/JS language queries, project diagnostics and opt-in deterministic hooks",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml",
+    "index.js",
+    "worker.js",
+    "core.js",
+    "config.js"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dependencies": {
+    "typescript": "5.9.3",
+    "zod": "4.1.12"
+  }
+}

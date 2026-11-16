@@ -1,0 +1,10 @@
+- insert:
+    - id: local-dev-code-quality
+      name: '@local/dev-code-quality'
+      config:
+        registerLspProvider: true
+        hooks:
+          enabled: false
+          tools: [write, edit]
+          task: diagnostics
+        tasks: []

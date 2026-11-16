@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "bundles": 52,
+  "sourceBundles": 33,
+  "files": 758,
+  "syntaxChecked": 106,
+  "pathTemplateCount": 36,
+  "failures": [],
+  "limits": [
+    "Static validation only; no profile installed, no external service or paid generation tested.",
+    "Local-source packages without declared licenses require repository owner license decision.",
+    "Prepared files may contain destination-host private paths; exclude scripts/prepared and deployment.json from publication."
+  ]
+}

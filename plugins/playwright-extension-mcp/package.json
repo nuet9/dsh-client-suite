@@ -1,0 +1,25 @@
+{
+  "name": "@local/playwright-extension-mcp",
+  "version": "1.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Launches a dedicated persistent Chrome profile for Harness, isolated from the user's daily browser.",
+  "dependencies": {
+    "@playwright/mcp": "0.0.83"
+  },
+  "exports": {
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

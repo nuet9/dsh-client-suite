@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Development Shell Environment",
+    "description": "Adds a persistent UGit Bash backend and workspace portable GitHub CLI helpers."
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "@local/windows-file-link-client-fix",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Normalize Windows file links at the shared reader boundary.",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./client": "./client.js"
+  },
+  "files": [
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml",
+    "client.js",
+    "index.js"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar-right"
+      ]
+    }
+  }
+}

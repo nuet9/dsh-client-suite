@@ -1,0 +1,25 @@
+{
+  "name": "@local/background-browser-control",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Persistent headless Chrome automation without global desktop input.",
+  "exports": {
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml"
+  ],
+  "dependencies": {
+    "chrome-devtools-mcp": "1.9.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

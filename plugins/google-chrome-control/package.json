@@ -1,0 +1,26 @@
+{
+  "name": "@local/google-chrome-control",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Explicit persistent connection to everyday Google Chrome with session-owned background task pages.",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml",
+    "index.js",
+    "transport.js",
+    "controller.js"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

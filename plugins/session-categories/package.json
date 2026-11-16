@@ -1,0 +1,47 @@
+{
+  "name": "@local/session-categories",
+  "version": "1.2.4",
+  "private": true,
+  "type": "module",
+  "description": "Persistent conversation categories within each Harness workspace",
+  "exports": {
+    ".": "./index-thumbnails-v2.js",
+    "./client": "./client-thumbnails-v3.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml",
+    "client-thumbnails-v3.js",
+    "index-thumbnails-v2.js",
+    "model.js",
+    "thumbnails-v2.js"
+  ],
+  "peerDependencies": {
+    "zod": "4.4.3"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-api-workspace-controller"
+      ]
+    }
+  },
+  "dependencies": {
+    "sharp": "0.35.5",
+    "zod": "4.4.3"
+  }
+}

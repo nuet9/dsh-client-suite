@@ -1,0 +1,24 @@
+{
+  "policy": "No external software, browser, SDK, Python package, model, or paid service is installed or tested by these scripts.",
+  "integrations": {
+    "background-browser-control": "Chrome plus chrome-devtools-mcp 1.9.0 ordinary dependency; configure Node executable, MCP entrypoint, Chrome executable, dedicated empty user-data directory and working directory independently.",
+    "playwright-extension-mcp": "@playwright/mcp 0.0.83 ordinary dependency, Node, Chrome, dedicated user-data and work directory; browser extension/login is user-managed.",
+    "pinterest-browser-headless": "Target-compatible @playwright/mcp, Node and Chrome. User independently authenticates Pinterest; no cookies or profiles shipped.",
+    "blender-mcp": "Separate Python environment with blender_mcp.server, matching Blender add-on and Blender; configure exact Python executable and server repository cwd. No fixed workspace restore layout required.",
+    "windows-desktop-control": "Windows and a separately installed windows-mcp Python environment; configure Python executable and cwd.",
+    "dev-shell-environment": "Separately installed Git Bash executable configured explicitly; no UGit version-specific installation is required.",
+    "tool-call-compat": "Version-sensitive Harness PTC executor module URL; configure exact target-compatible file:/// module URL. Installer may reject incompatible Harness versions; never grant an exception implicitly.",
+    "art-toolbox": "sharp 0.35.5 ordinary dependency; optional ComfyUI root and backend with independently provisioned nodes/models. Windows process helpers require PowerShell. Optional Pinterest browser and production helpers require separate setup.",
+    "session-categories": "sharp 0.35.5 ordinary dependency for thumbnails. Native optional packages must match destination platform. Lifecycle scripts remain disabled unless explicitly reviewed/approved.",
+    "supir-refine": "Separate ComfyUI/SUPIR installation, configured Python executable and output directory; model weights are not bundled.",
+    "dsh-whale-widget": "Web widget uses Harness; desktop pin optionally requires Windows x64, .NET 10 SDK/runtime and WebView2 runtime. scripts/build-whale.mjs --allow-restore explicitly downloads pinned NuGet WebView2 1.0.3537.50; this task did not run it. Native binaries and WebView2 DLLs are not redistributed.",
+    "workbuddy-experts": "Optional independently installed WorkBuddy with user-owned expert catalogs. No credentials/cache/catalog data is redistributed.",
+    "drock-media": "User supplies Drock service credentials through Harness settings. Generation is paid and was not tested.",
+    "google-chrome-control": "User-managed everyday Chrome plus compatible connector/transport; explicit connection and user permissions remain required."
+  },
+  "peerDependencyPolicy": "Harness/React peers are supplied by compatible Harness; package-manager auto-install-peers must be disabled. zod/TypeScript needed by local plugins are ordinary dependencies. Use pnpm install --ignore-scripts --config.auto-install-peers=false only inside prepared plugin directories, never the profile.",
+  "licenseSources": {
+    "whale": "https://raw.githubusercontent.com/MeteorNOX/DeepSeek-Balance-Whale-Widget/main/LICENSE",
+    "betterSidebar": "Preserved local source LICENSE; local version 0.28.2-local.1 and runtime source included."
+  }
+}

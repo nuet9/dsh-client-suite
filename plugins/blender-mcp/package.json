@@ -1,0 +1,22 @@
+{
+  "name": "@local/blender-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Connect Harness to the active Blender scene through MCP for Blender.",
+  "exports": {
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

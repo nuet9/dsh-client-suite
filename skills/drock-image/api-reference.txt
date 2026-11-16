@@ -1,0 +1,11 @@
+Portable image API summary (public endpoint; no credentials)
+
+Base: https://ai.freeflyagain.xyz/v1
+POST /images/generations: authenticated JSON request; background=true.
+Required: model, prompt. Script defaults: model=gpt-image-2.6-sunburst, n=1, quality=auto, size=auto.
+Optional: file_list=[{url: HTTPS URL or data:image/...}], mask_url=hosted HTTPS mask with matching reference dimensions.
+GET /images/tasks/{taskId}: query original task; do not resubmit an uncertain paid request.
+Authorization is supplied from the deployment's DROCK_IMAGE_API_KEY or private file selected by DROCK_IMAGE_API_KEY_FILE. No credential is included.
+The helper accepts n=1..4, up to 16 PNG/JPEG/WebP references; it validates downloaded image signatures.
+An asynchronous submit can return task_id/id at the top level or in data. Preserve the state.json returned by the script for polling and recovery.
+Models, response formats, availability, pricing and account groups may change. Check the current provider documentation at https://ai.freeflyagain.xyz/modelSquare . This summary is not a copied full website manual and does not grant service access or an API license.

@@ -1,0 +1,5 @@
+- insert:
+    - id: local-windows-file-link-client-fix
+      name: '@local/windows-file-link-client-fix'
+      config:
+        graphReport: '__DSH_SUITE_WINDOWS_FILE_LINK_CLIENT_FIX_PATH_16__'

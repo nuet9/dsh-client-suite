@@ -1,0 +1,25 @@
+{
+  "name": "@local/dev-file-tools",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Validated text batches, notebook source edits and explicit file checkpoints.",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml",
+    "index.js",
+    "core.js"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

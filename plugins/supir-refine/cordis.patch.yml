@@ -1,0 +1,15 @@
+- insert:
+    - id: supir-refine
+      name: '@local/supir-refine'
+      config:
+        comfyDir: '__DSH_SUITE_SUPIR_REFINE_PATH_1__'
+        python: '__DSH_SUITE_SUPIR_REFINE_PATH_2__'
+        port: 8199
+        checkpoint: 'juggernautXL_v9Rdphoto2Lightning.safetensors'
+        supirModel: 'SUPIR-v0Q_fp16.safetensors'
+        outputDir: '__DSH_SUITE_SUPIR_REFINE_PATH_3__'
+        attachmentsDir: ''
+        preset: 'balanced'
+        scale: 2
+        maxSide: 2048
+        serverIdleMinutes: 30

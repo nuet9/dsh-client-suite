@@ -1,0 +1,4 @@
+- insert:
+    - id: local-claude-throughput-fix
+      name: '@local/claude-throughput-fix'
+      config: {}

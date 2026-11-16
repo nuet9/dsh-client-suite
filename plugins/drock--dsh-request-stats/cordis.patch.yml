@@ -1,0 +1,4 @@
+- insert:
+    - id: drock-request-stats
+      name: '@drock/dsh-request-stats'
+      config: {}

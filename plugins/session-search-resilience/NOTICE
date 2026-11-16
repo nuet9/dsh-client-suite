@@ -1,0 +1,4 @@
+Local compatibility patch based on @deepseek-ai/dsh-session-query-sqlite 0.2.2-rc.1.
+Upstream: https://github.com/deepseek-ai/deepseek-harness/tree/main/packages/session-query/session-query-sqlite
+Upstream package declares MIT. Original source retained in upstream-index.js for comparison.
+Local use only; not published.

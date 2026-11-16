@@ -1,0 +1,9 @@
+deployment.json
+scripts/prepared/
+node_modules/
+**/node_modules/
+audit-portability.md
+*.zip
+*.tar.gz
+*.tgz
+.git-publish-*

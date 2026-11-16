@@ -1,0 +1,6 @@
+- insert:
+    - id: local-subagent-safe-defaults
+      name: '@local/subagent-safe-defaults'
+
+- id: local-subagent-safe-defaults
+  disabled: true

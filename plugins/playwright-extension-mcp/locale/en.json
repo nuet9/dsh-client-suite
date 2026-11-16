@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Harness Dedicated Chrome",
+    "description": "Launch a persistent Chrome profile for Harness, isolated from the daily browser."
+  }
+}

@@ -1,0 +1,4 @@
+- insert:
+    - id: local-google-chrome-control
+      name: '@local/google-chrome-control'
+      config: {}

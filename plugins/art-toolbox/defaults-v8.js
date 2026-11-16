@@ -1,0 +1,2 @@
+import {defaults as previous} from './defaults-v7.js';
+export const defaults={...previous,pinterest:"先加载 pinterest-reference-curator 技能，仅用Harness专用后台浏览器。先用30–45秒确定互补搜索方向，再快速看图、去重并交替收藏。默认目标50张，但整次执行含规划/搜索/筛选/保存/简查最多10分钟；第8分钟停新搜索，第9分30秒收尾，到点按实际数量交付。默认新建公开图版，按用途简单分区，保留有建设性意义的参考，不凑数。不写逐图长说明，不下载图库或生成manifest/本地索引；交付Pinterest图版网址、实际保存数，并快速附一张图版截图方便任务识别（仍计入10分钟预算）。只有工作量明显偏大时才用子代理并行找图，共用原截止时间，同账号收藏顺序执行。"};

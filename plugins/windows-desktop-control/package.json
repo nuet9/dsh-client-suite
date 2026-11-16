@@ -1,0 +1,22 @@
+{
+  "name": "@local/windows-desktop-control",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Windows desktop control through a local Windows-MCP process managed by Harness.",
+  "exports": {
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

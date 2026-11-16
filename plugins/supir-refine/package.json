@@ -1,0 +1,26 @@
+{
+  "name": "@local/supir-refine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "SUPIR image refinement tool backed by the local ComfyUI install at __DSH_SUITE_SUPIR_REFINE_COMFY_ROOT__",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml",
+    "index.js",
+    "compare.py"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT"
+}

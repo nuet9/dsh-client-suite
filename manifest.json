@@ -1,0 +1,511 @@
+{
+  "schemaVersion": 1,
+  "reconciliation": {
+    "sourceProfileBundleCount": 52,
+    "inventoryBundleCount": 52,
+    "missing": [],
+    "extra": [],
+    "priorReported58": "Earlier audit prose miscounted bundles; profile array actually contains 52. Zero missing/extra."
+  },
+  "requiredSkills": {
+    "status": "included-portable-adaptations-manual-install",
+    "names": [
+      "photo-modeling-lite",
+      "pinterest-reference-curator",
+      "tripo-model-processing",
+      "drock-image"
+    ],
+    "reason": "Four sanitized skill directories and necessary helpers included in skills/. See skills/README.md for manual installation, provenance and limitations."
+  },
+  "name": "harness-client-suite",
+  "capturedOn": "2026-11-16",
+  "node": ">=24",
+  "installation": {
+    "method": "Harness plugin_manager install_bundle only",
+    "never": [
+      "write profile dependencies",
+      "relax permissions or approval policy",
+      "grant version exemptions",
+      "run dependency lifecycle scripts"
+    ],
+    "steps": [
+      "Copy deployment.example.json to an untracked deployment.json and fill required variables.",
+      "node scripts/prepare.mjs --config deployment.json",
+      "Review generated install-plan.json and per-plugin prerequisites.",
+      "Use each plugin_manager call only after explicit installation authorization; do not pass approvedBuilds without separate approval."
+    ],
+    "dependencies": "Optional: pnpm install --ignore-scripts --config.auto-install-peers=false in each prepared plugin directory; never in a profile directory."
+  },
+  "environmentTemplate": "scripts/deployment.example.json",
+  "limitations": [
+    "No external binaries installed or paid integrations tested.",
+    "Target Harness must satisfy peers and engines; plugin_manager compatibility checks remain authoritative.",
+    "UNDECLARED local-source license requires owner confirmation before redistribution under a chosen license."
+  ],
+  "features": [
+    {
+      "name": "@deepseek-ai/dsh-base",
+      "title": "Harness 基础运行环境",
+      "kind": "builtin",
+      "defaultEnabled": true,
+      "installationMode": "discover-and-enable-existing-bundle"
+    },
+    {
+      "name": "@deepseek-ai/dsh-web-app",
+      "title": "Harness Web 客户端",
+      "kind": "builtin",
+      "defaultEnabled": true,
+      "installationMode": "discover-and-enable-existing-bundle"
+    },
+    {
+      "name": "@local/browser-tabs",
+      "title": "会话浏览器标签页",
+      "version": "1.0.1",
+      "kind": "local-source",
+      "directory": "plugins/browser-tabs",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@local/supir-refine",
+      "title": "SUPIR 照片高清修复",
+      "version": "0.1.0",
+      "kind": "local-source",
+      "directory": "plugins/supir-refine",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@local/background-browser-control",
+      "title": "后台浏览器控制",
+      "version": "1.0.0",
+      "kind": "local-source",
+      "directory": "plugins/background-browser-control",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@deepseek-ai/dsh-experimental-auto-review",
+      "title": "工具操作自动审批审查",
+      "version": "0.2.2-rc.3",
+      "kind": "official-reference",
+      "installTarget": "@deepseek-ai/dsh-experimental-auto-review@0.2.2-rc.3",
+      "defaultEnabled": true,
+      "installationMode": "discover-and-enable-existing-bundle"
+    },
+    {
+      "name": "@deepseek-ai/dsh-experimental-inspector-profile",
+      "title": "运行时插件与接口检查",
+      "version": "0.2.2-rc.3",
+      "kind": "official-reference",
+      "installTarget": "@deepseek-ai/dsh-experimental-inspector-profile@0.2.2-rc.3",
+      "defaultEnabled": true,
+      "installationMode": "discover-and-enable-existing-bundle"
+    },
+    {
+      "name": "@deepseek-ai/dsh-experimental-voice-input-bundle",
+      "title": "语音输入",
+      "version": "0.2.2-rc.3",
+      "kind": "official-reference",
+      "installTarget": "@deepseek-ai/dsh-experimental-voice-input-bundle@0.2.2-rc.3",
+      "defaultEnabled": true,
+      "installationMode": "discover-and-enable-existing-bundle"
+    },
+    {
+      "name": "@deepseek-ai/dsh-experimental-terminal-bundle",
+      "title": "持久终端与终端侧栏",
+      "version": "0.2.2-rc.3",
+      "kind": "official-reference",
+      "installTarget": "@deepseek-ai/dsh-experimental-terminal-bundle@0.2.2-rc.3",
+      "defaultEnabled": true,
+      "installationMode": "discover-and-enable-existing-bundle"
+    },
+    {
+      "name": "@deepseek-ai/dsh-experimental-session-search",
+      "title": "历史会话全文检索",
+      "version": "0.2.2-rc.3",
+      "kind": "official-reference",
+      "installTarget": "@deepseek-ai/dsh-experimental-session-search@0.2.2-rc.3",
+      "defaultEnabled": true,
+      "installationMode": "discover-and-enable-existing-bundle"
+    },
+    {
+      "name": "@deepseek-ai/dsh-experimental-session-titles-bundle",
+      "title": "模型生成会话标题",
+      "version": "0.2.2-rc.3",
+      "kind": "official-reference",
+      "installTarget": "@deepseek-ai/dsh-experimental-session-titles-bundle@0.2.2-rc.3",
+      "defaultEnabled": true,
+      "installationMode": "discover-and-enable-existing-bundle"
+    },
+    {
+      "name": "@deepseek-ai/dsh-experimental-badge-skill-bundle",
+      "title": "DSH 官方署名徽章技能",
+      "version": "0.2.2-rc.3",
+      "kind": "official-reference",
+      "installTarget": "@deepseek-ai/dsh-experimental-badge-skill-bundle@0.2.2-rc.3",
+      "defaultEnabled": true,
+      "installationMode": "discover-and-enable-existing-bundle"
+    },
+    {
+      "name": "@deepseek-ai/dsh-experimental-ralph-bundle",
+      "title": "Ralph 全新代理迭代",
+      "version": "0.2.2-rc.3",
+      "kind": "official-reference",
+      "installTarget": "@deepseek-ai/dsh-experimental-ralph-bundle@0.2.2-rc.3",
+      "defaultEnabled": true,
+      "installationMode": "discover-and-enable-existing-bundle"
+    },
+    {
+      "name": "@deepseek-ai/dsh-experimental-plugin-market-bundle",
+      "title": "官方插件市场入口",
+      "version": "0.2.2-rc.3",
+      "kind": "official-reference",
+      "installTarget": "@deepseek-ai/dsh-experimental-plugin-market-bundle@0.2.2-rc.3",
+      "defaultEnabled": true,
+      "installationMode": "discover-and-enable-existing-bundle"
+    },
+    {
+      "name": "dshmarket",
+      "title": "第三方插件市场",
+      "version": "1.73.5",
+      "kind": "registry-reference",
+      "installTarget": "dshmarket@1.73.5",
+      "defaultEnabled": true,
+      "installationMode": "exact-registry-install"
+    },
+    {
+      "name": "@local/browser-session-guard",
+      "title": "浏览器页面会话归属保护",
+      "version": "1.0.0",
+      "kind": "local-source",
+      "directory": "plugins/browser-session-guard",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@local/interactive-data-view",
+      "title": "对话交互数据表格",
+      "version": "1.0.0",
+      "kind": "local-source",
+      "directory": "plugins/interactive-data-view",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "dsh-context",
+      "title": "会话上下文管理",
+      "version": "0.78.2",
+      "kind": "registry-reference",
+      "installTarget": "dsh-context@0.78.2",
+      "defaultEnabled": true,
+      "installationMode": "exact-registry-install"
+    },
+    {
+      "name": "billion-context",
+      "title": "大上下文压缩与缓存统计",
+      "version": "0.1.215",
+      "kind": "registry-reference",
+      "installTarget": "billion-context@0.1.215",
+      "defaultEnabled": true,
+      "installationMode": "exact-registry-install"
+    },
+    {
+      "name": "@xmanrui/dsh-im",
+      "title": "即时消息渠道连接",
+      "version": "5.8.0",
+      "kind": "registry-reference",
+      "installTarget": "@xmanrui/dsh-im@5.8.0",
+      "defaultEnabled": true,
+      "installationMode": "exact-registry-install"
+    },
+    {
+      "name": "cc-safety-net",
+      "title": "命令安全拦截集成",
+      "version": "2.7.1",
+      "kind": "registry-reference",
+      "installTarget": "cc-safety-net@2.7.1",
+      "defaultEnabled": true,
+      "installationMode": "exact-registry-install"
+    },
+    {
+      "name": "@local/background-browser-hub",
+      "title": "后台浏览器统一入口",
+      "version": "1.0.0",
+      "kind": "local-source",
+      "directory": "plugins/background-browser-hub",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@local/interactive-chart",
+      "title": "对话交互图表",
+      "version": "1.0.0",
+      "kind": "local-source",
+      "directory": "plugins/interactive-chart",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@local/google-chrome-control",
+      "title": "日常 Chrome 显式连接控制",
+      "version": "1.0.0",
+      "kind": "local-source",
+      "directory": "plugins/google-chrome-control",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@local/claude-throughput-fix",
+      "title": "模型吞吐与输出统计兼容",
+      "version": "1.1.0",
+      "kind": "local-source",
+      "directory": "plugins/claude-throughput-fix",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@local/playwright-extension-mcp",
+      "title": "Playwright 浏览器 MCP",
+      "version": "1.0.1",
+      "kind": "local-source",
+      "directory": "plugins/playwright-extension-mcp",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@local/dev-file-tools",
+      "title": "开发文件检查点与批量编辑",
+      "version": "1.0.0",
+      "kind": "local-source",
+      "directory": "plugins/dev-file-tools",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@local/dev-shell-environment",
+      "title": "Git Bash 持久开发终端",
+      "version": "1.0.1",
+      "kind": "local-source",
+      "directory": "plugins/dev-shell-environment",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@local/dev-code-quality",
+      "title": "TypeScript 与 JavaScript 代码诊断",
+      "version": "1.0.0",
+      "kind": "local-source",
+      "directory": "plugins/dev-code-quality",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@local/windows-file-link-client-fix",
+      "title": "Windows 文件链接兼容修复",
+      "version": "1.0.0",
+      "kind": "local-source",
+      "directory": "plugins/windows-file-link-client-fix",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@local/internal-folder-browser",
+      "title": "客户端本地文件夹浏览",
+      "version": "1.2.0",
+      "kind": "local-source",
+      "directory": "plugins/internal-folder-browser",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "dsh-whale-widget",
+      "title": "余额鲸鱼挂件与可选桌面固定",
+      "version": "0.4.2-desktop.2",
+      "kind": "modified-third-party-source",
+      "directory": "plugins/dsh-whale-widget",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@local/workflow-prompt-library",
+      "title": "可复用工作流提示词库",
+      "version": "1.2.0",
+      "kind": "local-source",
+      "directory": "plugins/workflow-prompt-library",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@local/tool-call-compat",
+      "title": "工具执行协议兼容",
+      "version": "1.0.0",
+      "kind": "local-source",
+      "directory": "plugins/tool-call-compat",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@local/inspector-fetch-compat",
+      "title": "检查器请求兼容",
+      "version": "1.0.0",
+      "kind": "local-source",
+      "directory": "plugins/inspector-fetch-compat",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@local/blender-mcp",
+      "title": "Blender 场景与建模 MCP",
+      "version": "1.0.0",
+      "kind": "local-source",
+      "directory": "plugins/blender-mcp",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@local/file-folder-open",
+      "title": "文件夹定位与打开",
+      "version": "1.1.0",
+      "kind": "local-source",
+      "directory": "plugins/file-folder-open",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@local/session-search-resilience",
+      "title": "历史搜索恢复与兼容",
+      "version": "1.0.1",
+      "kind": "local-source",
+      "directory": "plugins/session-search-resilience",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@local/drock-media",
+      "title": "公司图片与视频生成",
+      "version": "0.1.0",
+      "kind": "local-source",
+      "directory": "plugins/drock-media",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@local/windows-desktop-control",
+      "title": "Windows 桌面 MCP 控制",
+      "version": "1.0.0",
+      "kind": "local-source",
+      "directory": "plugins/windows-desktop-control",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@local/session-categories",
+      "title": "会话分类与缩略图",
+      "version": "1.2.4",
+      "kind": "local-source",
+      "directory": "plugins/session-categories",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@local/pinterest-browser-headless",
+      "title": "Pinterest 无头浏览器服务",
+      "version": "1.0.0",
+      "kind": "local-source",
+      "directory": "plugins/pinterest-browser-headless",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@local/workbuddy-experts",
+      "title": "WorkBuddy 专家与技能桥接",
+      "version": "0.1.0",
+      "kind": "local-source",
+      "directory": "plugins/workbuddy-experts",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "dsh-better-sidebar",
+      "title": "增强文件与编辑侧栏（本地修改版）",
+      "version": "0.28.2-local.1",
+      "kind": "modified-third-party-source",
+      "directory": "plugins/dsh-better-sidebar",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@deepseek-ai/dsh-experimental-forge-bundle",
+      "title": "GitHub 变更请求与工作树集成",
+      "version": "0.2.2-rc.3",
+      "kind": "official-reference",
+      "installTarget": "@deepseek-ai/dsh-experimental-forge-bundle@0.2.2-rc.3",
+      "defaultEnabled": true,
+      "installationMode": "discover-and-enable-existing-bundle"
+    },
+    {
+      "name": "@local/art-toolbox",
+      "title": "美术工具箱与成果库",
+      "version": "0.12.1",
+      "kind": "local-source",
+      "directory": "plugins/art-toolbox",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "dsh-deeppilot",
+      "title": "远程协作与主动任务集成",
+      "version": "0.9.22",
+      "kind": "registry-reference",
+      "installTarget": "dsh-deeppilot@0.9.22",
+      "defaultEnabled": true,
+      "installationMode": "exact-registry-install"
+    },
+    {
+      "name": "@local/agent-chat-tabs-v2",
+      "title": "子代理聊天标签与会话偏好",
+      "version": "2.0.11",
+      "kind": "local-source",
+      "directory": "plugins/agent-chat-tabs-v2",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@deepseek-ai/dsh-personalized-recommendations",
+      "title": "个性化页面与插件建议",
+      "version": "0.2.2-rc.3",
+      "kind": "official-reference",
+      "installTarget": "@deepseek-ai/dsh-personalized-recommendations@0.2.2-rc.3",
+      "defaultEnabled": true,
+      "installationMode": "discover-and-enable-existing-bundle"
+    },
+    {
+      "name": "@local/subagent-safe-defaults",
+      "title": "子代理安全默认值（保留停用）",
+      "version": "1.0.0",
+      "kind": "local-source",
+      "directory": "plugins/subagent-safe-defaults",
+      "defaultEnabled": false,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@local/subagent-native-defaults",
+      "title": "原生子代理默认路由",
+      "version": "1.0.1",
+      "kind": "local-source",
+      "directory": "plugins/subagent-native-defaults",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    },
+    {
+      "name": "@drock/dsh-request-stats",
+      "title": "模型请求与缓存用量统计",
+      "version": "1.2.1",
+      "kind": "local-source",
+      "directory": "plugins/drock--dsh-request-stats",
+      "defaultEnabled": true,
+      "installationMode": "local-source-install"
+    }
+  ]
+}

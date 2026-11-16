@@ -1,0 +1,1 @@
+{"meta":{"title":"Agent chat tabs v2","description":"Centered main/subagent navigation. Plus opens a local unsent chat; first send spawns a native child with bounded recent context, without preparatory summarization or stopping main work. Shared files and native completion reports remain. Persistent display names and independent model settings for continuable children."}}

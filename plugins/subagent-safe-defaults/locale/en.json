@@ -1,0 +1,1 @@
+{"meta":{"title":"Safe subagent defaults","description":"Ordinary subagent delegation omits model and reasoning parameters while preserving native defaults, permissions and lifecycle. Choose independent child models in chat settings. Does not repair upstream failures or cold continuation recovery."}}

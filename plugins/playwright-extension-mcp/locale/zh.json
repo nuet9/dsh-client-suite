@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Harness 专用 Chrome",
+    "description": "为 Harness 启动独立持久化 Chrome 配置，与日常浏览器数据隔离。"
+  }
+}

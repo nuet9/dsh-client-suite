@@ -1,0 +1,44 @@
+{
+  "name": "@local/workbuddy-experts",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Use local WorkBuddy experts and skills in Harness",
+  "exports": {
+    ".": "./host.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml",
+    "client.js",
+    "host.js",
+    "connectors.js",
+    "catalog.js"
+  ],
+  "dependencies": {
+    "yaml": "^2.9.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-llm": "*"
+  }
+}

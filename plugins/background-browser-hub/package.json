@@ -1,0 +1,25 @@
+{
+  "name": "@local/background-browser-hub",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Session-aware headless browser entry points and bounded status checks.",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml",
+    "index.js",
+    "hub.js"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

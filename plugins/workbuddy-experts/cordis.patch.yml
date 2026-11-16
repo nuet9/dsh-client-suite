@@ -1,0 +1,4 @@
+- insert:
+    - id: workbuddy-experts
+      name: '@local/workbuddy-experts'
+      config: {}

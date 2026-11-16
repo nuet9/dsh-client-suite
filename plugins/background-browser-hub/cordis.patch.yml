@@ -1,0 +1,4 @@
+- insert:
+    - id: local-background-browser-hub
+      name: '@local/background-browser-hub'
+      config: {}

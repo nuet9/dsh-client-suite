@@ -1,0 +1,7 @@
+- insert:
+    - id: local-file-folder-open
+      name: '@local/file-folder-open'
+      config: {}
+    - id: local-file-folder-open-host-v3
+      name: '@local/file-folder-open/host-v3'
+      config: {}

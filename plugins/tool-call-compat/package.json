@@ -1,0 +1,25 @@
+{
+  "name": "@local/tool-call-compat",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Discover tool schemas and tolerate null optional PTC controls.",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml",
+    "index.js",
+    "core.js"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Browser Tabs (Chrome DevTools)",
+    "description": "Connects the agent to a running Chromium browser over the DevTools protocol so it can inspect pages and operate real tabs."
+  }
+}

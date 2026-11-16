@@ -1,0 +1,25 @@
+- insert:
+    - id: background-browser-control
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: background_browser
+        transport: stdio
+        command: '__DSH_SUITE_BACKGROUND_BROWSER_CONTROL_PATH_4__'
+        args:
+          - '__DSH_SUITE_BACKGROUND_BROWSER_CONTROL_PATH_5__'
+          - '--headless=true'
+          - '--executablePath=__DSH_SUITE_BACKGROUND_BROWSER_CONTROL_PATH_6__'
+          - '--userDataDir=__DSH_SUITE_BACKGROUND_BROWSER_CONTROL_PATH_7__'
+          - '--pageIdRouting=true'
+          - '--categoryEmulation=false'
+          - '--categoryPerformance=false'
+          - '--categoryNetwork=false'
+          - '--no-usage-statistics'
+          - '--no-performance-crux'
+          - '--viewport=1440x1000'
+        cwd: '__DSH_SUITE_BACKGROUND_BROWSER_CONTROL_PATH_8__'
+        env:
+          CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS: '1'
+          CHROME_DEVTOOLS_MCP_NO_UPDATE_CHECKS: '1'
+        toolCallTimeoutMs: 60000
+        failOnStartupError: true

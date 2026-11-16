@@ -1,0 +1,22 @@
+{
+  "name": "@local/dev-shell-environment",
+  "version": "1.0.1",
+  "private": true,
+  "type": "module",
+  "description": "UGit Bash terminal backend and verified portable GitHub CLI helpers",
+  "exports": {
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

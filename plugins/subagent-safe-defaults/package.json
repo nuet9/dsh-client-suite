@@ -1,0 +1,24 @@
+{
+  "name": "@local/subagent-safe-defaults",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Route-free ordinary subagent delegation without guessed model parameters.",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml",
+    "index.js"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

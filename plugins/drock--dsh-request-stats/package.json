@@ -1,0 +1,42 @@
+{
+  "name": "@drock/dsh-request-stats",
+  "version": "1.2.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml",
+    "client.js",
+    "index.js",
+    "cache-spec.js",
+    "history-api.js",
+    "stats.js"
+  ],
+  "peerDependencies": {
+    "zod": "4.4.3"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
+    }
+  },
+  "dependencies": {
+    "zod": "4.4.3"
+  }
+}

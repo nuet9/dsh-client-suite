@@ -1,0 +1,4 @@
+- insert:
+    - id: browser-session-guard
+      name: '@local/browser-session-guard'
+      config: {}

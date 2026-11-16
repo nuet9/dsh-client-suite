@@ -1,0 +1,294 @@
+{
+  "variables": {
+    "DSH_SUITE_SUPIR_REFINE_COMFY_ROOT": "",
+    "DSH_SUITE_SUPIR_REFINE_PATH_1": "",
+    "DSH_SUITE_SUPIR_REFINE_PATH_2": "",
+    "DSH_SUITE_SUPIR_REFINE_PATH_3": "",
+    "DSH_SUITE_BACKGROUND_BROWSER_CONTROL_PATH_4": "",
+    "DSH_SUITE_BACKGROUND_BROWSER_CONTROL_PATH_5": "",
+    "DSH_SUITE_BACKGROUND_BROWSER_CONTROL_PATH_6": "",
+    "DSH_SUITE_BACKGROUND_BROWSER_CONTROL_PATH_7": "",
+    "DSH_SUITE_BACKGROUND_BROWSER_CONTROL_PATH_8": "",
+    "DSH_SUITE_GOOGLE_CHROME_CONTROL_PROFILE_ROOT": "",
+    "DSH_SUITE_GOOGLE_CHROME_CONTROL_USER_HOME": "",
+    "DSH_SUITE_PLAYWRIGHT_EXTENSION_MCP_PATH_11": "",
+    "DSH_SUITE_PLAYWRIGHT_EXTENSION_MCP_PATH_12": "",
+    "DSH_SUITE_PLAYWRIGHT_EXTENSION_MCP_PATH_13": "",
+    "DSH_SUITE_PLAYWRIGHT_EXTENSION_MCP_PATH_14": "",
+    "DSH_SUITE_DEV_SHELL_ENVIRONMENT_PATH_15": "",
+    "DSH_SUITE_WINDOWS_FILE_LINK_CLIENT_FIX_PATH_16": "",
+    "DSH_SUITE_INTERNAL_FOLDER_BROWSER_HARNESS_RUNTIME_ROOT": "",
+    "DSH_SUITE_DSH_WHALE_WIDGET_USER_HOME": "",
+    "DSH_SUITE_DSH_WHALE_WIDGET_PROGRAM_FILES": "",
+    "DSH_SUITE_TOOL_CALL_COMPAT_HARNESS_RUNTIME_ROOT": "",
+    "DSH_SUITE_BLENDER_MCP_PATH_21": "",
+    "DSH_SUITE_BLENDER_MCP_PATH_22": "",
+    "DSH_SUITE_SESSION_SEARCH_RESILIENCE_HARNESS_RUNTIME_ROOT": "",
+    "DSH_SUITE_DROCK_MEDIA_HARNESS_RUNTIME_ROOT": "",
+    "DSH_SUITE_WINDOWS_DESKTOP_CONTROL_PATH_25": "",
+    "DSH_SUITE_WINDOWS_DESKTOP_CONTROL_PATH_26": "",
+    "DSH_SUITE_PINTEREST_BROWSER_HEADLESS_PATH_27": "",
+    "DSH_SUITE_PINTEREST_BROWSER_HEADLESS_PATH_28": "",
+    "DSH_SUITE_PINTEREST_BROWSER_HEADLESS_PATH_29": "",
+    "DSH_SUITE_PINTEREST_BROWSER_HEADLESS_PATH_30": "",
+    "DSH_SUITE_DSH_BETTER_SIDEBAR_USER_HOME": "",
+    "DSH_SUITE_ART_TOOLBOX_HARNESS_RUNTIME_ROOT": "",
+    "DSH_SUITE_ART_TOOLBOX_COMFY_ROOT": "",
+    "DSH_SUITE_ART_TOOLBOX_PROGRAM_FILES": "",
+    "DSH_SUITE_AGENT_CHAT_TABS_V2_HARNESS_RUNTIME_ROOT": ""
+  },
+  "requirements": {
+    "DSH_SUITE_SUPIR_REFINE_COMFY_ROOT": {
+      "plugin": "supir-refine",
+      "file": "package.json",
+      "required": true,
+      "description": "Separately installed ComfyUI parent directory",
+      "hint": "Use an absolute forward-slash directory path without a trailing slash"
+    },
+    "DSH_SUITE_SUPIR_REFINE_PATH_1": {
+      "plugin": "supir-refine",
+      "file": "cordis.patch.yml",
+      "required": true,
+      "description": "Absolute deployment path for ComfyUI; preserve required external dependency, install it separately.",
+      "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
+    },
+    "DSH_SUITE_SUPIR_REFINE_PATH_2": {
+      "plugin": "supir-refine",
+      "file": "cordis.patch.yml",
+      "required": true,
+      "description": "Absolute deployment path for python.exe; preserve required external dependency, install it separately.",
+      "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
+    },
+    "DSH_SUITE_SUPIR_REFINE_PATH_3": {
+      "plugin": "supir-refine",
+      "file": "cordis.patch.yml",
+      "required": true,
+      "description": "Absolute deployment path for results; preserve required external dependency, install it separately.",
+      "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
+    },
+    "DSH_SUITE_BACKGROUND_BROWSER_CONTROL_PATH_4": {
+      "plugin": "background-browser-control",
+      "file": "cordis.patch.yml",
+      "required": true,
+      "description": "Absolute deployment path for node.exe; preserve required external dependency, install it separately.",
+      "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
+    },
+    "DSH_SUITE_BACKGROUND_BROWSER_CONTROL_PATH_5": {
+      "plugin": "background-browser-control",
+      "file": "cordis.patch.yml",
+      "required": true,
+      "description": "Absolute deployment path for chrome-devtools-mcp.js; preserve required external dependency, install it separately.",
+      "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
+    },
+    "DSH_SUITE_BACKGROUND_BROWSER_CONTROL_PATH_6": {
+      "plugin": "background-browser-control",
+      "file": "cordis.patch.yml",
+      "required": true,
+      "description": "Absolute deployment path for --executablePath=; preserve required external dependency, install it separately.",
+      "hint": "Forward-slash path only; do not include --executablePath="
+    },
+    "DSH_SUITE_BACKGROUND_BROWSER_CONTROL_PATH_7": {
+      "plugin": "background-browser-control",
+      "file": "cordis.patch.yml",
+      "required": true,
+      "description": "Absolute deployment path for --userDataDir=; preserve required external dependency, install it separately.",
+      "hint": "Forward-slash path only; do not include --userDataDir="
+    },
+    "DSH_SUITE_BACKGROUND_BROWSER_CONTROL_PATH_8": {
+      "plugin": "background-browser-control",
+      "file": "cordis.patch.yml",
+      "required": true,
+      "description": "Absolute deployment path for work; preserve required external dependency, install it separately.",
+      "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
+    },
+    "DSH_SUITE_GOOGLE_CHROME_CONTROL_PROFILE_ROOT": {
+      "plugin": "google-chrome-control",
+      "file": "transport.js",
+      "required": true,
+      "description": "Target Harness profile directory; read only; installation still uses plugin_manager",
+      "hint": "Use an absolute forward-slash directory path without a trailing slash"
+    },
+    "DSH_SUITE_GOOGLE_CHROME_CONTROL_USER_HOME": {
+      "plugin": "google-chrome-control",
+      "file": "transport.js",
+      "required": true,
+      "description": "Destination operating-system user home",
+      "hint": "Use an absolute forward-slash directory path without a trailing slash"
+    },
+    "DSH_SUITE_PLAYWRIGHT_EXTENSION_MCP_PATH_11": {
+      "plugin": "playwright-extension-mcp",
+      "file": "cordis.patch.yml",
+      "required": true,
+      "description": "Absolute deployment path for node.exe; preserve required external dependency, install it separately.",
+      "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
+    },
+    "DSH_SUITE_PLAYWRIGHT_EXTENSION_MCP_PATH_12": {
+      "plugin": "playwright-extension-mcp",
+      "file": "cordis.patch.yml",
+      "required": true,
+      "description": "Absolute deployment path for cli.js; preserve required external dependency, install it separately.",
+      "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
+    },
+    "DSH_SUITE_PLAYWRIGHT_EXTENSION_MCP_PATH_13": {
+      "plugin": "playwright-extension-mcp",
+      "file": "cordis.patch.yml",
+      "required": true,
+      "description": "Absolute deployment path for .harness-browser-profile; preserve required external dependency, install it separately.",
+      "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
+    },
+    "DSH_SUITE_PLAYWRIGHT_EXTENSION_MCP_PATH_14": {
+      "plugin": "playwright-extension-mcp",
+      "file": "cordis.patch.yml",
+      "required": true,
+      "description": "Absolute deployment path for desktop; preserve required external dependency, install it separately.",
+      "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
+    },
+    "DSH_SUITE_DEV_SHELL_ENVIRONMENT_PATH_15": {
+      "plugin": "dev-shell-environment",
+      "file": "cordis.patch.yml",
+      "required": true,
+      "description": "Absolute deployment path for bash.exe; preserve required external dependency, install it separately.",
+      "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
+    },
+    "DSH_SUITE_WINDOWS_FILE_LINK_CLIENT_FIX_PATH_16": {
+      "plugin": "windows-file-link-client-fix",
+      "file": "cordis.patch.yml",
+      "required": true,
+      "description": "Absolute deployment path for client-graph.json; preserve required external dependency, install it separately.",
+      "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
+    },
+    "DSH_SUITE_INTERNAL_FOLDER_BROWSER_HARNESS_RUNTIME_ROOT": {
+      "plugin": "internal-folder-browser",
+      "file": "index-v5.js",
+      "required": true,
+      "description": "Target Harness runtime root (ASAR-aware file URL consumers require compatible Desktop runtime)",
+      "hint": "Use an absolute forward-slash directory path without a trailing slash"
+    },
+    "DSH_SUITE_DSH_WHALE_WIDGET_USER_HOME": {
+      "plugin": "dsh-whale-widget",
+      "file": "lib/index-v4.js",
+      "required": true,
+      "description": "Destination operating-system user home",
+      "hint": "Use an absolute forward-slash directory path without a trailing slash"
+    },
+    "DSH_SUITE_DSH_WHALE_WIDGET_PROGRAM_FILES": {
+      "plugin": "dsh-whale-widget",
+      "file": "lib/verify-desktop.js",
+      "required": true,
+      "description": "Windows Program Files directory",
+      "hint": "Use an absolute forward-slash directory path without a trailing slash"
+    },
+    "DSH_SUITE_TOOL_CALL_COMPAT_HARNESS_RUNTIME_ROOT": {
+      "plugin": "tool-call-compat",
+      "file": "cordis.patch.yml",
+      "required": true,
+      "description": "Target Harness runtime root (ASAR-aware file URL consumers require compatible Desktop runtime)",
+      "hint": "Use an absolute forward-slash directory path without a trailing slash"
+    },
+    "DSH_SUITE_BLENDER_MCP_PATH_21": {
+      "plugin": "blender-mcp",
+      "file": "cordis.patch.yml",
+      "required": true,
+      "description": "Absolute deployment path for python.exe; preserve required external dependency, install it separately.",
+      "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
+    },
+    "DSH_SUITE_BLENDER_MCP_PATH_22": {
+      "plugin": "blender-mcp",
+      "file": "cordis.patch.yml",
+      "required": true,
+      "description": "Absolute deployment path for repository; preserve required external dependency, install it separately.",
+      "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
+    },
+    "DSH_SUITE_SESSION_SEARCH_RESILIENCE_HARNESS_RUNTIME_ROOT": {
+      "plugin": "session-search-resilience",
+      "file": "index-v2.js",
+      "required": true,
+      "description": "Target Harness runtime root (ASAR-aware file URL consumers require compatible Desktop runtime)",
+      "hint": "Use an absolute forward-slash directory path without a trailing slash"
+    },
+    "DSH_SUITE_DROCK_MEDIA_HARNESS_RUNTIME_ROOT": {
+      "plugin": "drock-media",
+      "file": "index.js",
+      "required": true,
+      "description": "Target Harness runtime root (ASAR-aware file URL consumers require compatible Desktop runtime)",
+      "hint": "Use an absolute forward-slash directory path without a trailing slash"
+    },
+    "DSH_SUITE_WINDOWS_DESKTOP_CONTROL_PATH_25": {
+      "plugin": "windows-desktop-control",
+      "file": "cordis.patch.yml",
+      "required": true,
+      "description": "Absolute deployment path for python.exe; preserve required external dependency, install it separately.",
+      "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
+    },
+    "DSH_SUITE_WINDOWS_DESKTOP_CONTROL_PATH_26": {
+      "plugin": "windows-desktop-control",
+      "file": "cordis.patch.yml",
+      "required": true,
+      "description": "Absolute deployment path for DSHDesktopControl; preserve required external dependency, install it separately.",
+      "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
+    },
+    "DSH_SUITE_PINTEREST_BROWSER_HEADLESS_PATH_27": {
+      "plugin": "pinterest-browser-headless",
+      "file": "cordis.patch.yml",
+      "required": true,
+      "description": "Absolute deployment path for node.exe; preserve required external dependency, install it separately.",
+      "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
+    },
+    "DSH_SUITE_PINTEREST_BROWSER_HEADLESS_PATH_28": {
+      "plugin": "pinterest-browser-headless",
+      "file": "cordis.patch.yml",
+      "required": true,
+      "description": "Absolute deployment path for cli.js; preserve required external dependency, install it separately.",
+      "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
+    },
+    "DSH_SUITE_PINTEREST_BROWSER_HEADLESS_PATH_29": {
+      "plugin": "pinterest-browser-headless",
+      "file": "cordis.patch.yml",
+      "required": true,
+      "description": "Absolute deployment path for .harness-browser-profile; preserve required external dependency, install it separately.",
+      "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
+    },
+    "DSH_SUITE_PINTEREST_BROWSER_HEADLESS_PATH_30": {
+      "plugin": "pinterest-browser-headless",
+      "file": "cordis.patch.yml",
+      "required": true,
+      "description": "Absolute deployment path for desktop; preserve required external dependency, install it separately.",
+      "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
+    },
+    "DSH_SUITE_DSH_BETTER_SIDEBAR_USER_HOME": {
+      "plugin": "dsh-better-sidebar",
+      "file": "lib/index.js",
+      "required": true,
+      "description": "Destination operating-system user home",
+      "hint": "Use an absolute forward-slash directory path without a trailing slash"
+    },
+    "DSH_SUITE_ART_TOOLBOX_HARNESS_RUNTIME_ROOT": {
+      "plugin": "art-toolbox",
+      "file": "index-pinterest-v1.js",
+      "required": true,
+      "description": "Target Harness runtime root (ASAR-aware file URL consumers require compatible Desktop runtime)",
+      "hint": "Use an absolute forward-slash directory path without a trailing slash"
+    },
+    "DSH_SUITE_ART_TOOLBOX_COMFY_ROOT": {
+      "plugin": "art-toolbox",
+      "file": "comfy-process-v1.ps1",
+      "required": true,
+      "description": "Separately installed ComfyUI parent directory",
+      "hint": "Use an absolute forward-slash directory path without a trailing slash"
+    },
+    "DSH_SUITE_ART_TOOLBOX_PROGRAM_FILES": {
+      "plugin": "art-toolbox",
+      "file": "browser-login-v2.js",
+      "required": true,
+      "description": "Windows Program Files directory",
+      "hint": "Use an absolute forward-slash directory path without a trailing slash"
+    },
+    "DSH_SUITE_AGENT_CHAT_TABS_V2_HARNESS_RUNTIME_ROOT": {
+      "plugin": "agent-chat-tabs-v2",
+      "file": "index.js",
+      "required": true,
+      "description": "Target Harness runtime root (ASAR-aware file URL consumers require compatible Desktop runtime)",
+      "hint": "Use an absolute forward-slash directory path without a trailing slash"
+    }
+  }
+}

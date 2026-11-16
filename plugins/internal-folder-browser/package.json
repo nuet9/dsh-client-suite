@@ -1,0 +1,34 @@
+{
+  "name": "@local/internal-folder-browser",
+  "version": "1.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Browse file link folders inside Harness",
+  "exports": {
+    ".": "./index-v5.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml",
+    "client.js",
+    "index-v5.js",
+    "file-icons.ps1"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar-right"
+      ]
+    }
+  }
+}

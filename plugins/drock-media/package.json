@@ -1,0 +1,39 @@
+{
+  "name": "@local/drock-media",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Drock company image, Midjourney and video settings with conversational generation tools",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml",
+    "client.js",
+    "index.js",
+    "media.js",
+    "catalog.js",
+    "progress.js",
+    "video-route.js",
+    "render.js",
+    "wait.js"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
+    }
+  }
+}

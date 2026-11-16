@@ -1,0 +1,4 @@
+- insert:
+    - id: interactive-data-view
+      name: '@local/interactive-data-view'
+      config: {}

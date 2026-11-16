@@ -1,0 +1,44 @@
+{
+  "name": "@local/workflow-prompt-library",
+  "version": "1.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Reusable staged workflow prompts stored in Harness",
+  "exports": {
+    ".": "./host-v120.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml",
+    "client.js",
+    "host-v120.js",
+    "model-v120.js",
+    "defaults.js"
+  ],
+  "peerDependencies": {
+    "zod": "4.4.3"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  },
+  "dependencies": {
+    "zod": "4.4.3"
+  }
+}
