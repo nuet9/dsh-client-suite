@@ -1,0 +1,35 @@
+{
+  "name": "@dsh-local/view-3d6103d7-d022-4183-b4e9-67af87730c58",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./dist/host.js",
+    "./client": "./dist/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml",
+    "dist/client.js",
+    "dist/host.js"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-api-remotes"
+      ]
+    }
+  }
+}

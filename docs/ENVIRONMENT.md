@@ -1,6 +1,6 @@
 # 匹配环境与外部服务
 
-整理日期：2026-11-16。本套件的插件界面、任务路由和文档不自动安装生产软件，不自带外部账号、密钥、模型权重或浏览器登录。本文列出部署者需要自行准备的依赖；浏览器的配置步骤见 [BROWSER-SETUP.md](BROWSER-SETUP.md)，可选长期约定见 [portable-AGENTS.md](portable-AGENTS.md)。
+整理日期：2026-11-24。本套件的插件界面、任务路由和文档不自动安装生产软件，不自带外部账号、密钥、模型权重或浏览器登录。本文列出部署者需要自行准备的依赖；Windows 软件清单和短流程见 [SOFTWARE-SETUP.md](SOFTWARE-SETUP.md)，浏览器的配置步骤见 [BROWSER-SETUP.md](BROWSER-SETUP.md)，可选长期约定见 [portable-AGENTS.md](portable-AGENTS.md)。
 
 ## 基础环境与路径
 
@@ -13,16 +13,16 @@
 | `${CHROME_EXECUTABLE}`、`${HARNESS_BROWSER_PROFILE}`、`${BACKGROUND_BROWSER_PROFILE}` | 实际 Chrome 和两个独立的非公开 profile 位置 |
 | `${BLENDER_EXECUTABLE}`、`${COMFYUI_ROOT}`、`${COMFYUI_URL}` | 用户自行安装的生产软件与实际服务地址，按功能需要填写 |
 
-`${...}` 是本文说明记号，与发布包源码的 `__DSH_SUITE_*__` 模板 token 不同。套件使用 [prepare.mjs](../scripts/prepare.mjs) 将 36 项部署配置写入生成副本；配置字段、所属插件、用途与提示以 [deployment.example.json](../scripts/deployment.example.json) 的 `variables/requirements` 为准。复制该模板到不提交版本库的本地配置文件，填自己的路径；脚本优先读取该文件，再读取同名环境变量。不要把本文 `${...}` 直接写进配置值。PowerShell 实际环境变量使用 `$env:名称`。
+`${...}` 是本文说明记号，与发布包源码的 `__DSH_SUITE_*__` 模板 token 不同。套件使用 [prepare.mjs](../scripts/prepare.mjs) 按实际模板的 30 项配置变量写入生成副本；配置字段、所属插件、用途与提示以 [deployment.example.json](../scripts/deployment.example.json) 的 `variables/requirements` 为准。复制该模板到不提交版本库的本地配置文件，填自己的路径；脚本优先读取该文件，再读取同名环境变量。不要把本文 `${...}` 直接写进配置值。PowerShell 实际环境变量使用 `$env:名称`。
 
-本次确认运行安装包为 `@deepseek-ai/dsh` **0.2.2-rc.3**，Windows desktop。早期开发终端/后台浏览器记录基于 0.2.1-rc.5，不能推导任意新旧版兼容。所有插件须对照其 manifest、当前 DSH 文档与 Inspect 接口核对；浏览器矩阵见配套文档。macOS、Linux、容器、远程 Host、企业 Chrome 策略和第二台机器实装未在本次验证。
+本次确认运行安装包为 `@deepseek-ai/dsh` **0.2.2-rc.5**，Windows Desktop；其安装 manifest 声明 Node `>=24.9.0`。这只确认当前运行包元数据，不证明本套件全部插件在任意版本兼容或异机已安装。早期浏览器/开发记录不替代新版本现场验证。macOS、Linux、容器、远程 Host、企业 Chrome 策略和第二台机器实装未在本次验证。
 
 ## 安装顺序
 
 1. 在已有 Harness 环境加载 `dsh-doc`，确认安装版本、当前 profile、工具与权限。本文不要求更改模型默认值、全局权限、系统 PATH、注册表或执行策略。
 2. 从可信分发取得源码或安装包，检查 `package.json`、`dsh.bundle.patch`、依赖、打包 `files` 和许可证。确认实际入口都随包存在，不能只验证旧入口或只复制部分源码。
-3. 填写本地部署配置后，从套件根使用已发现的 Node 运行 `node scripts/prepare.mjs --config <本地配置.json>`，或加 `--plugin @local/background-browser-control` 只准备指定包。脚本将发布源码中的 `__DSH_SUITE_*__` token 替换到 `scripts/prepared/` 副本，生成 `install-plan.json`；未填写选定插件的必需字段会列入 `configurationRequired` 并退出 2。值必须单行、不含引号/反引号或 `${`，路径建议正斜杠；不要手改发布源码。每次运行会重新生成整个 prepared 目录，先保存自己的配置，不在该目录存放项目或手工修改。
-4. 按 [external-dependencies.json](../scripts/external-dependencies.json) 单独准备外部软件和包依赖。仅在 prepared 插件目录运行 `pnpm install --ignore-scripts --config.auto-install-peers=false`；不在 profile 执行该命令，不自动安装 Harness/React peer。脚本不会安装浏览器、Python、模型或付费服务。源码 link 安装必须保留生成目录及依赖，重新 prepare 前先处理仍引用该目录的安装；也可打包生成副本再安装审查过的 tarball。
+3. 填写本地部署配置后，从套件根使用已发现的 Node 运行 `node scripts/prepare.mjs --config <本地配置.json>`，或重复传 `--plugin <feature-inventory.json 中的精确名称>` 只准备指定包（如 `--plugin @local/background-browser-control`）。脚本将发布源码中的 `__DSH_SUITE_*__` token 替换到 `scripts/prepared/` 副本，生成 `install-plan.json`；未填写选定插件的必需字段会列入 `configurationRequired` 并退出 2。值必须单行、不含引号/反引号或 `${`，路径建议正斜杠；不要手改发布源码。每个本地插件会输出到按内容哈希命名的 `scripts/prepared/<slug>-<hash16>/`，同内容目录复用、不同内容生成新目录，既有目录保留；仅 `install-plan.json` 每次更新。可重复运行 prepare，不会删除旧 prepared link 目标。仍须保留被安装器引用的目录及依赖，不要手工修改生成文件。
+4. 按 [external-dependencies.json](../scripts/external-dependencies.json) 单独准备外部软件和包依赖。仅在 prepared 插件目录运行 `pnpm install --ignore-scripts --config.auto-install-peers=false`；不在 profile 执行该命令，不自动安装 Harness/React peer。脚本不会安装浏览器、Python、模型或付费服务。源码 link 安装必须保留对应哈希生成目录及依赖；内容变化时准备器会创建新目录，旧安装仍可能引用旧目录。
 5. 审阅生成的 `install-plan.json`；它只是计划，不会执行工具。通过 `plugin_manager` 先 `list_bundles`，再在获得安装授权后对选定包使用计划中的正式安装入口；配置采用 Harness 支持的配置编辑入口。不要覆盖整个 profile 或复制作者 profile。尊重管理器版本约束；不要为跳过约束擅自增加版本豁免。
 6. 检查管理器的 `application/nextStep`。`restart-required` 或 `module-comparison` 按提示完整重开，再实际查工具和功能。Client 刷新、Host 重开、源码构建监听是不同条件，不承诺写文件自动生效。
 7. 先做无付费、最小范围验收。分别记录依赖检查、离线测试、真实工具、界面与生产效果的状态。只有静态通过时标“待实机”，不要标“部署成功”。
@@ -75,6 +75,6 @@ API endpoint、模型名、配额和认证方式可能变化，按部署者实�
 
 ## 验证状态和维护
 
-发布套件包含准备脚本、外部依赖清单、36 项部署模板和经迁移处理的插件源码。源码清理和模板生成不等于目标电脑安装验证；安装计划不执行 profile 修改，外部软件和付费服务也不会自动安装或测试。已读的 Harness manifest 只证明来源安装版本，历史记录只说明当时对应机器的结果。第二台电脑实装、全版本兼容、真实浏览器登录、完整媒体播放、所有模型/连接器及生产效果仍需部署者按所选功能另验。
+发布套件包含准备脚本、外部依赖清单、当前 30 项部署变量模板和经迁移处理的插件源码。源码清理和模板生成不等于目标电脑安装验证；安装计划不执行 profile 修改，外部软件和付费服务也不会自动安装或测试。已读的 Harness manifest 只证明来源安装版本，历史记录只说明当时对应机器的结果。第二台电脑实装、全版本兼容、真实浏览器登录、完整媒体播放、所有模型/连接器及生产效果仍需部署者按所选功能另验。
 
 升级时保留旧源包、版本和配置备份但不公开凭据，按官方升级指南核对 DSH 服务、工具 schema、Client slot、MCP 参数和内部依赖路径，再跑相关最小验收。回退通过正式管理器停用/卸载对应包，不删除仍被 link 引用的源码，不以删除浏览器 profile 或生产工程代替回退。

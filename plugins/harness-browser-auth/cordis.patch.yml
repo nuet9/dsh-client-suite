@@ -1,0 +1,4 @@
+- insert:
+    - id: harness-browser-auth
+      name: '@local/harness-browser-auth'
+      config: {}

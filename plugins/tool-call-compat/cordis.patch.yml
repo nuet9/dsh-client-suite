@@ -1,8 +1,0 @@
-- id: tool-executor-ptc
-  name: '@deepseek-ai/dsh-tool-executor-ptc'
-  disabled: true
-- insert:
-    - id: local-tool-call-compat
-      name: '@local/tool-call-compat'
-      config:
-        executorModule: 'file:///__DSH_SUITE_TOOL_CALL_COMPAT_HARNESS_RUNTIME_ROOT__/node_modules/@deepseek-ai/dsh-tool-executor-ptc/lib/index.js'

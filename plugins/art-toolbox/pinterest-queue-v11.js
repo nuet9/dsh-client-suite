@@ -17,7 +17,11 @@ export async function browserOperation(page,a){
  async function owned(name,create=false){
   let p=pages.get(name);if(p&&!p.isClosed())return p;
   if(!create)return null;
-  if(pages.size>=5)throw Error('Toolbox page limit reached (5); close the active round before opening another');
+  const group=a.pageGroup?'atb-'+a.pageGroup+'-':null;
+   const groupSize=group?[...pages.keys()].filter(k=>k.startsWith(group)).length:pages.size;
+   if(groupSize>=5)throw Error('ATB_PAGE_BUDGET: Toolbox page limit reached (5 per task); close this round before opening another page');
+   if(a.action==='search'&&pages.size>=29)throw Error('ATB_PAGE_BUDGET: Toolbox search page budget reached (29); one slot is reserved for saving and finalization');
+   if(pages.size>=30)throw Error('ATB_PAGE_BUDGET: Toolbox shared page budget reached (30); finish an active task first');
   p=await context.newPage();pages.set(name,p);return p;
  }
  const now=()=>Date.now();const remaining=()=>a.deadline-now();
@@ -51,17 +55,20 @@ export async function browserOperation(page,a){
  }
  if(a.action==='search'){
   if(remaining()<120000)return {stopped:true,reason:'Search cutoff reached'};
-  const p=await owned(a.pageName,true);p.setDefaultTimeout(3500);
-  if(a.url)await p.goto(a.url,{waitUntil:'domcontentloaded',timeout:Math.min(9000,remaining())});
-  if(a.scroll)await p.mouse.wheel(0,650);
-  await p.locator('[data-test-id=pin] img').first().waitFor({timeout:5000});
-  await p.screenshot({path:a.screenshot,timeout:5000});
-  const cards=await p.locator('[data-test-id=pin]').evaluateAll(es=>es.filter(e=>{const r=e.getBoundingClientRect();return r.bottom>120&&r.top<innerHeight&&r.width>0}).map(e=>({pinId:e.getAttribute('data-test-pin-id'),pinUrl:e.querySelector('a[href*="/pin/"]')?.href,imageUrl:e.querySelector('img')?.src,signature:e.querySelector('[data-test-image-signature]')?.getAttribute('data-test-image-signature')})).filter(x=>x.pinId&&x.imageUrl));
-  return {cards,screenshot:a.screenshot};
+  const p=await owned(a.pageName,true);p.setDefaultTimeout(8000);
+  if(a.url)await p.goto(a.url,{waitUntil:'commit',timeout:Math.min(10000,remaining()-30000)});
+  if(a.scroll){const viewportHeight=await p.evaluate(()=>innerHeight);await p.mouse.wheel(0,Math.max(400,Math.round(viewportHeight*0.75)));}
+  const readyTimeout=Math.max(1000,Math.min(20000,remaining()-20000));
+   let pageReady=true;
+   try{await p.waitForFunction(()=>{const visible=[...document.querySelectorAll('[data-test-id=pin]')].filter(e=>{const r=e.getBoundingClientRect();return r.bottom>120&&r.top<innerHeight&&r.width>0}).map(e=>e.querySelector('img')).filter(Boolean);return visible.length>0&&visible.every(img=>img.complete);},{},{timeout:readyTimeout});}
+   catch(error){if(error?.name!=='TimeoutError')throw error;pageReady=false;}
+  await p.screenshot({path:a.screenshot,timeout:Math.min(8000,remaining()-10000)});
+  const cards=await p.locator('[data-test-id=pin]').evaluateAll(es=>es.filter(e=>{const r=e.getBoundingClientRect();return r.bottom>120&&r.top<innerHeight&&r.width>0}).map(e=>{const img=e.querySelector('img');return {pinId:e.getAttribute('data-test-pin-id'),pinUrl:e.querySelector('a[href*="/pin/"]')?.href,imageUrl:img?.src,imageLoaded:!!img?.complete&&img.naturalWidth>0,signature:e.querySelector('[data-test-image-signature]')?.getAttribute('data-test-image-signature')}}).filter(x=>x.pinId&&x.imageUrl&&x.imageLoaded));
+  return {cards,screenshot:a.screenshot,pageReady:pageReady&&cards.length>0,loadedVisiblePinCount:cards.length,readiness:!pageReady?'timed out waiting for visible pin images':cards.length?'visible pin images settled':'visible pins have no loaded images'};
  }
  if(a.action==='drain'){
   const results=[];const batchStart=now();const budget=ms=>Math.max(1,Math.min(ms,remaining()-25000,42000-(now()-batchStart)));const p=await owned(a.pageName,true);p.setDefaultTimeout(3000);
-  for(const item of a.items){
+  try{for(const item of a.items){
    if(remaining()<30000||now()-batchStart>30000)break;
    const t=now();let clicked=false,stage='navigate';
    try{
@@ -89,12 +96,12 @@ export async function browserOperation(page,a){
     results.push({pinId:item.pinId,status:'verified',destinationSelected:a.section||a.boardName,elapsedMs:now()-t,sourceUrl:p.url()});
    }catch(e){const diagnostic=await p.evaluate(()=>({url:location.href,visibility:document.visibilityState,dialogs:[...document.querySelectorAll('[role=dialog]')].map(e=>e.textContent?.slice(0,200))})).catch(()=>null);results.push({pinId:item.pinId,status:clicked?'unverified':'skipped',writeAttempted:clicked,stage,diagnostic,elapsedMs:now()-t,reason:String(e).slice(0,1800)});await p.keyboard.press('Escape').catch(()=>{});}
   }
-  return {results,elapsedMs:now()-batchStart};
+  return {results,elapsedMs:now()-batchStart};}finally{await p.close();pages.delete(a.pageName);}
  }
  if(a.action==='finish'){
-  const p=await owned(a.pageName,true);p.setDefaultTimeout(4000);await p.goto(a.boardUrl,{waitUntil:'domcontentloaded',timeout:8000});
+  const p=await owned(a.pageName,true);try{p.setDefaultTimeout(4000);await p.goto(a.boardUrl,{waitUntil:'domcontentloaded',timeout:8000});
   await p.locator('a[href*="/pin/"] img').first().waitFor({timeout:4000}).catch(()=>{});
-  await p.screenshot({path:a.screenshot,timeout:4000});return {url:p.url(),text:(await p.locator('body').innerText()).slice(0,1600),screenshot:a.screenshot};
+  await p.screenshot({path:a.screenshot,timeout:4000});return {url:p.url(),text:(await p.locator('body').innerText()).slice(0,1600),screenshot:a.screenshot};}finally{await p.close();pages.delete(a.pageName);}
  }
  if(a.action==='close'){
   let closed=0;for(const name of a.pageNames){const p=pages.get(name);if(p){await p.close().catch(()=>{});pages.delete(name);closed++;}}return {closed};
@@ -107,18 +114,22 @@ export function queueService({callBrowser,browserStatus,mkdir,outputDir,authoriz
  const exclusiveBrowser=fn=>{const p=browserTail.then(()=>{if(disposed)throw Error('Toolbox service stopped');return fn();});browserTail=p.catch(()=>{});return p;};
  const recoveryFile=q=>q.root+'/pinterest-queue-'+q.id+'.json';
  function persist(q){
-  const data=JSON.stringify({version:1,id:q.id,owner:q.owner,jobId:q.jobId,deadline:q.deadline,boardUrl:q.boardUrl,boardName:q.boardName,section:q.section,baseline:q.baseline,items:q.items,observed:[...q.observed],sources:[...q.sources],existingPinIds:[...q.existingPinIds],existingSignatures:[...q.existingSignatures],saveMs:q.saveMs,timings:q.timings,lastError:q.lastError,browserFailed:!!q.browserFailed,closed:!!q.closing},null,2);
+  const data=JSON.stringify({version:1,id:q.id,roundId:q.roundId||q.id,owner:q.owner,jobId:q.jobId,deadline:q.deadline,boardUrl:q.boardUrl,boardName:q.boardName,section:q.section,baseline:q.baseline,items:q.items,observed:[...q.observed],sources:[...q.sources],existingPinIds:[...q.existingPinIds],existingSignatures:[...q.existingSignatures],saveMs:q.saveMs,timings:q.timings,lastError:q.lastError,browserFailed:!!q.browserFailed,closed:!!q.closing},null,2);
   q.persistence=(q.persistence||Promise.resolve()).catch(()=>{}).then(async()=>{const file=recoveryFile(q);await storage.writeFile(file+'.tmp',data,'utf8');await storage.rename(file+'.tmp',file);});return q.persistence;
  }
- const snapshot=q=>({queueId:q.id,recoveryFile:recoveryFile(q),closed:!!q.closing,expired:clock()>=q.deadline,deadline:new Date(q.deadline).toISOString(),remainingSeconds:Math.max(0,Math.ceil((q.deadline-clock())/1000)),destinationReady:!!q.boardUrl,auto:!!q.auto,observed:q.observed.size,...Object.fromEntries(['pending','saving','verified','already-saved','unverified','skipped','blocked'].map(s=>[s==='already-saved'?'alreadySaved':s,q.items.filter(i=>i.status===s).length])),totalSaveMs:q.saveMs,boardUrl:q.boardUrl,boardName:q.boardName,baseline:q.baseline,timings:q.timings,lastError:q.lastError});
- async function call(q,a){const t=clock();try{return await exclusiveBrowser(()=>{if(a.action!=='close'&&(q.closing||clock()>=q.deadline))throw Error('Round stopped before browser execution');if(q.browserFailed&&a.action!=='close')throw Error('Browser failed; no automatic relaunch');q.browserTouched=true;return callBrowser(a).catch(e=>{q.browserFailed=true;q.auto=false;q.lastError=String(e.message||e);throw e;});});}finally{const m=q.timings[a.action]??={calls:0,ms:0};m.calls++;m.ms+=clock()-t;}}
+ const snapshot=q=>({queueId:q.id,roundId:q.roundId||q.id,recoveryFile:recoveryFile(q),closed:!!q.closing,expired:clock()>=q.deadline,deadline:new Date(q.deadline).toISOString(),remainingSeconds:Math.max(0,Math.ceil((q.deadline-clock())/1000)),destinationReady:!!q.boardUrl,auto:!!q.auto,observed:q.observed.size,...Object.fromEntries(['pending','saving','verified','already-saved','unverified','skipped','blocked'].map(s=>[s==='already-saved'?'alreadySaved':s,q.items.filter(i=>i.status===s).length])),totalSaveMs:q.saveMs,boardUrl:q.boardUrl,boardName:q.boardName,baseline:q.baseline,timings:q.timings,lastError:q.lastError});
+ async function call(q,a){const t=clock(),roundId=q.roundId||q.id;
+   const p=exclusiveBrowser(()=>{if((q.roundId||q.id)!==roundId)throw Error('Round changed before browser execution');if(a.action!=='close'&&(q.closing||clock()>=q.deadline))throw Error('Round stopped before browser execution');if(q.browserFailed&&a.action!=='close')throw Error('Browser failed; no automatic relaunch');q.browserTouched=true;return callBrowser({...a,pageGroup:q.id}).catch(e=>{if(!String(e.message||e).includes('ATB_PAGE_BUDGET:'))q.browserFailed=true;q.auto=false;q.lastError=String(e.message||e);throw e;});});
+   const pending=q.browserCalls??=new Set();pending.add(p);
+   try{return await p;}finally{pending.delete(p);const m=q.timings[a.action]??={calls:0,ms:0};m.calls++;m.ms+=clock()-t;}
+  }
  function destination(a){const u=new URL(a.boardUrl);if(u.origin!=='https://www.pinterest.com'||!/^\/[^/]+\/[^/]+\/$/.test(u.pathname)||/^\/(pin|search)\//.test(u.pathname))throw Error('Expected a real Pinterest board URL');if(!a.boardName?.trim())throw Error('Exact boardName required');return {boardUrl:u.href,boardName:a.boardName,section:a.section||''};}
  async function bind(q,a){const dest=destination(a);const baseline=await call(q,{action:'baseline',deadline:q.deadline,pageName:'atb-'+q.id+'-baseline',...dest});Object.assign(q,dest);q.existingSignatures=new Set(baseline.signatures||[]);q.existingPinIds=new Set(baseline.pinIds||[]);q.baseline={knownImages:q.existingSignatures.size,visitedPages:baseline.visitedPages,scope:baseline.scope};for(const i of q.items)if(i.status==='pending'&&(q.existingPinIds.has(i.pinId)||(i.signature&&q.existingSignatures.has(i.signature))))i.status='already-saved';}
- async function batch(q,limit=5){const run=async()=>{if(q.closing||q.deadline-clock()<=30000){q.auto=false;return snapshot(q);}if(!q.boardUrl)throw Error('Owner must bind a destination before saving');let items=q.items.filter(i=>i.status==='pending');const first=items[0];if(!first)return snapshot(q);items=items.slice(0,limit);for(const i of items)i.status='saving';await persist(q);let result;try{result=await call(q,{action:'drain',pageName:'atb-'+q.id+'-writer',deadline:q.deadline,items,boardName:q.boardName,section:q.section});}catch(e){for(const i of items){i.status='unverified';i.writeAttempted=true;i.reason='Browser operation interrupted; inspect destination before retry';}await persist(q);throw e;}for(const i of items)if(i.status==='saving')i.status='pending';for(const r of result.results||[]){const item=q.items.find(i=>i.pinId===r.pinId);if(item){Object.assign(item,r);q.saveMs+=r.elapsedMs||0;if(r.status==='verified'){q.existingPinIds.add(item.pinId);if(item.signature)q.existingSignatures.add(item.signature);}}}const failures=(result.results||[]).filter(r=>['skipped','unverified','blocked'].includes(r.status)).length;if(failures>=2){q.auto=false;q.lastError='Repeated save failures; paused with reviewed candidates preserved';}await persist(q);return {...snapshot(q),results:result.results};};const p=writer.then(run);writer=p.catch(()=>{});return p;}
+ async function batch(q,limit=5){const run=async()=>{if(q.closing||q.deadline-clock()<=30000){q.auto=false;return snapshot(q);}if(!q.boardUrl)throw Error('Owner must bind a destination before saving');let items=q.items.filter(i=>i.status==='pending');const first=items[0];if(!first)return snapshot(q);items=items.slice(0,limit);for(const i of items)i.status='saving';await persist(q);let result;try{result=await call(q,{action:'drain',pageName:'atb-'+q.id+'-writer',deadline:q.deadline,items,boardName:q.boardName,section:q.section});}catch(e){const capacity=String(e.message||e).includes('ATB_PAGE_BUDGET:');for(const i of items){i.status=capacity?'pending':'unverified';i.writeAttempted=!capacity;i.reason=capacity?'Page capacity reached before any save attempt; owner may retry after releasing pages':'Browser operation interrupted; inspect destination before retry';}await persist(q);throw e;}for(const i of items)if(i.status==='saving')i.status='pending';for(const r of result.results||[]){const item=q.items.find(i=>i.pinId===r.pinId);if(item){Object.assign(item,r);q.saveMs+=r.elapsedMs||0;if(r.status==='verified'){q.existingPinIds.add(item.pinId);if(item.signature)q.existingSignatures.add(item.signature);}}}const failures=(result.results||[]).filter(r=>['skipped','unverified','blocked'].includes(r.status)).length;if(failures>=2){q.auto=false;q.lastError='Repeated save failures; paused with reviewed candidates preserved';}await persist(q);return {...snapshot(q),results:result.results};};const p=writer.then(run);writer=p.catch(()=>{});return p;}
  function pump(q){if(!q.auto||q.worker||q.closing)return;q.worker=(async()=>{while(q.auto&&!q.closing&&q.deadline-clock()>30000&&q.items.some(i=>i.status==='pending')){const before=new Set(q.items.filter(i=>i.status==='pending').map(i=>i.pinId));await batch(q);if(!q.items.some(i=>before.has(i.pinId)&&i.status!=='pending')){q.auto=false;q.lastError='No save progress; automatic saving paused';break;}}})().catch(e=>{q.auto=false;q.lastError=String(e);}).finally(()=>{q.worker=null;});}
  async function cleanup(q){
   q.auto=false;q.closing=true;clearTimer(q.timer);
-  await q.worker;await writer;
+  await q.worker;await writer;await Promise.allSettled([...(q.browserCalls||[])]);
   if(q.browserTouched&&(await browserStatus()).mode==='background'){try{await call(q,{action:'close',pageNames:[...q.sources.values()].map(s=>s.pageName).concat('atb-'+q.id+'-finish','atb-'+q.id+'-writer','atb-'+q.id+'-create','atb-'+q.id+'-baseline')});}catch(e){q.lastError=String(e);}}
   await persist(q);
  }
@@ -128,7 +139,6 @@ export function queueService({callBrowser,browserStatus,mkdir,outputDir,authoriz
   if(a.action==='begin'){
    if(typeof a.jobId!=='string'||!/^[-a-zA-Z0-9_]{8,100}$/.test(a.jobId))throw Error('Invalid jobId');
    const same=[...queues.values()].find(q=>q.jobId===a.jobId&&q.owner===session&&!q.closing&&clock()<q.deadline);if(same)return snapshot(same);
-   if([...queues.values()].some(q=>!q.closing&&clock()<q.deadline))throw Error('Another Pinterest round is active; reuse its queue or finish it first');
    const status=await browserStatus();if(!['background','closed'].includes(status.mode))throw Error('Dedicated background browser required');
    const start=a.startedAt?Date.parse(a.startedAt):clock();if(!Number.isFinite(start)||start>clock()+1000||start+600000<=clock())throw Error('Round start invalid or expired');
    const id=uuid(),q={id,owner:session,jobId:a.jobId,deadline:start+600000,observed:new Map(),items:[],sources:new Map(),existingSignatures:new Set(),existingPinIds:new Set(),saveMs:0,root:outputDir(a.jobId),timings:{},boardUrl:null};await mkdir(q.root,{recursive:true});queues.set(id,q);expire(q);try{if(a.boardUrl)await bind(q,a);}catch(e){await cleanup(q);queues.delete(id);throw e;}return snapshot(q);
@@ -137,18 +147,18 @@ export function queueService({callBrowser,browserStatus,mkdir,outputDir,authoriz
    if(!/^[-a-zA-Z0-9_]{8,100}$/.test(a.jobId||'')||!/^[-a-zA-Z0-9_]{1,100}$/.test(a.queueId||''))throw Error('Valid jobId and queueId required');
    let q=queues.get(a.queueId);
    if(!q){const raw=JSON.parse(await storage.readFile(outputDir(a.jobId)+'/pinterest-queue-'+a.queueId+'.json','utf8'));if(raw.version!==1||raw.id!==a.queueId||raw.jobId!==a.jobId)throw Error('Invalid recovery file');q={...raw,closing:!!raw.closed,root:outputDir(a.jobId),observed:new Map(raw.observed),sources:new Map(raw.sources),existingPinIds:new Set(raw.existingPinIds),existingSignatures:new Set(raw.existingSignatures)};}
-   if(q.owner!==session)throw Error('Only original queue owner may resume');if([...queues.values()].some(other=>other.id!==q.id&&!other.closing&&clock()<other.deadline))throw Error('Another Pinterest round is active');await q.cleanup;
+   if(q.owner!==session)throw Error('Only original queue owner may resume');if(q.jobId!==a.jobId)throw Error('Queue jobId mismatch');await q.cleanup;
    if(q.worker||(!q.closing&&clock()<q.deadline))throw Error('Finish or close the active round before resuming');
    const same=[...queues.values()].find(q=>q.jobId===a.jobId&&q.owner===session&&!q.closing&&clock()<q.deadline);if(same)return snapshot(same);
-   if([...queues.values()].some(q=>!q.closing&&clock()<q.deadline))throw Error('Another Pinterest round is active; reuse its queue or finish it first');
    const status=await browserStatus();if(!['background','closed'].includes(status.mode))throw Error('Dedicated background browser required');
    const start=a.startedAt?Date.parse(a.startedAt):clock();if(!Number.isFinite(start)||start>clock()+1000||start+600000<=clock())throw Error('Round start invalid or expired');
-   q.deadline=start+600000;q.closing=false;q.auto=false;q.lastError=null;q.browserFailed=false;q.browserTouched=false;q.cleanup=null;q.sources=new Map();q.observed=new Map();
+   q.roundId=uuid();q.deadline=start+600000;q.closing=false;q.auto=false;q.lastError=null;q.browserFailed=false;q.browserTouched=false;q.cleanup=null;q.sources=new Map();q.observed=new Map();
    for(const i of q.items){if(i.status==='saving'){i.status='unverified';i.writeAttempted=true;i.reason='Interrupted save; not automatically replayed';}else if(['skipped','blocked'].includes(i.status)&&i.writeAttempted===false)i.status='pending';}
    queues.set(q.id,q);expire(q);await persist(q);return snapshot(q);
   }
   const q=queues.get(a.queueId);if(!q)throw Error('Queue not found; use resume with jobId to recover an explicitly authorized new round');
-  if(q.owner!==session){if(!['search','enqueue','status'].includes(a.action)||!await authorizeReader(q,session))throw Error('Only queue owner or its admitted read-only researcher may access this queue');}
+  if(a.jobId!==undefined&&a.jobId!==q.jobId)throw Error('Queue jobId mismatch');
+   if(q.owner!==session){if(!['search','enqueue','status'].includes(a.action)||!await authorizeReader(q,session))throw Error('Only queue owner or its admitted read-only researcher may access this queue');}
   if(a.action==='status')return {...snapshot(q),items:q.items.slice(-30).map(({pinId,status,reason,stage,elapsedMs,diagnostic})=>({pinId,status,reason,stage,elapsedMs,diagnostic}))};
   if(a.action==='close'){await (q.cleanup??=cleanup(q));return snapshot(q);}
   if(a.action==='finish'){q.auto=false;await q.worker;if(!q.boardUrl)throw Error('No destination bound');if(clock()>=q.deadline)return {...snapshot(q),stopped:true};try{return {...snapshot(q),...await call(q,{action:'finish',pageName:'atb-'+q.id+'-finish',boardUrl:q.section?q.boardUrl+encodeURIComponent(q.section)+'/':q.boardUrl,screenshot:q.root+'/图版快速预览.png'})};}finally{await(q.cleanup??=cleanup(q));}}
@@ -171,5 +181,5 @@ export function queueService({callBrowser,browserStatus,mkdir,outputDir,authoriz
   if(a.action==='drain'){if(!q.boardUrl)throw Error('Bind destination first');if(a.auto!==undefined){q.auto=a.auto;if(q.auto)pump(q);else await q.worker;return snapshot(q);}await q.worker;return batch(q,Math.min(5,Math.max(1,a.limit||3)));}
   throw Error('Unknown queue action');
  }
- return {info(id){const q=queues.get(id);return q?{id:q.id,owner:q.owner,jobId:q.jobId,deadline:q.deadline,closed:!!q.closing}:null;},async execute(a,session){try{let result;if(['begin','resume'].includes(a.action)){const run=lifecycle.then(()=>invoke(a,session));lifecycle=run.catch(()=>{});result=await run;}else result=await invoke(a,session);return JSON.parse(JSON.stringify(result));}finally{const q=queues.get(a.queueId)||[...queues.values()].find(q=>q.jobId===a.jobId&&q.owner===session);if(q)await persist(q);}},async dispose(){for(const q of queues.values()){q.auto=false;q.closing=true;clearTimer(q.timer);}await Promise.all([...queues.values()].map(q=>q.worker));await writer;for(const q of queues.values())await(q.cleanup??=cleanup(q));await browserTail;disposed=true;}};
+ return {hasActive(){return [...queues.values()].some(q=>!q.closing&&clock()<q.deadline);},info(id){const q=queues.get(id);return q?{id:q.id,roundId:q.roundId||q.id,owner:q.owner,jobId:q.jobId,deadline:q.deadline,closed:!!q.closing}:null;},async execute(a,session){try{let result;if(['begin','resume'].includes(a.action)){const run=lifecycle.then(()=>invoke(a,session));lifecycle=run.catch(()=>{});result=await run;}else result=await invoke(a,session);return JSON.parse(JSON.stringify(result));}finally{const q=queues.get(a.queueId)||[...queues.values()].find(q=>q.jobId===a.jobId&&q.owner===session);if(q)await persist(q);}},async dispose(){for(const q of queues.values()){q.auto=false;q.closing=true;clearTimer(q.timer);}await Promise.all([...queues.values()].map(q=>q.worker));await writer;for(const q of queues.values())await(q.cleanup??=cleanup(q));await browserTail;disposed=true;}};
 }

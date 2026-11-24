@@ -1,10 +1,10 @@
 {
   "passed": true,
   "bundles": 52,
-  "sourceBundles": 33,
-  "files": 758,
-  "syntaxChecked": 106,
-  "pathTemplateCount": 36,
+  "sourceBundles": 32,
+  "files": 291,
+  "syntaxChecked": 104,
+  "pathTemplateCount": 30,
   "failures": [],
   "limits": [
     "Static validation only; no profile installed, no external service or paid generation tested.",

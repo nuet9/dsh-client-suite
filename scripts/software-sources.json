@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "observedOn": "2026-11-24",
+  "versionStatusDefinitions": {
+    "pinned": "Exact value is present in this suite's manifest, template or build script; it is not an upstream support guarantee.",
+    "minimum": "Exact compatibility floor read from a manifest; not a recommended forever install target.",
+    "live": "Official rolling download/documentation page; no exact upstream version was independently pinned here.",
+    "unverified": "Official project location is identified, but release/version/build compatibility was not independently verified."
+  },
+  "sources": [
+    {
+      "id": "harness-runtime",
+      "name": "DeepSeek Harness Desktop",
+      "url": "https://github.com/DeepSeek-AI/DeepSeek-Harness",
+      "versionStatus": "minimum",
+      "version": "0.2.2-rc.5",
+      "runtime": "Node.js >=24.9.0",
+      "basis": "Target package manifest and feature-inventory.json snapshot; does not prove all suite plugins or other distributions compatible."
+    },
+    {
+      "id": "nodejs",
+      "name": "Node.js",
+      "url": "https://nodejs.org/en/download",
+      "versionStatus": "minimum",
+      "version": ">=24.9.0 for this Harness package",
+      "basis": "Harness engine requirement. Select currently supported Node 24 LTS release; v24.9.0 release page confirms Windows x64 distribution, but it is not the suggested pin.",
+      "reference": "https://nodejs.org/en/blog/release/v24.9.0"
+    },
+    {
+      "id": "pnpm",
+      "name": "pnpm",
+      "url": "https://pnpm.io/installation",
+      "versionStatus": "live",
+      "basis": "Official install guidance; package manager version is not pinned by the suite. Use only in generated plugin directories."
+    },
+    {
+      "id": "git-for-windows",
+      "name": "Git for Windows",
+      "url": "https://gitforwindows.org/",
+      "versionStatus": "live",
+      "basis": "Official current download; this suite pins no Git release. Git Bash is an explicit executable path input."
+    },
+    {
+      "id": "python",
+      "name": "Python for Windows",
+      "url": "https://www.python.org/downloads/windows/",
+      "versionStatus": "live",
+      "basis": "Official rolling release page; Python version is not pinned by the bundled MCP server sources."
+    },
+    {
+      "id": "playwright-mcp",
+      "name": "Playwright MCP dependency",
+      "url": "https://www.npmjs.com/package/@playwright/mcp",
+      "versionStatus": "pinned",
+      "version": "0.0.83",
+      "basis": "Exact ordinary dependency in feature inventory; browser/Chrome compatibility must be tested on target."
+    },
+    {
+      "id": "chrome-devtools-mcp",
+      "name": "Chrome DevTools MCP dependency",
+      "url": "https://www.npmjs.com/package/chrome-devtools-mcp",
+      "versionStatus": "pinned",
+      "version": "1.9.0",
+      "basis": "Exact ordinary dependency in feature inventory; custom page routing and Chrome compatibility must be tested on target."
+    },
+    {
+      "id": "chrome",
+      "name": "Google Chrome",
+      "url": "https://www.google.com/chrome/",
+      "versionStatus": "live",
+      "basis": "Official rolling download page; suite has no verified Chrome minimum or fixed build."
+    },
+    {
+      "id": "blender",
+      "name": "Blender",
+      "url": "https://www.blender.org/download/",
+      "versionStatus": "live",
+      "basis": "Official rolling download page; use an add-on and MCP server version that are mutually compatible, then verify in Blender."
+    },
+    {
+      "id": "blender-mcp",
+      "name": "Blender MCP server",
+      "url": "https://github.com/ahujasid/mcp-for-blender",
+      "versionStatus": "unverified",
+      "basis": "Upstream project location identified; this suite invokes blender_mcp.server but does not pin or validate an upstream release."
+    },
+    {
+      "id": "windows-mcp",
+      "name": "Windows MCP server",
+      "url": "https://github.com/CursorTouch/Windows-MCP",
+      "versionStatus": "unverified",
+      "basis": "Upstream source identified; this suite invokes python -m windows_mcp serve, but no tested package version is pinned."
+    },
+    {
+      "id": "comfyui",
+      "name": "ComfyUI",
+      "url": "https://github.com/Comfy-Org/ComfyUI/blob/master/docs/installation.md",
+      "versionStatus": "live",
+      "basis": "Official rolling install documentation; installation mode depends on hardware and workflow. The SUPIR integration's port is not a universal ComfyUI default."
+    },
+    {
+      "id": "comfyui-model-list",
+      "name": "ComfyUI Manager model list (SUPIR reference)",
+      "url": "https://github.com/Comfy-Org/ComfyUI-Manager/blob/main/model-list.json",
+      "versionStatus": "live",
+      "basis": "Model reference only; weights are not bundled. Confirm source, terms, hashes and workflow compatibility before download."
+    },
+    {
+      "id": "office",
+      "name": "Microsoft 365 / Office for Windows",
+      "url": "https://support.microsoft.com/en-us/office/download-install-or-reinstall-microsoft-365-or-office-2024-on-a-pc-or-mac-4414eaaf-0478-48be-9c42-23adc4716658",
+      "versionStatus": "live",
+      "basis": "Official installation guidance; product entitlement and version depend on the user's organization/account."
+    },
+    {
+      "id": "workbuddy",
+      "name": "WorkBuddy Windows client",
+      "url": "https://www.workbuddy.ai/docs/workbuddy/From-Beginner-to-Expert-Guide/Installation-Win-Guide",
+      "versionStatus": "live",
+      "basis": "Official Windows installation guide states Windows 10 or later; no fixed client version verified. User performs login."
+    },
+    {
+      "id": "drock-service",
+      "name": "Drock image/video service",
+      "url": "https://ai.freeflyagain.xyz/modelSquare",
+      "versionStatus": "unverified",
+      "apiBase": "https://ai.freeflyagain.xyz/v1",
+      "basis": "Service endpoint documented in suite skill; no API client install, account, quota, credential or paid generation verified."
+    },
+    {
+      "id": "dotnet",
+      "name": ".NET SDK and runtimes",
+      "url": "https://learn.microsoft.com/en-us/dotnet/core/install/windows",
+      "versionStatus": "live",
+      "basis": "Official Windows installer guidance; optional desktop pin declares .NET 10 SDK/runtime requirement."
+    },
+    {
+      "id": "webview2",
+      "name": "Microsoft Edge WebView2 Evergreen Runtime",
+      "url": "https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/evergreen-vs-fixed-version",
+      "versionStatus": "live",
+      "basis": "Suite requires the runtime only for optional native desktop pin; Evergreen is user-installed/serviced independently."
+    },
+    {
+      "id": "webview2-nuget",
+      "name": "Microsoft.Web.WebView2 NuGet package used by build script",
+      "url": "https://www.nuget.org/packages/Microsoft.Web.WebView2/1.0.3537.50",
+      "versionStatus": "pinned",
+      "version": "1.0.3537.50",
+      "basis": "Exact version declared by optional whale desktop build script; only downloaded when explicitly opting into its restore operation."
+    },
+    {
+      "id": "sharp",
+      "name": "sharp native image dependency",
+      "url": "https://www.npmjs.com/package/sharp",
+      "versionStatus": "pinned",
+      "version": "0.35.5",
+      "basis": "Exact ordinary dependency in art-toolbox and session-categories; platform-specific native package must match target."
+    },
+    {
+      "id": "typescript",
+      "name": "TypeScript dependency used by code diagnostics",
+      "url": "https://www.npmjs.com/package/typescript",
+      "versionStatus": "pinned",
+      "version": "5.9.3",
+      "basis": "Exact ordinary dependency in dev-code-quality."
+    },
+    {
+      "id": "zod-dev-quality",
+      "name": "Zod dependency used by code diagnostics",
+      "url": "https://www.npmjs.com/package/zod",
+      "versionStatus": "pinned",
+      "version": "4.1.12",
+      "basis": "Exact ordinary dependency in dev-code-quality; other bundles may pin different versions."
+    },
+    {
+      "id": "tripo-processing",
+      "name": "Tripo model processing skill runtime",
+      "url": "https://www.blender.org/download/",
+      "versionStatus": "unverified",
+      "basis": "Local static-GLB processing uses Blender; not a Tripo generation SDK or account integration. See skill runner requirements."
+    }
+  ]
+}

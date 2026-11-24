@@ -4,9 +4,9 @@
       config:
         serverName: blender
         transport: stdio
-        command: '__DSH_SUITE_BLENDER_MCP_PATH_21__'
+        command: '__DSH_SUITE_BLENDER_MCP_PATH_20__'
         args: ['-m', 'blender_mcp.server', '--host', '127.0.0.1', '--port', '9876']
-        cwd: '__DSH_SUITE_BLENDER_MCP_PATH_22__'
+        cwd: '__DSH_SUITE_BLENDER_MCP_PATH_21__'
         env:
           DISABLE_TELEMETRY: '1'
           BLENDER_MCP_DISABLE_TELEMETRY: '1'

@@ -1,6 +1,6 @@
 # 浏览器配置与迁移
 
-本文对应 2026-11-16 发布套件，结合来源安装文档与已迁移的发布源码提供部署步骤和验证标准。套件提供模板准备脚本，但没有据此宣称异机安装、浏览器登录或站点任务已验证。通用环境与凭据边界见 [ENVIRONMENT.md](ENVIRONMENT.md)，代理操作模板见 [portable-AGENTS.md](portable-AGENTS.md)。
+本文对应 2026-11-24 套件快照，结合官方来源安装文档与已迁移的发布源码提供部署步骤和验证标准。套件提供模板准备脚本，但没有据此宣称异机安装、浏览器登录或站点任务已验证。通用环境与凭据边界见 [ENVIRONMENT.md](ENVIRONMENT.md)，代理操作模板见 [portable-AGENTS.md](portable-AGENTS.md)。
 
 ## 先选择浏览器路线
 
@@ -15,25 +15,25 @@
 
 ## 版本、依赖与适配前提
 
-| 组件 | 本次来源版本 | 安装前提和限制 |
+| 组件 | 已核对模板锁定值 | 安装前提和限制 |
 |---|---|---|
-| Harness | 安装包 `@deepseek-ai/dsh` 0.2.2-rc.3 | 已读安装 manifest；早期后台浏览器真实验证记录基于 0.2.1-rc.5 desktop。没有证据覆盖所有 DSH 版本或非 Windows 系统 |
+| Harness | 本次运行安装包 `@deepseek-ai/dsh` 0.2.2-rc.5；Node `>=24.9.0` | 来自当前安装 manifest；不等于套件全部插件兼容性或异机实装证据。没有证据覆盖所有 DSH 版本或非 Windows 系统 |
 | `@local/playwright-extension-mcp` | 1.0.1；固定 `@playwright/mcp` 0.0.83 | Chrome + Node + stdio MCP；包名沿用历史命名，当前专用路线不需要 Playwright Chrome Extension 或其 token |
-| `@local/pinterest-browser-headless` | 1.0.0 | 修改既有 `playwright-extension-mcp` row 加 `--headless`，不是第二个 MCP；依赖原 row 存在和 patch 正确作用域 |
+| `@local/pinterest-browser-headless` | 仅旧 profile 排除项，未包含在此发布套件 | 当前套件没有该 headless overlay；Playwright 基础 patch 不含 `--headless`，需要 headless 部署时须明确配置并验证目标 MCP 参数 |
 | `@local/background-browser-control` | 1.0.0；固定 `chrome-devtools-mcp` 1.9.0 | 需要支持 `--pageIdRouting=true`、显式 pageId 及 isolated context 的实际安装构建；不要只凭上游同版本号推断兼容 |
 | `@local/browser-session-guard` | 1.0.0 | Host `tools`、`systemPrompt` 服务；依赖基础 MCP 新页输出中唯一 `[selected]` 行解析 |
 | `@local/background-browser-hub` | 1.0.0 | 基础 MCP + guard；无新增第三方运行依赖，通过原工具执行管线调用 |
 | `@local/google-chrome-control` | 1.0.0 | Windows desktop、用户已打开 Chrome、手动允许 remote debugging；依赖 profile 中 `chrome-devtools-mcp` 的内部 Puppeteer 导出 |
 
-Chrome 具体最低版本、Node 最低版本、非 Windows 路径、Chrome Dev/Canary/自定义 profile、企业策略、更新后 Puppeteer 内部路径均未在本次验证。部署者应使用其 Harness 支持的 Node，并记录实际 Chrome/Node 版本后运行下述最小验证。
+Chrome 最低版本、Playwright 与具体 Chrome 版本组合、非 Windows 路径、Chrome Dev/Canary/自定义 profile、企业策略、更新后 Puppeteer 内部路径均未在本次验证。Harness manifest 的 Node 下限是 24.9.0；部署时使用受支持的 Node 24 LTS 更新版本，并记录实际 Chrome/Node 版本后运行下述最小验证。
 
 ## 生成部署者本地配置
 
 先定位 `${WORKSPACE_ROOT}`、`${DSH_PROFILE_DIR}`、`${NODE_EXECUTABLE}`、`${CHROME_EXECUTABLE}`、`${PLAYWRIGHT_MCP_CLI}`、`${DEVTOOLS_MCP_CLI}`。两个 profile 选为独立、可写、不会提交版本库的目录：`${HARNESS_BROWSER_PROFILE}` 与 `${BACKGROUND_BROWSER_PROFILE}`。另建 `${BROWSER_WORK_DIR}` 供后台 MCP 工作。
 
-这些 `${...}` 只是文档记号。发布源码使用 `__DSH_SUITE_*__` token；填写 [deployment.example.json](../scripts/deployment.example.json) 的本地副本后，通过 [prepare.mjs](../scripts/prepare.mjs) 生成配置完成的插件副本，无需修改原源码。脚本从配置 `variables` 或同名环境变量取值，requirements 说明每个字段的插件与用途；路径用正斜杠、不含引号/反引号或换行。运行 `node scripts/prepare.mjs --config <本地配置.json>`，检查 `scripts/prepared/install-plan.json`，再按授权使用 Harness 插件管理器安装。脚本只准备副本和计划，不安装外部依赖或改 profile；依赖清单见 [external-dependencies.json](../scripts/external-dependencies.json)。本地配置和生成目录不提交公共仓库。
+这些 `${...}` 只是文档记号。发布源码使用 `__DSH_SUITE_*__` token；填写 [deployment.example.json](../scripts/deployment.example.json) 的本地副本后，通过 [prepare.mjs](../scripts/prepare.mjs) 生成配置完成的插件副本，无需修改原源码。脚本从配置 `variables` 或同名环境变量取值，requirements 说明每个字段的插件与用途；路径用正斜杠、不含引号/反引号或换行。运行 `node scripts/prepare.mjs --config <本地配置.json>`，检查 `scripts/prepared/install-plan.json`，再按授权使用 Harness 插件管理器安装。脚本只准备副本和计划，不安装外部依赖或改 profile；依赖清单见 [external-dependencies.json](../scripts/external-dependencies.json)。插件副本写入 `scripts/prepared/<slug>-<hash16>/`，同内容复用、不同内容生成新目录，旧目录保留；每次仅更新 `install-plan.json`。可以重复 prepare，不会删除已有 link 目标；始终保留安装器仍引用的输出目录及依赖。配置与生成副本不提交公共仓库。
 
-后台 MCP 对应模板字段 `DSH_SUITE_BACKGROUND_BROWSER_CONTROL_PATH_4` 至 `PATH_8`：依次为 Node、DevTools MCP CLI、Chrome、独立 user-data-dir、工作目录。Playwright 对应 `DSH_SUITE_PLAYWRIGHT_EXTENSION_MCP_PATH_11` 至 `PATH_14`：依次为 Node、Playwright MCP CLI、专用 user-data-dir、工作目录。headless 覆盖另填 `DSH_SUITE_PINTEREST_BROWSER_HEADLESS_PATH_27` 至 `PATH_30`，与前述 Playwright 路线指向同一部署环境。日常 Chrome 对应 `DSH_SUITE_GOOGLE_CHROME_CONTROL_PROFILE_ROOT` 和 `DSH_SUITE_GOOGLE_CHROME_CONTROL_USER_HOME`。字段含义最终以模板 requirements 为准；不要将本文 `${...}` 直接填入值。
+后台 MCP 对应模板字段 `DSH_SUITE_BACKGROUND_BROWSER_CONTROL_PATH_4` 至 `PATH_8`：依次为 Node、DevTools MCP CLI、Chrome、独立 user-data-dir、工作目录。Playwright 对应 `DSH_SUITE_PLAYWRIGHT_EXTENSION_MCP_PATH_11` 至 `PATH_14`：依次为 Node、Playwright MCP CLI、专用 user-data-dir、工作目录。该套件未包含旧版 Pinterest headless 覆盖，且不含该旧覆盖的任何部署模板字段。日常 Chrome 对应 `DSH_SUITE_GOOGLE_CHROME_CONTROL_PROFILE_ROOT` 和 `DSH_SUITE_GOOGLE_CHROME_CONTROL_USER_HOME`。字段含义最终以模板 requirements 为准；不要将本文 `${...}` 直接填入值。
 
 ### 专用 Playwright Chrome
 
@@ -47,7 +47,7 @@ chrome
 ${HARNESS_BROWSER_PROFILE}
 ```
 
-基础 1.0.1 bundle 的原始 patch **没有 `--headless`**，README 明确默认 headed，首次调用可能打开独立窗口。后台策略部署应明确加 headless，或安装匹配作用域的 headless 覆盖；不可只读旧说明就声称当前运行无窗口。专用 profile 仍持久保存登录、历史及缓存。
+发布版 1.0.1 patch **没有 `--headless`**，上述参数片段是部署者配置示例而非当前发布默认值。要后台运行，必须按实际 MCP 版本文档核实无头参数并在目标环境验收；本套件未附 Pinterest headless overlay。专用 profile 仍持久保存登录、历史及缓存。
 
 要人工登录时，需用户明确授权打开专用登录窗口，再按该安装的登录入口完成；登录后确认恢复 headless。headless 模式本身不能让用户处理验证码。不要开两个 Chrome 同时占用同一 user-data-dir，也不以复制日常 Chrome cookies 代替登录。
 
@@ -89,7 +89,7 @@ guard 串行化单次调用并按真实调用者登记页，不允许父子会�
 
 ## 部署后最小验收
 
-本次未执行下列真实验收，部署者应记录结果后才声明环境可用：
+本次只核对了来源代码、模板及运行包 metadata；未安装或连接软件/浏览器。部署者应记录下列真实验收后才声明环境可用：
 
 - 插件管理器先 list 核对包标识、安装来源与版本，按 `application/nextStep` 完成必要重开；工具实际存在后再调用。`applied` 不证明浏览器或页面已验证。
 - 专用 Playwright：读取 Example Domain 标题；只读核对进程实际 user-data-dir 与 headless 参数，确认没有复用日常 profile。

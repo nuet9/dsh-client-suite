@@ -1,0 +1,28 @@
+{
+  "name": "@local/harness-browser-auth",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Opt-in session-scoped official Harness browser login without exporting credentials.",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "icon.svg",
+    "locale/zh.json",
+    "locale/en.json",
+    "cordis.patch.yml",
+    "index.js",
+    "auth.js"
+  ],
+  "engines": {
+    "dsh": ">=0.2.2-rc.3 <0.3.0-0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

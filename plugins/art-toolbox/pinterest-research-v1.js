@@ -7,6 +7,16 @@ export function researchService({ctx,settings,jobs,queue,clock=Date.now,uuid=ran
  const store=async data=>settings.put(KEY,{body:JSON.stringify(data),revision:(settings.get(KEY)?.revision||0)+1});
  const recordFor=id=>Object.values(read().requests).find(r=>r.childId===id);
  const keyFor=a=>a.queueId+'\0'+a.requestId;
+ function settle(key,childId,result,error){
+  const p=tail.then(async()=>{const data=read(),r=data.requests[key];if(!r||r.childId!==childId||r.status!=='started')return;
+   const stopReason=result?.stopReason;r.settledAt=new Date(clock()).toISOString();
+   if(error){r.status='failed';r.error=String(error.message||error);}
+   else if(['completed','aborted','error','max-tokens','refusal'].includes(stopReason)){r.stopReason=stopReason;r.status=stopReason==='completed'?'completed':stopReason==='aborted'?'aborted':'failed';
+    const texts=(Array.isArray(result.output)?result.output:[]).filter(b=>b?.type==='text'&&typeof b.text==='string').map(b=>b.text);if(texts.length)r.resultText=texts.join('\n').slice(0,6000);if(typeof result.diagnostic==='string')r.diagnostic=result.diagnostic.slice(0,2000);
+   }else{r.status='failed';r.error='Research returned no valid stopReason';}
+   await store(data);
+  });tail=p.catch(e=>ctx.logger?.warn?.('Pinterest research settlement failed: %s',String(e.message||e)));return tail;
+ }
  function guard(exec){const r=recordFor(exec.agent?.id);if(!r)return;const args=exec.arguments;
   if(exec.name==='read_image')return;
   if(exec.name==='pinterest_queue'&&researchPolicy.actions.includes(args?.action)&&args.queueId===r.queueId)return;
@@ -29,12 +39,12 @@ export function researchService({ctx,settings,jobs,queue,clock=Date.now,uuid=ran
   if(old){if(old.owner!==parent.id||old.jobId!==a.jobId)throw Error('Research request owner conflict');if(!a.queryOnly&&old.prompt!==a.prompt)throw Error('Research request content changed');return old;}
   if(a.queryOnly)return {status:'unknown',retryable:false,message:'No persisted admission; do not redispatch uncertain research automatically'};
   const {q,job}=await authorize(a,parent,signal);if(typeof a.prompt!=='string'||!a.prompt.trim()||a.prompt.length>5000)throw Error('One research direction required (1–5000 characters)');
-  if(Object.values(data.requests).filter(r=>r.queueId===a.queueId).length>=researchPolicy.maxResearchers)throw Error('At most three researchers per queue; reuse original researchers');
-  const childId=uuid(),r={owner:parent.id,jobId:a.jobId,queueId:a.queueId,requestId:a.requestId,prompt:a.prompt,childId,status:'admitting',deadline:q.deadline};data.requests[key]=r;await store(data);
+  if(Object.values(data.requests).filter(r=>r.queueId===a.queueId&&(r.roundId||r.queueId)===(q.roundId||q.id)).length>=researchPolicy.maxResearchers)throw Error('At most three researchers per round; reuse original researchers, or explicitly resume and use new requestIds');
+  const childId=uuid(),r={owner:parent.id,jobId:a.jobId,queueId:a.queueId,roundId:q.roundId||q.id,requestId:a.requestId,prompt:a.prompt,childId,status:'admitting',deadline:q.deadline};data.requests[key]=r;await store(data);
   // Reserve before activation so the global guard applies before the first child tool step.
-  try{const run=await ctx.subagents.startActivation({provider:'spawn',parent,childId,name:'research-'+createHash('sha256').update(childId).digest('hex').slice(0,12),label:a.prompt.slice(0,80),maxDepth:ctx.subagents.resolveMaxDepth(researchPolicy.maxDepth),signal,delivery:'parent',...(job.modelSelection?{agentOptions:job.modelSelection}:{}),prompt:[{type:'text',text:['Pinterest只读研究代理；禁止递归委派、直接浏览器、命令执行、写文件或收藏。','任务ID：'+a.jobId,'队列ID：'+a.queueId,'共用截止时间：'+new Date(q.deadline).toISOString(),'方向：'+a.prompt,'仅用 pinterest_queue search（queueId固定）→ read_image 实际查看返回截图 → enqueue reviewed=true附具体可见理由。首批60–90秒回传，不等整轮结束。status可查队列。图片不可见则报告不能筛选，不凭标题凑数。到截止前2分钟停止新搜索。只回传候选与限制，收藏由队列所有者执行。'].join('\n')}]});r.status='started';r.childId=run.childId;runs.add(run);run.result.finally(()=>runs.delete(run)).catch(e=>ctx.logger?.warn?.('Pinterest research settlement failed: %s',String(e.message||e)));}
+  try{const run=await ctx.subagents.startActivation({provider:'spawn',parent,childId,name:'research-'+createHash('sha256').update(childId).digest('hex').slice(0,12),label:a.prompt.slice(0,80),maxDepth:ctx.subagents.resolveMaxDepth(researchPolicy.maxDepth),signal,delivery:'parent',...(job.modelSelection?{agentOptions:job.modelSelection}:{}),prompt:[{type:'text',text:['Pinterest只读研究代理；禁止递归委派、直接浏览器、命令执行、写文件或收藏。','任务ID：'+a.jobId,'队列ID：'+a.queueId,'共用截止时间：'+new Date(q.deadline).toISOString(),'方向：'+a.prompt,'仅用 pinterest_queue search（queueId固定）→ read_image 实际查看返回截图 → enqueue reviewed=true附具体可见理由。首批60–90秒回传，不等整轮结束。status可查队列。图片不可见则报告不能筛选，不凭标题凑数。到截止前2分钟停止新搜索。只回传候选与限制，收藏由队列所有者执行。'].join('\n')}]});r.status='started';r.childId=run.childId;runs.add(run);Promise.resolve(run.result).then(result=>settle(key,run.childId,result),error=>settle(key,run.childId,null,error)).finally(()=>runs.delete(run)).catch(e=>ctx.logger?.warn?.('Pinterest research settlement failed: %s',String(e.message||e)));}
   catch(e){r.status='uncertain';r.error=String(e.message||e);r.retryable=false;}
   await store(data);return r;
  }
- return {policy:researchPolicy,recordFor,guard,async authorizedReader(q,session){const r=recordFor(session);return !!r&&r.owner===q.owner&&r.queueId===q.id&&r.jobId===q.jobId;},execute(a,parent,signal){const p=tail.then(()=>invoke(a,parent,signal));tail=p.catch(()=>{});return p;},async close(){await tail;await Promise.all([...runs].map(run=>run.dispose?.()));runs.clear();}};
+ return {policy:researchPolicy,recordFor,guard,async authorizedReader(q,session){const r=recordFor(session);return !!r&&r.owner===q.owner&&r.queueId===q.id&&r.jobId===q.jobId&&(r.roundId||r.queueId)===(q.roundId||q.id);},execute(a,parent,signal){const p=tail.then(()=>invoke(a,parent,signal));tail=p.catch(()=>{});return p;},async close(){await tail;await Promise.all([...runs].map(run=>run.dispose?.()));await tail;runs.clear();}};
 }

@@ -20,22 +20,16 @@
     "DSH_SUITE_INTERNAL_FOLDER_BROWSER_HARNESS_RUNTIME_ROOT": "",
     "DSH_SUITE_DSH_WHALE_WIDGET_USER_HOME": "",
     "DSH_SUITE_DSH_WHALE_WIDGET_PROGRAM_FILES": "",
-    "DSH_SUITE_TOOL_CALL_COMPAT_HARNESS_RUNTIME_ROOT": "",
+    "DSH_SUITE_BLENDER_MCP_PATH_20": "",
     "DSH_SUITE_BLENDER_MCP_PATH_21": "",
-    "DSH_SUITE_BLENDER_MCP_PATH_22": "",
     "DSH_SUITE_SESSION_SEARCH_RESILIENCE_HARNESS_RUNTIME_ROOT": "",
     "DSH_SUITE_DROCK_MEDIA_HARNESS_RUNTIME_ROOT": "",
+    "DSH_SUITE_WINDOWS_DESKTOP_CONTROL_PATH_24": "",
     "DSH_SUITE_WINDOWS_DESKTOP_CONTROL_PATH_25": "",
-    "DSH_SUITE_WINDOWS_DESKTOP_CONTROL_PATH_26": "",
-    "DSH_SUITE_PINTEREST_BROWSER_HEADLESS_PATH_27": "",
-    "DSH_SUITE_PINTEREST_BROWSER_HEADLESS_PATH_28": "",
-    "DSH_SUITE_PINTEREST_BROWSER_HEADLESS_PATH_29": "",
-    "DSH_SUITE_PINTEREST_BROWSER_HEADLESS_PATH_30": "",
-    "DSH_SUITE_DSH_BETTER_SIDEBAR_USER_HOME": "",
+    "DSH_SUITE_AGENT_CHAT_TABS_V2_HARNESS_RUNTIME_ROOT": "",
     "DSH_SUITE_ART_TOOLBOX_HARNESS_RUNTIME_ROOT": "",
     "DSH_SUITE_ART_TOOLBOX_COMFY_ROOT": "",
-    "DSH_SUITE_ART_TOOLBOX_PROGRAM_FILES": "",
-    "DSH_SUITE_AGENT_CHAT_TABS_V2_HARNESS_RUNTIME_ROOT": ""
+    "DSH_SUITE_ART_TOOLBOX_PROGRAM_FILES": ""
   },
   "requirements": {
     "DSH_SUITE_SUPIR_REFINE_COMFY_ROOT": {
@@ -178,21 +172,14 @@
       "description": "Windows Program Files directory",
       "hint": "Use an absolute forward-slash directory path without a trailing slash"
     },
-    "DSH_SUITE_TOOL_CALL_COMPAT_HARNESS_RUNTIME_ROOT": {
-      "plugin": "tool-call-compat",
-      "file": "cordis.patch.yml",
-      "required": true,
-      "description": "Target Harness runtime root (ASAR-aware file URL consumers require compatible Desktop runtime)",
-      "hint": "Use an absolute forward-slash directory path without a trailing slash"
-    },
-    "DSH_SUITE_BLENDER_MCP_PATH_21": {
+    "DSH_SUITE_BLENDER_MCP_PATH_20": {
       "plugin": "blender-mcp",
       "file": "cordis.patch.yml",
       "required": true,
       "description": "Absolute deployment path for python.exe; preserve required external dependency, install it separately.",
       "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
     },
-    "DSH_SUITE_BLENDER_MCP_PATH_22": {
+    "DSH_SUITE_BLENDER_MCP_PATH_21": {
       "plugin": "blender-mcp",
       "file": "cordis.patch.yml",
       "required": true,
@@ -213,58 +200,30 @@
       "description": "Target Harness runtime root (ASAR-aware file URL consumers require compatible Desktop runtime)",
       "hint": "Use an absolute forward-slash directory path without a trailing slash"
     },
-    "DSH_SUITE_WINDOWS_DESKTOP_CONTROL_PATH_25": {
+    "DSH_SUITE_WINDOWS_DESKTOP_CONTROL_PATH_24": {
       "plugin": "windows-desktop-control",
       "file": "cordis.patch.yml",
       "required": true,
       "description": "Absolute deployment path for python.exe; preserve required external dependency, install it separately.",
       "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
     },
-    "DSH_SUITE_WINDOWS_DESKTOP_CONTROL_PATH_26": {
+    "DSH_SUITE_WINDOWS_DESKTOP_CONTROL_PATH_25": {
       "plugin": "windows-desktop-control",
       "file": "cordis.patch.yml",
       "required": true,
       "description": "Absolute deployment path for DSHDesktopControl; preserve required external dependency, install it separately.",
       "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
     },
-    "DSH_SUITE_PINTEREST_BROWSER_HEADLESS_PATH_27": {
-      "plugin": "pinterest-browser-headless",
-      "file": "cordis.patch.yml",
+    "DSH_SUITE_AGENT_CHAT_TABS_V2_HARNESS_RUNTIME_ROOT": {
+      "plugin": "agent-chat-tabs-v2",
+      "file": "index.js",
       "required": true,
-      "description": "Absolute deployment path for node.exe; preserve required external dependency, install it separately.",
-      "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
-    },
-    "DSH_SUITE_PINTEREST_BROWSER_HEADLESS_PATH_28": {
-      "plugin": "pinterest-browser-headless",
-      "file": "cordis.patch.yml",
-      "required": true,
-      "description": "Absolute deployment path for cli.js; preserve required external dependency, install it separately.",
-      "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
-    },
-    "DSH_SUITE_PINTEREST_BROWSER_HEADLESS_PATH_29": {
-      "plugin": "pinterest-browser-headless",
-      "file": "cordis.patch.yml",
-      "required": true,
-      "description": "Absolute deployment path for .harness-browser-profile; preserve required external dependency, install it separately.",
-      "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
-    },
-    "DSH_SUITE_PINTEREST_BROWSER_HEADLESS_PATH_30": {
-      "plugin": "pinterest-browser-headless",
-      "file": "cordis.patch.yml",
-      "required": true,
-      "description": "Absolute deployment path for desktop; preserve required external dependency, install it separately.",
-      "hint": "Forward-slash path only; do not include quotes or file:/// unless this is a module URL"
-    },
-    "DSH_SUITE_DSH_BETTER_SIDEBAR_USER_HOME": {
-      "plugin": "dsh-better-sidebar",
-      "file": "lib/index.js",
-      "required": true,
-      "description": "Destination operating-system user home",
+      "description": "Target Harness runtime root (ASAR-aware file URL consumers require compatible Desktop runtime)",
       "hint": "Use an absolute forward-slash directory path without a trailing slash"
     },
     "DSH_SUITE_ART_TOOLBOX_HARNESS_RUNTIME_ROOT": {
       "plugin": "art-toolbox",
-      "file": "index-pinterest-v1.js",
+      "file": "index-pinterest-v1-concept.js",
       "required": true,
       "description": "Target Harness runtime root (ASAR-aware file URL consumers require compatible Desktop runtime)",
       "hint": "Use an absolute forward-slash directory path without a trailing slash"
@@ -281,13 +240,6 @@
       "file": "browser-login-v2.js",
       "required": true,
       "description": "Windows Program Files directory",
-      "hint": "Use an absolute forward-slash directory path without a trailing slash"
-    },
-    "DSH_SUITE_AGENT_CHAT_TABS_V2_HARNESS_RUNTIME_ROOT": {
-      "plugin": "agent-chat-tabs-v2",
-      "file": "index.js",
-      "required": true,
-      "description": "Target Harness runtime root (ASAR-aware file URL consumers require compatible Desktop runtime)",
       "hint": "Use an absolute forward-slash directory path without a trailing slash"
     }
   }

@@ -1,6 +1,6 @@
 {
   "name": "@local/agent-chat-tabs-v2",
-  "version": "2.0.11",
+  "version": "2.0.13",
   "private": true,
   "type": "module",
   "description": "Switch between the main conversation and native subagent chats without stopping work.",

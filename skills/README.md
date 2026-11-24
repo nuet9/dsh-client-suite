@@ -1,6 +1,6 @@
 # 本地技能的便携副本
 
-这四个技能及白名单 helper 来自发布者本地技能，由用户明确授权作为本套件源码分发并进行脱敏改编。来源目录没有附独立 LICENSE；这里不虚构第三方许可证，也不替第三方软件、模型、API 文档或素材授予许可。对这些本地方法/脚本的分发授权不扩展到服务商、Blender、Python/Pillow 或用户素材。
+这六个技能及白名单辅助脚本 来自发布者本地技能，由用户明确授权作为本套件源码分发并进行脱敏改编。来源目录没有附独立 LICENSE；这里不虚构第三方许可证，也不替第三方软件、模型、API 文档或素材授予许可。对这些本地方法/脚本的分发授权不扩展到服务商、Blender、Python/Pillow 或用户素材。
 
 | 技能 | 白名单内容 | 外部依赖与改编 |
 |---|---|---|
@@ -8,6 +8,8 @@
 | photo-modeling-lite | SKILL、方法 references、EVALUATION、compare.py | 视觉能力、可执行的 3D 工具；compare.py 可选依赖 Pillow。私人案例与旧建模项目替换为通用方法，无样件 |
 | pinterest-reference-curator | SKILL、队列/选图 references、manifest.mjs | 匹配工具箱队列、视觉读图和专用浏览器、部署者登录；manifest 仅按需，无浏览器脚本或 cookies |
 | tripo-model-processing | SKILL、plan/runner references、runner.py、worker.py | 独立 Python、Blender；通过 --blender 或 TRIPO_BLENDER_EXECUTABLE 指定，不附固定安装路径。所有输入新建视觉 plan，不附私人 plans/cache/GLB |
+| concept-modeling | SKILL | Blender 与后台执行入口；用于参考驱动白模和近景几何验收，单图精修可联用下项 |
+| industrial-form-match | SKILL、checks.md、align_reference.py、compare_contours.py、check_mesh.py | 图像脚本用 Python/Pillow，网格检查用 Blender 自带 Python；不附参考素材与工程 |
 
 ## 手工安装
 

@@ -1,6 +1,6 @@
 # 可迁移的功能约定
 
-这是部署者可选择合并到其工作区 AGENTS.md 的模板，整理日期为 2026-11-16。它只描述本套扩展的操作边界，不自动加载、不修改全局规则，也不替代当前会话的工具 schema、权限和用户指令。环境准备见 [ENVIRONMENT.md](ENVIRONMENT.md)，浏览器准备见 [BROWSER-SETUP.md](BROWSER-SETUP.md)。
+这是部署者可选择合并到其工作区 AGENTS.md 的模板，整理日期为 2026-11-24。它只描述本套扩展的操作边界，不自动加载、不修改全局规则，也不替代当前会话的工具 schema、权限和用户指令。环境准备见 [ENVIRONMENT.md](ENVIRONMENT.md)，浏览器准备见 [BROWSER-SETUP.md](BROWSER-SETUP.md)。
 
 ## 路径和能力发现
 

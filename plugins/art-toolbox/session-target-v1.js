@@ -39,9 +39,9 @@ export function routePrompt(request, target, services, signal) {
 }
 export async function admitTaskPrompt(request, target, selected, services, signal) {
   let r = request;
-  if (selected && r.content.some(p => p.type === 'image')) {
+  if (r.content.some(p => p.type === 'image')) {
     const current = await services.currentModel(target, signal);
-    const infos = await Promise.all([selected,...(current ? [current] : [])].map(v => services.modelInfo(v)));
+    const infos = await Promise.all([...(selected ? [selected] : []),...(current ? [current] : [])].map(v => services.modelInfo(v)));
     if (infos.some(v => v.inputModalities && !v.inputModalities.includes('image'))) r = {...r,content:r.content.filter(p => p.type !== 'image').map(p => p.type === 'text' ? {...p,text:p.text+'\n参考图片已保存到上述本机路径。开始制作前用可用的视觉工具读取原图；无视觉能力时报告阻碍，不能仅凭文字猜测。'} : p)};
   }
   return routePrompt(r, target, services, signal);

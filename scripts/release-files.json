@@ -7,43 +7,53 @@
     },
     {
       "path": "README.md",
-      "bytes": 4958,
-      "sha256": "bd33db04d7e3a9dfa01888e19d22074354950f0b3d2cde459ada0661515691b5"
+      "bytes": 4322,
+      "sha256": "4ba06f27a3531341d80be498b434fe3f46de64150e486c3e6dee9f5e28cbbc1d"
     },
     {
       "path": "docs/BROWSER-SETUP.md",
-      "bytes": 12049,
-      "sha256": "74917cab9595c4adb487e105c76cf1d2425be9de4c6c731e0fa4f8f0542353c6"
+      "bytes": 12529,
+      "sha256": "81c8b58cf83a05b11f1cc960239997571f6bc7937598ac626d20d1456465d7e0"
     },
     {
       "path": "docs/ENVIRONMENT.md",
-      "bytes": 13143,
-      "sha256": "b5cc1a04d91af25e866ae02e4ab204d084bb38e2637b5ae7c91c1b738ece9af7"
+      "bytes": 13537,
+      "sha256": "6d4250d1ac8ca8d06c1f66a5cca7448546f69dc0e682f800dc7d37a7b2115482"
+    },
+    {
+      "path": "docs/Harness-使用指南.pptx",
+      "bytes": 184133,
+      "sha256": "4482ce405992a4a2e66e2eb1614a03c06228a5ea40ed2abf6dc9ce2eec46c8e2"
+    },
+    {
+      "path": "docs/SOFTWARE-SETUP.md",
+      "bytes": 6872,
+      "sha256": "bae7a53fbf514dfbdb970ac472ac8e9aa3435bd08645b8e99d492e94fe5bc9ce"
     },
     {
       "path": "docs/portable-AGENTS.md",
       "bytes": 6641,
-      "sha256": "944e00479075290b072e16ff039c7111e02da2ece79a950695621a6d6812a403"
+      "sha256": "de7223d7033c5811d79d4edab1ab5f41d67c58a11142bbb4fdd351e2b021e5e2"
     },
     {
       "path": "feature-inventory.json",
-      "bytes": 59021,
-      "sha256": "a7a5686884612b93efd8d6e4859e8cbec010b54a0ad914af7ece412e074de912"
+      "bytes": 49101,
+      "sha256": "73253b1d96e79764f1ed0ed45db1fe3d4d8a3413ad45e440cc6487109312ca13"
     },
     {
       "path": "manifest.json",
-      "bytes": 17742,
-      "sha256": "187713cb6fcb87a00cd8aac926549da59f2766ddbd4f81a35714d4862ba8a880"
+      "bytes": 26486,
+      "sha256": "9767be3bb168e5391887120f734266002fa4a7b0cb22602315d82ca15d5e823d"
     },
     {
       "path": "plugins/agent-chat-tabs-v2/chat-preferences.js",
-      "bytes": 4714,
-      "sha256": "61efc1269ae176b1d8961a38043eff656da8f05742ce73d3d8b063f40ff680a5"
+      "bytes": 7695,
+      "sha256": "c74f5f9ba6b6e02d87cf60c2e74873c404c1c9a37b0f515767b01646ede31726"
     },
     {
       "path": "plugins/agent-chat-tabs-v2/client.js",
-      "bytes": 31068,
-      "sha256": "c393916082befc521f148f7c4dddba79ab5ee64f8f7255887ccd4d699d26e897"
+      "bytes": 52645,
+      "sha256": "f453f2f261b8ea08ce47c58ac054ee8475c836ab0df131fd89eb8ecbb409a2e0"
     },
     {
       "path": "plugins/agent-chat-tabs-v2/cordis.patch.yml",
@@ -57,23 +67,23 @@
     },
     {
       "path": "plugins/agent-chat-tabs-v2/index.js",
-      "bytes": 28084,
-      "sha256": "b5d56728f67fa6befcfc1b3ce7e82593521361079a529036c8bca134e6489e0f"
+      "bytes": 28691,
+      "sha256": "4d60f86a4ac4671bba0ed734e762a40a38c359bfeebe184a95fc4d62ecaca8dc"
     },
     {
       "path": "plugins/agent-chat-tabs-v2/locale/en.json",
-      "bytes": 375,
-      "sha256": "d9205dfb74e2902d0365cc3c405a5fb3fbb073cc7ffc3ee003e8a2d0f04d7089"
+      "bytes": 399,
+      "sha256": "da79c8247f59e3c33e3b3bd922bd46dd7c551830ba8b4ee74daa5a0eac31731c"
     },
     {
       "path": "plugins/agent-chat-tabs-v2/locale/zh.json",
-      "bytes": 378,
-      "sha256": "333bfaabc56f045bf6a9f5581f68932393589ac1b0ad396e4faaeafd48a51d13"
+      "bytes": 417,
+      "sha256": "ce77b1f0a6dc6ce0af363c706f3fbd9d358d78d654deafaa1a551a12cf0e5664"
     },
     {
       "path": "plugins/agent-chat-tabs-v2/package.json",
       "bytes": 1067,
-      "sha256": "a682f05eb544c242fe0a27176cd83d3565de567af171f1b27ab1939cbd052032"
+      "sha256": "11b964901790686bfe3aed6718f5fdb7efbfa7f6ecef93c92f6583d21aa17d5e"
     },
     {
       "path": "plugins/agent-chat-tabs-v2/silent-notification-stream.js",
@@ -96,9 +106,14 @@
       "sha256": "9b5f8f6ea89e83f86130c53a0ee53a987479faa280a8f6fb8cbd06c459d735f2"
     },
     {
-      "path": "plugins/art-toolbox/base-v15.js",
-      "bytes": 16115,
-      "sha256": "1a133e33ebd2c6e5579c8cce7672b89d77ca1fa3c06f1e3f44ea0b967c112688"
+      "path": "plugins/art-toolbox/base-v15-concept.js",
+      "bytes": 21032,
+      "sha256": "9a9de08bb1376b53fc7e7f6e61870e38443bbb57557f5eab2d86a418a009d6b5"
+    },
+    {
+      "path": "plugins/art-toolbox/browser-close-v1.ps1",
+      "bytes": 1949,
+      "sha256": "aa7d3b0c016a93b694ee7691f033b02ebe5a9e635f94c1b4aed5f7320ca12167"
     },
     {
       "path": "plugins/art-toolbox/browser-dispatch-v1.js",
@@ -107,8 +122,8 @@
     },
     {
       "path": "plugins/art-toolbox/browser-login-v2.js",
-      "bytes": 3691,
-      "sha256": "b320dffb37c93c1f2ba5d224553000673804319349b8ffe59ca12d8553af7ff0"
+      "bytes": 5390,
+      "sha256": "821ebeb862ee5866a19203248ddb7d392b7f9e291e3a98a769bbe9b09e2ec61e"
     },
     {
       "path": "plugins/art-toolbox/browser-process-v1.ps1",
@@ -116,9 +131,14 @@
       "sha256": "c77c48054b0d978d8aab638672485df0b5c31280cf6c0473f55d7b251a6cc9ac"
     },
     {
-      "path": "plugins/art-toolbox/client-comfy-v1.js",
-      "bytes": 109616,
-      "sha256": "9ce268cef347a0da4f3b56d43f426b34226619346d77e8515d9f1eb0d4e80d24"
+      "path": "plugins/art-toolbox/child-handoff-v1.js",
+      "bytes": 3667,
+      "sha256": "07dcd42f250ea4aec03ddd1f6c9c4db5a0662726759293047bcc4b6d18a36269"
+    },
+    {
+      "path": "plugins/art-toolbox/client-comfy-v1-concept.js",
+      "bytes": 119181,
+      "sha256": "0b8abe41b52521b8b7a89c2d9e851b1cc722e6627b76beebfbd1e054e7f5fbfa"
     },
     {
       "path": "plugins/art-toolbox/comfy-library-schema-v1.js",
@@ -146,9 +166,9 @@
       "sha256": "0e9015bfe7cd8c8e37014c07bcaa9473e6a94391c104667a3c61f25b2c7b68b0"
     },
     {
-      "path": "plugins/art-toolbox/defaults-v11.js",
-      "bytes": 1753,
-      "sha256": "f177c68a81337ef79ca5ca7cd389448286f53917cd73fd17cfe89fb0bedcf0fa"
+      "path": "plugins/art-toolbox/defaults-v11-concept.js",
+      "bytes": 1989,
+      "sha256": "d51ff4dc82940d4802c45527a0223ffad336c9c027fe99b22e190bd1b0026694"
     },
     {
       "path": "plugins/art-toolbox/defaults-v5.js",
@@ -191,9 +211,14 @@
       "sha256": "1b9c8bfba0bf8911793d526c116debd3d52084778a2689e9e958ae81e979b24f"
     },
     {
-      "path": "plugins/art-toolbox/index-pinterest-v1.js",
-      "bytes": 17269,
-      "sha256": "bf8491eab7bd22c15212be06aadbed429e42f87466b48c242c930da2519246cb"
+      "path": "plugins/art-toolbox/image-input-v1.js",
+      "bytes": 2497,
+      "sha256": "aa3a8173ec72ab5ab792eba7fcc5ec34843789351e42a492941cd7acef9cb4eb"
+    },
+    {
+      "path": "plugins/art-toolbox/index-pinterest-v1-concept.js",
+      "bytes": 23944,
+      "sha256": "13c2b5b86448f73c1195fae7e0a01733d5083b2bbb8dd5541a364c8155259993"
     },
     {
       "path": "plugins/art-toolbox/locale/en.json",
@@ -206,34 +231,34 @@
       "sha256": "c55a88e74d393d14a6ede8ac5242c24dce8967b2db1d39d85e96909dbae95ceb"
     },
     {
-      "path": "plugins/art-toolbox/model-selection-v1.js",
-      "bytes": 3526,
-      "sha256": "a9f1a71647e4543144019e53c5803ede004e9562b54b67287a6ad5f7808c9f6e"
+      "path": "plugins/art-toolbox/model-selection-v1-concept.js",
+      "bytes": 3626,
+      "sha256": "c045cdaecbfafde7ac202e178b53a6b60481181ce6ffe0f11217fb9f1019f54b"
     },
     {
       "path": "plugins/art-toolbox/package.json",
-      "bytes": 1497,
-      "sha256": "a6cc6eb8833c201dd1cf4ba4356e9ce29dc37de074bcf570015ab9810421fec3"
+      "bytes": 1690,
+      "sha256": "8aef428563f4ae514cfdccbf9add55f3d53d3b9a8879e6bf543d416fe2ea7f6b"
     },
     {
-      "path": "plugins/art-toolbox/pinterest-projects-v1.js",
-      "bytes": 12476,
-      "sha256": "960f0b0f84a1fa29be53e2aacd60dfb5c09c762f1ee9a157d644cebf5a1f1a36"
+      "path": "plugins/art-toolbox/pinterest-projects-v1-concept.js",
+      "bytes": 12357,
+      "sha256": "ab3ecdc815c654dd47b0d14f1e02ab7e060736fca32104114b88534a32c11ba1"
     },
     {
       "path": "plugins/art-toolbox/pinterest-queue-v11.js",
-      "bytes": 25046,
-      "sha256": "f894cbfc935223df84b2d0a0cf7bb829a5c51c783b89b72e27d260535e53f2eb"
+      "bytes": 26851,
+      "sha256": "2778372824d37716943b711c467b19d29ee5b12412337fc2e1f1fd96f9ba893e"
     },
     {
       "path": "plugins/art-toolbox/pinterest-research-v1.js",
-      "bytes": 5667,
-      "sha256": "16f4071a289176b0e7ebdb5de78d787d3eee12c9246eb4f1fe3bb895cae374cd"
+      "bytes": 6963,
+      "sha256": "cc5175c8394d30e841e8170a167e528984bef4f04cd89d6adcd3191332a8253f"
     },
     {
-      "path": "plugins/art-toolbox/pinterest-sync-v1.js",
-      "bytes": 6091,
-      "sha256": "328e7a428df0bb24cddfa75fe6f7592acceaff68d5bc3d44526617c82f305da6"
+      "path": "plugins/art-toolbox/pinterest-sync-v1-concept.js",
+      "bytes": 6123,
+      "sha256": "f5d2aeafc733b4a1b96811cf331cf7eda023520f3b84b2f6d43cbd7084d1e223"
     },
     {
       "path": "plugins/art-toolbox/previews-v1.js",
@@ -241,9 +266,14 @@
       "sha256": "cc68af107f64709b6fcdeb1e2882b6d4075018b22fd62e71a2320c607c632fb7"
     },
     {
-      "path": "plugins/art-toolbox/repository-v11.js",
-      "bytes": 10408,
-      "sha256": "dca40441208544d60c9db225d41f8cd64e67f90419a59781ca1135b749fbd90f"
+      "path": "plugins/art-toolbox/reference-providers-v1.js",
+      "bytes": 2609,
+      "sha256": "0781bb6c1d7265742962a406533911d3fa66304e5949c7cfa41eeeb5b89e63fc"
+    },
+    {
+      "path": "plugins/art-toolbox/repository-v11-concept.js",
+      "bytes": 10602,
+      "sha256": "b01681c126f957fa4628de90f7fe0f5785e42b95bf8516976f46ff338888371f"
     },
     {
       "path": "plugins/art-toolbox/reveal-folder.ps1",
@@ -252,8 +282,8 @@
     },
     {
       "path": "plugins/art-toolbox/session-target-v1.js",
-      "bytes": 3856,
-      "sha256": "081fc42a0e49c42d1e276e35906cd14c7169f958db0b465177baaa608560ae40"
+      "bytes": 3867,
+      "sha256": "95eff21e1abfa0b9e356068a1e447a2afcc97c3df3815059a2d965b8ea6b95db"
     },
     {
       "path": "plugins/art-toolbox/workflow-folder-v1.js",
@@ -323,7 +353,7 @@
     {
       "path": "plugins/blender-mcp/cordis.patch.yml",
       "bytes": 485,
-      "sha256": "e982d282fcddc33b67be44b40ea5537e0a5bffec8689672c5337aea2c0e56c10"
+      "sha256": "3e5aa9f7a552506ad57fc03514695857dacc000f011e675c38cf45f0d9d5a152"
     },
     {
       "path": "plugins/blender-mcp/icon.svg",
@@ -666,2369 +696,39 @@
       "sha256": "37ac0143baee100ddbe4593baa1289678e9904aecd4f5141b3e035e15375ddfd"
     },
     {
-      "path": "plugins/dsh-better-sidebar/LICENSE",
-      "bytes": 1069,
-      "sha256": "f4d265194e0824721af0592462a71fe750c04db3565c23c5d6c65fdee25fb4b0"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/cordis.patch.yml",
-      "bytes": 2270,
-      "sha256": "ec25fc02f0d283e913014bb2cbdef92a17ea360c92f2503d5104b4f8f5e7c064"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/icon.svg",
-      "bytes": 663,
-      "sha256": "06dc6d2d1ae8bafcea1897662f61e0af14c37d77317ae2fb77fbc1b864a6a8a1"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/client-editor.js",
-      "bytes": 2359936,
-      "sha256": "033dff0c94a9a854794fd610188441be33460ecc736fedbdbb71ddb8c4a1cd49"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/client-locale.js",
-      "bytes": 943387,
-      "sha256": "68d1819a6040c1eb5954d97fd234940ad0389e1bec7985a61a0cbb0eae79553c"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/client-mermaid.js",
-      "bytes": 7045389,
-      "sha256": "33b971e644ff82c83017260868369bf6881ba986b6c600695250d82782f70d16"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/client-registry.js",
-      "bytes": 1567417,
-      "sha256": "255fd9fdac0a4d8ba6880b8512f0e63a1d383a7679769c53aa97001ba9135a37"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/client-terminal.js",
-      "bytes": 758053,
-      "sha256": "c539038d5897df17c5713e8a6d7c91130bbb3744f546059d018b34c710e4b4bc"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/client.js",
-      "bytes": 1567234,
-      "sha256": "bb79ba5b4cf7a9bfaddcc02f9686ea88b2a60a3aecb089e6ff45fdcfc753e485"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/index.js",
-      "bytes": 391926,
-      "sha256": "cf54109ec15c16e41160e72e16ce536dd5ece7446b2ff7efc0ed47ba875d3fa2"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/active-worktree.d.ts",
-      "bytes": 768,
-      "sha256": "c2cc12550d73e83b5928d386252a296b458453a4e98fde0332ce4beb64afb7ad"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/agent-opens.d.ts",
-      "bytes": 3419,
-      "sha256": "3ccfb934fdd3a85f7a2ba5d2872a03c6c6c6c791b17f86fde7f84d397ed86302"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/archive-route.d.ts",
-      "bytes": 5265,
-      "sha256": "c309bd443e8c5335e424ee7e864c2cf659c91821df0f766de3c7cf925c448e1c"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/archive-tools.d.ts",
-      "bytes": 6851,
-      "sha256": "e7602056d4e0210b81093ed03245e50dc8b331fa13c2da68bb3261e343d27bee"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/assistant-live.d.ts",
-      "bytes": 3127,
-      "sha256": "b1afecc349ba72570e2dd2cdafea50aaceb7597eecd49b583365cf3afff0a7ce"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/bundle-route.d.ts",
-      "bytes": 899,
-      "sha256": "03c77c4449b6e32722e3bcd797150639d34a71595985c42094263c36dc777df0"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/changes-ops.d.ts",
-      "bytes": 962,
-      "sha256": "4561b9145955ec99849d0382bcb619806c584a493ed315bfcad04d9fcf6e506d"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/AnchoredPopover.d.ts",
-      "bytes": 1784,
-      "sha256": "b5a3669800a81fa3b25acd46f6368fdd892f0178f9834956bb2de423d7b5a1e7"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/DiffTab.d.ts",
-      "bytes": 221,
-      "sha256": "149b8a4715f8ff5d92adf1538821cf52eee51c493f9ab51dc305e233e2745038"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/EditorHost.d.ts",
-      "bytes": 658,
-      "sha256": "6b5743d03e9ae690f08b4351e9b122235a1f4103b2d6f03c7a85347f9eb1ce15"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/FileTree.d.ts",
-      "bytes": 5699,
-      "sha256": "d1f17e20f234f13409c43eefa30b1fcd99d32e8c0879cb525556e1756a7a76ee"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/FloatingWindow.d.ts",
-      "bytes": 3687,
-      "sha256": "a8674d2df0a428819d350758e939885e94a1d7a31916fd21ae624ef4e1b1d539"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/JobsDrawer.d.ts",
-      "bytes": 3994,
-      "sha256": "1f179f527bc66834c60d2d0ed614ca2282a47bc2bdecef3b09f2314541ad0ba6"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/LargeFileView.d.ts",
-      "bytes": 2641,
-      "sha256": "2f8ae802910cc4477bfa6fa76161fd2c3e2eef06597dfc2fc23ad47bf3369c75"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/MarkdownHtml.d.ts",
-      "bytes": 1567,
-      "sha256": "5d17d2368f797353ac635aa0a2e6958331d446553780848e39617200ffe3c8c4"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/OrphanedTab.d.ts",
-      "bytes": 588,
-      "sha256": "39d8b7b6209d9e6fdfc85f5578642c77187ce06647086a6e588c576a5cda27fc"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/PdfView.d.ts",
-      "bytes": 182,
-      "sha256": "9bbb8a05c49d59b975ddc75c37174a643b91ad5abd5d5f7fe9597239f0a84e8d"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/RenderBoundary.d.ts",
-      "bytes": 1246,
-      "sha256": "6a68fcd5f81f753abaca4d89a1c85e4b12db5b3f5d07cb6a75abd2609380dc77"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/SandboxStatusBar.d.ts",
-      "bytes": 474,
-      "sha256": "fe34363fc2e44ddc555650b30b8a85ead1f8f089d9f67e91a286948ec6013d7a"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/SideCardSection.d.ts",
-      "bytes": 4679,
-      "sha256": "cd0de3997ef18d1e2db5991bb0766e2276dfd44dbf1aa71fa8b4792479713ab3"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/SideChatView.d.ts",
-      "bytes": 803,
-      "sha256": "490a10a5ff8a8240efe242f9d2f4b2448865fa93ce79be2084f2000c1f0bec85"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/Sidebar.d.ts",
-      "bytes": 473,
-      "sha256": "16ef7e39e24c38ba4fd78dd8e6f52947dc9c970b385a3b93170c34122d68c198"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/SubagentView.d.ts",
-      "bytes": 2394,
-      "sha256": "ba98125c9e9197cd7caa8f313d7fbc3b5b908d44e463622c5e27ea48aea4ce57"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/TabBar.d.ts",
-      "bytes": 3425,
-      "sha256": "87b95feb3c03f65908d5cf96b603ed0a79e323ef9552812e3fc66ff8c8d0d51e"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/TaskWindow.d.ts",
-      "bytes": 2472,
-      "sha256": "e393e09fcd5394d3da05e24a3f3f8eced023e9078219feb5d822be926e04ea93"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/TasksGraph.d.ts",
-      "bytes": 3393,
-      "sha256": "b999f3503d68580b0b1f5a3c6ceda5eb9436c0b18628f09df4b53e88463750a6"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/TasksPopovers.d.ts",
-      "bytes": 2922,
-      "sha256": "0a79bf4bd2186ca21cad131b3d4df64d40be0adeea6c75906afef73f0c99c6d8"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/TasksTree.d.ts",
-      "bytes": 2353,
-      "sha256": "6b355253b1f2254c277c80e8e4c3fdbf6e915a338bebe29f41b6d3b04d71942e"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/TeamBoard.d.ts",
-      "bytes": 1774,
-      "sha256": "f609f193cd035dda749fc7293ff9f153d37d826d1cd17e956e34d2b0aad01276"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/TerminalView.d.ts",
-      "bytes": 731,
-      "sha256": "18af98493aec4d9b0300ec8d4905e98269807df65a8b9d7b0b0b3288d1dafebd"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/TextEditor.d.ts",
-      "bytes": 1240,
-      "sha256": "65fc2f4e48fb79de692d098c033f85d0064f0791197797c931ab0f88ca7fc6bc"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/TreePanel.d.ts",
-      "bytes": 2627,
-      "sha256": "1d9b7d533677757f18a27995f62f28b7f6e172000be5e5747bd0fae65aa0ec3f"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/UploadOverlay.d.ts",
-      "bytes": 901,
-      "sha256": "ff23d18da125469e7a1e617823dc3379a29b554e190a1f271b4c274e6fb950e4"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/activity-icons.d.ts",
-      "bytes": 1322,
-      "sha256": "13b173a9b5a6e0fd34e274e00689f9f27a756c2d68a11b59e2d1b3e90f2d23dc"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/add-plugin-modal.d.ts",
-      "bytes": 689,
-      "sha256": "20792b07bd538bef9e7fb7de971ddd6a071969c537c288c2cb2363473c1b5b4e"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/address-base.d.ts",
-      "bytes": 3018,
-      "sha256": "9d7b93824cc2cc3564d4415ab5f11ca846677c09b2f5cc352666438a8bffc4a1"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/api.d.ts",
-      "bytes": 27843,
-      "sha256": "b96b65e3886185febce473790bc1b555b103cdf8c8de03c0d82d59ce04ba2afc"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/binary-download.d.ts",
-      "bytes": 506,
-      "sha256": "d0527d9eb1db100e108732d713eb73472fd555c45746acdfe1295d13b08f8bb1"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/block-labels.d.ts",
-      "bytes": 1144,
-      "sha256": "db30b773b46beab5f8bf5e04b2c7b9403335d070284a38f79f3beac8aa4fa51c"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/breakpoints.d.ts",
-      "bytes": 764,
-      "sha256": "ec47d71465aa4b955dcbdd8d3970fb82637595e3af08d5d07392571109aa33f5"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/builtins/index.d.ts",
-      "bytes": 986,
-      "sha256": "4b1a1905d1bafe9820c7d6af6fa3e8d04c78c4380a426d88f3ac3b04d4fae16b"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/builtins/tab-icons.d.ts",
-      "bytes": 1986,
-      "sha256": "c488cb87f78793c5d3641c097249e8eb8e88ab20a2d06cb92249c41a58419072"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/builtins/tabs.d.ts",
-      "bytes": 278,
-      "sha256": "19cbba96f2ce79e0e135c5d49e4ce057cfcd15ad07d13738d10c9f43fe7de867"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/builtins/viewers.d.ts",
-      "bytes": 181,
-      "sha256": "619d732f1f860578afea5371a8e00c0fd8652d1365cbefd9c0091de6bab17654"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/center-column.d.ts",
-      "bytes": 1763,
-      "sha256": "d41332bbf546806697c99e7ed1507c3c1c40e49fef85162082e36d50e77c37ca"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/changes/ChangesTab.d.ts",
-      "bytes": 404,
-      "sha256": "0b1156db8e908b537b4bee376d00a428d4b643fee5c6b40f0ec196b18913b588"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/changes/CommitDetails.d.ts",
-      "bytes": 1084,
-      "sha256": "e5ff14086aae55e473b0e91b48524f3446e241d8fcf62d3aee8097853c4903f1"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/changes/CommitModelSettings.d.ts",
-      "bytes": 311,
-      "sha256": "8c57a693fd43a8a4e7800501b4d4bfaee63ad8079bbb8718e318e89cb2e81c61"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/changes/DiffPane.d.ts",
-      "bytes": 4359,
-      "sha256": "f89860fbeccbffe8668626f1ce3b2a53d9d09b1277483cca6739809d68800dc0"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/changes/GitGraphSection.d.ts",
-      "bytes": 4263,
-      "sha256": "10434c5b8ffe3e514f3517b8591172fa80878b7a5372e6535f8a7fa5a5e794ac"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/changes/GitLens.d.ts",
-      "bytes": 3081,
-      "sha256": "9f089cecad432e33ebb14889c88bb7c4c1a9820b22b5a5bde883a27dc4a31e6c"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/changes/SessionLens.d.ts",
-      "bytes": 695,
-      "sha256": "76a1c34668d58647159731f3b7b9959bedd7a0a18685f9b366c3f26ad1fbe27e"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/changes/change-tree.d.ts",
-      "bytes": 3914,
-      "sha256": "c25c6d8d833825450c48f96c9927157b6b9c534099fdac951e9df4e13eb96145"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/changes/git-graph-windowing.d.ts",
-      "bytes": 1940,
-      "sha256": "313dc840dcf366aa9e4e984752da97bc8f48614344cf37cd15250ab1cf59c13b"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/changes/graph-layout.d.ts",
-      "bytes": 3527,
-      "sha256": "c18f85b42a9dd713877134cb145a7beb816a0f30c12140f134b2cc4b99fc40df"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/changes/ops.d.ts",
-      "bytes": 3474,
-      "sha256": "4689f3f3c637e92c03e8ba29770275e434d80cf99ec4f25edb4668786ada7707"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/chunk-loader.d.ts",
-      "bytes": 4110,
-      "sha256": "ff3a38c8136a77100d57b4da5a1ad6b5e3fcdc0c60b58b457afd5e13fd50d692"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/chunks/editor.d.ts",
-      "bytes": 459,
-      "sha256": "4fa97caa6392d91a07a8968b357dccfb63e1209eabbb29df5aa90550c7de3059"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/chunks/locale.d.ts",
-      "bytes": 197,
-      "sha256": "c5fa5acbbf0d4064fd54e57c261066c1e19b78c58abf6d928a333db76a5cb94c"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/chunks/mermaid.d.ts",
-      "bytes": 509,
-      "sha256": "4f0b3fe4ecad3c435367de105b84784acfd15373b634e0a233eddce369f157b9"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/chunks/terminal.d.ts",
-      "bytes": 488,
-      "sha256": "30665cf8573541ad040c8748062ff4a40dd6192ed90ff13fab07087a5a925080"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/cm-search.d.ts",
-      "bytes": 2697,
-      "sha256": "d4273a19ed8b6c9f619da0b018e17cb97f328e037b2c681b3433156b296eec77"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/cm-themes.d.ts",
-      "bytes": 1294,
-      "sha256": "09a3c9511971fba7539a997627023defea7dda55b4181f91623cf595690c614f"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/context-diagnostics-ui.d.ts",
-      "bytes": 4131,
-      "sha256": "bfb7e42995a9d0851c2e8e58325ea32dcc9470e03fe274aa536d7b38ff308d10"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/context-diagnostics.d.ts",
-      "bytes": 947,
-      "sha256": "cfc90d4330b40087d71fe410b4ad02217f159d5c53d089ed742eee322a6087ea"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/conversation-draft.d.ts",
-      "bytes": 7468,
-      "sha256": "90042afe734e6622753bc31b71444303f94f8e0eac3b234cca45d48741745d34"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/desktop-env.d.ts",
-      "bytes": 2744,
-      "sha256": "48220a2cdf6d16caffa400d50c4eebbf75a3e37d92a56fcbecd795b33c27d928"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/diff/DiffFiles.d.ts",
-      "bytes": 1323,
-      "sha256": "b5e892388e21af1dd879607607ef212c12165b4f422fc4ba95c598b61cabf9be"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/diff/DiffRows.d.ts",
-      "bytes": 1269,
-      "sha256": "bea62fb621f3a605c96a9687af474aae173616ee0e395a79ce57a1654f9cb1d5"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/diff/highlight.d.ts",
-      "bytes": 2068,
-      "sha256": "9d4df8af6a3c1e3998f445de96d366608af9a0d5a3b999f1b98d3d3cdfb3370f"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/diff/rows.d.ts",
-      "bytes": 10683,
-      "sha256": "04526a9c9d7d6fc7512192fc4e0e84060464230689834016c308ab79e7aaa8b5"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/diff/use-git-diff.d.ts",
-      "bytes": 1189,
-      "sha256": "db1f9b8ba6d5711aa3a8ffe78e8a084cc90bdc8cd55d38f3b3f0d049f6781e06"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/editor-dirty.d.ts",
-      "bytes": 3412,
-      "sha256": "c5c4f05d7e7ca23481e58deed8a0703829511b0bb7e966da69fbcc2f640ab833"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/editor-git-gutter.d.ts",
-      "bytes": 4263,
-      "sha256": "2e90517d390e2715d89a47755905d828661232b88cf36c05063f9efb1c3a222d"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/editor-load.d.ts",
-      "bytes": 3562,
-      "sha256": "2fd98779673cd64319a15227cf166c5710f9bc5f1505c97d1f11cad9197c2938"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/file-icons.d.ts",
-      "bytes": 2596,
-      "sha256": "fb607b0d2c9c61e2fb18822a2fcb2edb191dda4f5aeaa4e607b6cf6dff43c298"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/file-tree-compact.d.ts",
-      "bytes": 3259,
-      "sha256": "c55a46ebeb3e63b5f1ca412292e2a2304f0803a809e71f9703e9c7b5c4851c35"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/file-tree-sort.d.ts",
-      "bytes": 2152,
-      "sha256": "c8fe6882538542a2bef32d68f96ee6d2eb8557e0f356cebe0b912f516aec0865"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/frame-batcher.d.ts",
-      "bytes": 1153,
-      "sha256": "09960effa1050854f02dffb80d93040d9dc04eab5fb70b68b1b13dfb19b310e0"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/host-route-url.d.ts",
-      "bytes": 696,
-      "sha256": "daae2e0874715e25003e58929b16e2fce053a369bc463ba03c3955e22f6baf02"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/html-preview.d.ts",
-      "bytes": 713,
-      "sha256": "7222e963a2409d288f15ecd0b79b6dd8f90bc17eb3513eab05748b662771ac7d"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/icons.d.ts",
-      "bytes": 2695,
-      "sha256": "391e360cbfa7e49045c7c81982ce9fc36420ae42bfcbabf2bae1a1f392f95e76"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/image-types.d.ts",
-      "bytes": 187,
-      "sha256": "90d5f0af2825fb6abc91fe8fb67779be4cb8d14b9b4ad65f68cae833e63001a3"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/ime-guard.d.ts",
-      "bytes": 4494,
-      "sha256": "31ec8585c73a28f0691f6d45cea587a5b2c19fe2eca10e549ff704172005361c"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/index.d.ts",
-      "bytes": 1534,
-      "sha256": "98ccc86a1c9a58522dd3f1e81afa157039d022e27b3788f23a02770e9f1e397a"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/jobs-client.d.ts",
-      "bytes": 2367,
-      "sha256": "ee9c9a81066a1f697cc9e53fb21c7dd001f4f3c58affcdc180b0167494d746c7"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/jsonl.d.ts",
-      "bytes": 1445,
-      "sha256": "6f050e7bc3cf8db494615c0f9ac50007986495689fb21912012379d17ae4ad40"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/lang-jsonl.d.ts",
-      "bytes": 1720,
-      "sha256": "06338cd3439b50b82660214170a0cc3fe96ac2bc815889c3095ed0763470fdb8"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/lang.d.ts",
-      "bytes": 799,
-      "sha256": "6df7d5f4cda528082ea7e528afb17aee98584ab9de10aeafa99eada8cb6e22ef"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/layout-push.d.ts",
-      "bytes": 441,
-      "sha256": "52f1138e7324fa1a2b1c5efa042c82d61c3159007fef2027e201a9301efe9aa4"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/lazy-chunk.d.ts",
-      "bytes": 1493,
-      "sha256": "4db8eedd880ff19f02eef594903fd8167cd1cc16d5f3cd957f5a721f57ed8b4f"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/link-intercept.d.ts",
-      "bytes": 4417,
-      "sha256": "f747eb42f92562a4d8467a282ad437357f15e87bec32b8eb44ca8d7d96c3d7e0"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/locales-ar.d.ts",
-      "bytes": 876,
-      "sha256": "0c8a4d6d60f8c1dd792f17ee8b802533fc3572f1f6814a65267a774c64c17c28"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/locales-de.d.ts",
-      "bytes": 98,
-      "sha256": "20f3493c8a578a491d8c6214081a0af743b0b883a47d08f3739d80ea530aa94b"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/locales-fr.d.ts",
-      "bytes": 459,
-      "sha256": "97f8a090ef4c109ed88b40498a5704ad2ba72dbe14b1764914faf19b330308d0"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/locales-hi.d.ts",
-      "bytes": 1014,
-      "sha256": "231112635c69ff4061a86664bd2fc2844a302d4391e0c38f02b059ac74a2c19a"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/locales-id.d.ts",
-      "bytes": 710,
-      "sha256": "0296d0914824cc8ea37c6fe9e013468f6fa87c1ad7e314a08f38f9da65aefb66"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/locales-it.d.ts",
-      "bytes": 319,
-      "sha256": "2716d044f47d381cf5b1185d265d15ee2eff1bd988f23a220a9dc05043d8e3b1"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/locales-ja.d.ts",
-      "bytes": 955,
-      "sha256": "a604e89b8a46e7ac944053ecc7a1aa514b810f9e5790b71ec531488c4a0912ee"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/locales-ko.d.ts",
-      "bytes": 419,
-      "sha256": "6122a4b29313b270cfc26f6f69c8ad67b2c464a0daed6ff6a04a195eb6da6b16"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/locales-nl.d.ts",
-      "bytes": 777,
-      "sha256": "9d88d335a0f9c741d31d9275e49b5ac73eeff7044dc0a2abfe3ae6299220c5a2"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/locales-pl.d.ts",
-      "bytes": 977,
-      "sha256": "2d4a1b7bc4b2b6fa2ae6453f741e37fb1e75e34262949aaa66b2419828677a9c"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/locales-pt.d.ts",
-      "bytes": 49,
-      "sha256": "81ec924e788ac6cb4ec6ac4725fd18e6c4e4e3f1230ec431695bfa4eee116d45"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/locales-ru.d.ts",
-      "bytes": 577,
-      "sha256": "8f8f4b9784ae4c7aac8d35783c5b01b88160488f1ce7fb42b5f40e6f6d91364e"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/locales-sv.d.ts",
-      "bytes": 49,
-      "sha256": "4e1ab206caf9f958fcd20a39afd38b45947edb55e6eef4e47dd9d6a2584589c9"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/locales-th.d.ts",
-      "bytes": 835,
-      "sha256": "4a35e28b36ae9fb108a0f2725b244c7dbde1899f3eb3d712ea4b78ecea9ab691"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/locales-tr.d.ts",
-      "bytes": 883,
-      "sha256": "38403c0429b187d2750b8a3ef198fecac2d150bc56e03a5fe24879671ad98586"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/locales-vi.d.ts",
-      "bytes": 847,
-      "sha256": "0edf4d038d0a31ed4b37123938c0ee56919c0d65430091b5c7483e1985d1f6db"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/locales-zh-HK.d.ts",
-      "bytes": 2035,
-      "sha256": "1340cb37ab3b9d8e35706d4bed4dcebf6ea8b363b5373de0c6a9a422f34ce241"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/locales-zh-MO.d.ts",
-      "bytes": 2035,
-      "sha256": "0bec676a94d1c579ee911e300ae604aac3573c2207db670721f1f607adf885ad"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/locales-zh-TW.d.ts",
-      "bytes": 2035,
-      "sha256": "c1f45ea85ab2739731f5c4d8173f46c71c680eb91e37c42424c4fbbad7f92f03"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/locales.d.ts",
-      "bytes": 26244,
-      "sha256": "3cafe738e5cbcac141e3b347fb88b37b219b7ff1aefafd09fbd722559cf55a3c"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/markdown-code.d.ts",
-      "bytes": 1884,
-      "sha256": "5e959dacc06f9865207d11bdeabbc01f91d99d4d8cfd99c3f06b8f744665aaae"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/markdown-frontmatter.d.ts",
-      "bytes": 578,
-      "sha256": "c47dea40b35ef3dc765015841124fd478722798cd1b603339b9b8e1b195532e0"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/markdown-html.d.ts",
-      "bytes": 4661,
-      "sha256": "d703a1a1a0b8ef8162b20e8c23cb3557e50311cb68cefb9f7b7f8093b0f09007"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/markdown-images.d.ts",
-      "bytes": 4984,
-      "sha256": "fe90cd883bc2e1f47fac79709701460ed03529da96908c2df7404981cc8b6d2c"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/markdown-labels.d.ts",
-      "bytes": 2332,
-      "sha256": "4bb9b4160ed005322fc00eebe1444f033cfc98a1c973d04c235a339415e3c05d"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/markdown-navigation.d.ts",
-      "bytes": 7586,
-      "sha256": "73251aeb78276ebbc56a15758169ab28d276960c1488aeaf2fe50663a5d2dad9"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/md-toc.d.ts",
-      "bytes": 207,
-      "sha256": "36452f37842ca9f8a1b60a405ba8a9838b6469b0d99afaf7bf52c4e17324185d"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/menu-flip.d.ts",
-      "bytes": 1997,
-      "sha256": "e766c63da6fbde9501b2907a1c040ec2aada4326d8fcc6f73c048b478afbfb93"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/mermaid-blocks.d.ts",
-      "bytes": 2540,
-      "sha256": "df8ec26657e87098575c6c073b0cb5a763482bd011357462878c0e6ce3cf0d30"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/mermaid-lazy.d.ts",
-      "bytes": 247,
-      "sha256": "4cedb6f229a8a5a2d132abb0abda7bb4442b283af8d269a9a0120e393006746d"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/mermaid-sanitize.d.ts",
-      "bytes": 137,
-      "sha256": "6506edf2324c533ec2630db3c8873d093362a0d2b56dae6184c09dadbda23ccc"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/mermaid.d.ts",
-      "bytes": 719,
-      "sha256": "02382392967ce1256a811df27f63069d151c5e2e3864c1fee552b9a078d34337"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/native/index.d.ts",
-      "bytes": 5384,
-      "sha256": "809684abc7630e719228e2e6bd045637bdb6d9583a132001d18025b0a0f3e09a"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/native/surface.d.ts",
-      "bytes": 4020,
-      "sha256": "2de64eb253c1204d701334c48367a2ebe109ccaad7ba821ae78e61c03a16267b"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/native/tab-adapter.d.ts",
-      "bytes": 11789,
-      "sha256": "9f4ccdd7d5a920423e9fdc55e72a5f550abfefdee455e83bd6f178ff0c78e3f6"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/one-dark-palette.d.ts",
-      "bytes": 2549,
-      "sha256": "e284e220e0348c5dec5978a0758b522b846cfcea8da309eeadd6df0d0a84dace"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/open-in-app.d.ts",
-      "bytes": 1538,
-      "sha256": "cb534710fe71772910093714dc5f1d0b87b0462f1c2b8359e799a2268b7b22af"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/open-when-sized.d.ts",
-      "bytes": 1171,
-      "sha256": "15cd087f19647a31ad2fae386f475e20ec61ad926de605defb909ebd93982a17"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/open-with-settings.d.ts",
-      "bytes": 192,
-      "sha256": "df8ec5cfd7404a9c91ece8c1958531792bf38d855182571f30ccd64f5a695ce0"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/open-with.d.ts",
-      "bytes": 4879,
-      "sha256": "9a0ccbd2867c97a69e5224bee95b281a6f8626a5c9f77ff4a193ba3f507bb6d9"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/ops-stream.d.ts",
-      "bytes": 2241,
-      "sha256": "779a9624f98a03c8ea1f927a83cacee27031c22d2fcb947eef126de208c1e5e4"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/path-line.d.ts",
-      "bytes": 2408,
-      "sha256": "80389e47a7e7f31f74ba122a77c8e66c8fecd18484f3e8e9d5d443c5c0d1b157"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/paths.d.ts",
-      "bytes": 3646,
-      "sha256": "85f71497f87436471b8fa91a45e613104a02551b899d19ddb2c7236191b9df3b"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/pdf-types.d.ts",
-      "bytes": 130,
-      "sha256": "907790ad2fe16c70a4b003cf703ded622fb53202f6f5e0251e70c0b65d829e35"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/plugin-settings.d.ts",
-      "bytes": 533,
-      "sha256": "85ba594e42d0059bbdbdf2dd464d980c3de2ab47a29a7217c0f3c83c3c351c7d"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/plugins-shared.d.ts",
-      "bytes": 1477,
-      "sha256": "1566eeb8d28f18568f779b50a3d1fdddd6486bc328f32f8ab21528032269f277"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/plugins-tabs.d.ts",
-      "bytes": 174,
-      "sha256": "db4332facfab683189e58682a4eb2420ff42d6fd42c410389b8e2372a2c872ce"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/plugins-viewers.d.ts",
-      "bytes": 175,
-      "sha256": "6bb9acdfba5f713254d52e99cde29440fdfa5eb58e84056332709237a9add4b0"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/prefs.d.ts",
-      "bytes": 3047,
-      "sha256": "53582f57419e6e04a14c50f43aa886ba19b72d13c1f0d71b3740e74dd51870ba"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/process-labels.d.ts",
-      "bytes": 2845,
-      "sha256": "e9e2b5a67b7f6d3091fe4a1cd30247e9c2f782e1e0377763b79ccd48f5f4253f"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/redact.d.ts",
-      "bytes": 2038,
-      "sha256": "489924dfe98affee1b94d4b8d586ca25e444af1684b25ced780bc737c8681a0c"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/reference-in-chat.d.ts",
-      "bytes": 1932,
-      "sha256": "8148fff96529e1b24633a01026706a6e6a17be10ebd9301fe31536bbb4c3d108"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/resource-address.d.ts",
-      "bytes": 4473,
-      "sha256": "0d8e89e3d665bb3e9f51accb9e023e836994d780e001a44f09c18307d9c32799"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/selection-payload.d.ts",
-      "bytes": 1493,
-      "sha256": "0d5f4f0e0feae441ac74d1db5ae65841e0388925a9b9ef33c81fa1e5b8a911ce"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/selection-popup.d.ts",
-      "bytes": 2856,
-      "sha256": "b18effb4ab3b529a0b1992e8a55d90eb2f1049095bab8b0046bc1365535e51d2"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/service.d.ts",
-      "bytes": 43952,
-      "sha256": "fc59b967bb773f38086cf5a9e9b8ada6c0957ca0a1443ab3200652af8847931b"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/session-metrics.d.ts",
-      "bytes": 2667,
-      "sha256": "b7fe19a9c2a3cea01999cb592d34955ace117fad6abc4262d24431a7ab852ee7"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/session-phase.d.ts",
-      "bytes": 391,
-      "sha256": "4b23bc732b3084c7520eb91416842f98c039a4e65717a5abea9fc0f039137bd4"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/session-scope.d.ts",
-      "bytes": 608,
-      "sha256": "6ecb88bc738a29350aa3bf9389a791c1d939b3efb5717a7b2eeb4e2b0ee7f731"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/settings-nav-icon.d.ts",
-      "bytes": 1221,
-      "sha256": "ae97e1a1c223c4d08b88df5b92b47404d5e88a8000111d69f62f3b4d299683ae"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/sidebar-file.d.ts",
-      "bytes": 5280,
-      "sha256": "c3d96c61716fda3d49a22203884a1f9a010acee8e6c0ef50f7f3d6a34f61838c"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/sidebar/TabContent.d.ts",
-      "bytes": 1788,
-      "sha256": "ff391643eb2d7e696d7ae2aef786076cddca9dfe85edaf094319958a85bdcf32"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/sidebar/bottom-toggle.d.ts",
-      "bytes": 1184,
-      "sha256": "c0301b0beed54eee65da1b8cf609011153b8e2589da6c4a1e77be71b4cf08d86"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/sidebar/dock-fallback.d.ts",
-      "bytes": 1533,
-      "sha256": "7e62ce18177b211f15ac613c8ad5b905ec0456d1409fb306a30c05d701d956b0"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/sidebar/right-panel-open.d.ts",
-      "bytes": 275,
-      "sha256": "8b5122a687363581477ccb89b9c9d312c7fd14b0ad80b17a818fe4d1e781ab1a"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/sidebar/use-center-column.d.ts",
-      "bytes": 713,
-      "sha256": "eebd121063e10f0c741c778548e29f20dba5c2c8f93873d6d1935205e138b123"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/sidebar/use-host-feeds.d.ts",
-      "bytes": 361,
-      "sha256": "250797e18dea7a8e27e133bab9a8bfeb449a9b651e28603e029e3f7143ab67e2"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/sidechat-transcript.d.ts",
-      "bytes": 7702,
-      "sha256": "2e67b59372cd4aa539c54172ec191f9614ff56d1ddd0260e4f190c714464c2df"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/split-pane.d.ts",
-      "bytes": 2009,
-      "sha256": "41175d12e88d23444228fb2ff8287fca33c4087cb7ba9547e7d55f7e8d9d4284"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/state.d.ts",
-      "bytes": 23139,
-      "sha256": "c68e35f7a4e614458032a3eb810b5b1927b057c1ddd06e77c2ad78bb867c28ad"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/subagent-catalog.d.ts",
-      "bytes": 4090,
-      "sha256": "461319ad939d2be746734c7ed8fcee308af1fedc1159c4d679604f1fa5578ddd"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/subagent-chat.d.ts",
-      "bytes": 2395,
-      "sha256": "e41469d02902fe5c4501dbe55564c7d16c3ab8331dbdd845197bfe07ea8ff38f"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/subagent-detect.d.ts",
-      "bytes": 1810,
-      "sha256": "9f70abde20f29b57ee19c7bc3fc43bc738f77c899e341b1881bb230bfb93bd6f"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/subagent-jobs.d.ts",
-      "bytes": 3605,
-      "sha256": "e269a9aebaa0f4d90c67713dcbb8062784a3187ec2e82a7d09dc8ed3a26b6b06"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/subagent-lineage.d.ts",
-      "bytes": 2557,
-      "sha256": "020dbf6a824de6c46613d126fa2494e3f02541c6441e75712ef07080ef5fa820"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/tab-content-memo.d.ts",
-      "bytes": 1787,
-      "sha256": "b1fdde3c3dd0a3c6ca3a62f8eddd0fe37fd85435cc413bd411ab7edd12a80061"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/tasks-card.d.ts",
-      "bytes": 5814,
-      "sha256": "a0fe8f110e20ad4f3fe111a8246bbcef7f676741e49e7fa6a574375e55589a3f"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/tasks-graph-layout.d.ts",
-      "bytes": 5488,
-      "sha256": "c8b0ec0b222a203199b4ffef275f2d2add98274c15f34c506a5beef9b5e5c130"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/tasks-layout-tween.d.ts",
-      "bytes": 1415,
-      "sha256": "d88b0f506c7d3e37894c614cda2eb25a0580fd1b1e701997d9bf537ef2ab6386"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/tasks-model.d.ts",
-      "bytes": 10583,
-      "sha256": "8053637ab227c082dc581e3cd04a1db8ce141671a6da572d2a82d2e5053188cf"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/tasks-shared.d.ts",
-      "bytes": 9921,
-      "sha256": "6059183f57fcd954718b6ab38c168466a6d92179e529c107a17128f2b62654a8"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/tasks-view-glide.d.ts",
-      "bytes": 2293,
-      "sha256": "2520786fb68f2561872eec2a13680aedc8f2b0913aced2a5ff0d6dc759605817"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/team-projection.d.ts",
-      "bytes": 4815,
-      "sha256": "575f2e8a100b07cb8920cec93b4b45d98d3610fd5d2589116f2268fc057819ad"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/terminal-client.d.ts",
-      "bytes": 10050,
-      "sha256": "8fe1d0aaa724af3acfb61f98f5bf90b7777de5b5eddae7988b8e25210eae6553"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/terminal-lazy.d.ts",
-      "bytes": 230,
-      "sha256": "285f855c4122fdc72e44676b0d4cf8a3cb54379a7ac437b85e81ae5f0c8cc0d1"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/text-pages.d.ts",
-      "bytes": 2783,
-      "sha256": "9261d5dfe63856a620f5b2e0f6439c11a0d53a9d5d08d6fd575ace2641011920"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/theme.d.ts",
-      "bytes": 2536,
-      "sha256": "012f268e66c2431e76adc7a76b73a56d87e9912176e8b3cc4c48407ec7451cae"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/tree-mutations.d.ts",
-      "bytes": 4893,
-      "sha256": "b524ca59a2ba228319886c48d4941bda4599743e38f5f9c2ef239707cc748b0d"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/ui/git-status.d.ts",
-      "bytes": 2454,
-      "sha256": "ebd77ff0abd4248a37df0e4c4a6c6579621172ded6b57755dcceb35f2c9da0db"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/ui/index.d.ts",
-      "bytes": 468,
-      "sha256": "7f4ead92c09913cfad7241dc21138a082d5e9c5ce6e357b5355cc1effa4a14d5"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/ui/kit.d.ts",
-      "bytes": 3814,
-      "sha256": "978a271fcf6e17ddd3b715f2e7e526a039f80def348a5d2b033c5b236e48119d"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/upload.d.ts",
-      "bytes": 3620,
-      "sha256": "acbd3d3ab295fcc25a87bc273a65de150c61014f323de0c8dd407614a159a78e"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/use-auto-animate.d.ts",
-      "bytes": 443,
-      "sha256": "e2894f19ceec17f1957d032daf0e9b5280d8a2e168a4ae796a3d4cbd41acad9a"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/use-dir-watch.d.ts",
-      "bytes": 1332,
-      "sha256": "16d6614d5c85089328d50204d3744463fc8bfe81b5848ec1aa15a1ce6183d696"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/use-markdown-surface.d.ts",
-      "bytes": 1889,
-      "sha256": "31bee7dd29605986da45bb81b3fb9e06db501473b988f3358a9ef72eb759e3f8"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/use-polling.d.ts",
-      "bytes": 1001,
-      "sha256": "cbb70d961ce53e15211da55de51866d660843c3ec84918ef3f0271d936bd5f0f"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/use-session-root.d.ts",
-      "bytes": 865,
-      "sha256": "3731a0c2bfabdc8b3e48b5690ee3278385418aba409307944b44a0b39b753c96"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/client/use-sidechat-push.d.ts",
-      "bytes": 818,
-      "sha256": "ac968e8cb1c93392ac5f4126ff4eadd2cb060e72f9aa6da5bb7df2016bf8f82f"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/commit-message.d.ts",
-      "bytes": 6335,
-      "sha256": "d4551e0334dadf10d949e27192c1abff377f91357552de895fef3cfd9e7a52c6"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/config.d.ts",
-      "bytes": 2505,
-      "sha256": "9dff8e4fb30ab33cd777bdac1baad64af352639fb958328cfb9a24de6eb778af"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/context-types.d.ts",
-      "bytes": 41555,
-      "sha256": "beb86eda87099ab5cc675740d00521fc825e27196fa3e53af8f66ecf115a88cf"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/editor-limits.d.ts",
-      "bytes": 2796,
-      "sha256": "03658381ff0384cb57ef0300343a5791fd29bcbb2211c831759b50b574cd0d09"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/exclude-patterns.d.ts",
-      "bytes": 1738,
-      "sha256": "a915bf9ac83ba1bbaa27edf28d32f87a23ae1dbffe39f29e053a60b8b52e8761"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/file-stream.d.ts",
-      "bytes": 1059,
-      "sha256": "0a3f43a9db9be9977a6ee5137f1c52d94555f0ec831de199b1ac4351f9ccc661"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/fs-batch.d.ts",
-      "bytes": 488,
-      "sha256": "4a48868cb35f4fc99acdc99ef0f4f68ba67c2159ca7a3bdca39da5228a62b8db"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/fs-operations.d.ts",
-      "bytes": 7777,
-      "sha256": "a41c5938e6364fff04b9bb440c090d470561085247d94512dae57087260a76ab"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/fs-search.d.ts",
-      "bytes": 2845,
-      "sha256": "7724c498303de88f991cf84f8da26e3328b3ecd39e9c8f6c3225a8240f3901df"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/fs-tree.d.ts",
-      "bytes": 5681,
-      "sha256": "5f987f47c0cd94f2b7ef8824658ef6dd9bccb3a3f6887ba991a0ed6f5f03c361"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/fs-watch.d.ts",
-      "bytes": 1466,
-      "sha256": "26646b839d6fb4782b30e75f6f5d50f90073b9b7e5b54782fcfc9c143e141500"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/git-graph.d.ts",
-      "bytes": 1371,
-      "sha256": "5e39d7642b07716abf1f03c36bbeda18cddaa59bc8298e37422614b262f3ce1a"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/git.d.ts",
-      "bytes": 16967,
-      "sha256": "ba91afb06d19b3978535ceef43dc89eaf07835519ac21842b1b837c0b6794633"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/html-route.d.ts",
-      "bytes": 3140,
-      "sha256": "01fe5e20079ed38b6304dfda7da60693be2c036531e0feb4214da5360029663d"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/index.d.ts",
-      "bytes": 3454,
-      "sha256": "895e22828d43a24015404c6c15e068aea04e7c31aefd07d242328e68976805d4"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/open-external.d.ts",
-      "bytes": 4420,
-      "sha256": "127200e3bd35da1d3069ae2a46df4a52b29c3040194478ff7b9337c7f2106cca"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/path-security.d.ts",
-      "bytes": 1888,
-      "sha256": "07abf1839dc7f9be789eb598ef402c255ac0ff617851ac9b63e50d4612d0047c"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/prefs-shared.d.ts",
-      "bytes": 7496,
-      "sha256": "5b17442ea968da108d825ad5ba33b30dec7086e440810492153fd23b554a0298"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/process-activity.d.ts",
-      "bytes": 6200,
-      "sha256": "f91170ac2e8cc1a063de3d87052d7fc0601919b230790de0a790e2ca1c641313"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/search-debug.d.ts",
-      "bytes": 124,
-      "sha256": "07bbdc071b7ff54a6058cb55df45ffdb42b3af5b6183b2dda8a5a9dcaf8ff921"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/search-engines.d.ts",
-      "bytes": 11208,
-      "sha256": "51eba0475410430f78e7f7650df81c7232fe68c1af37cec1f87502224cbf2d2d"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/session-path.d.ts",
-      "bytes": 1546,
-      "sha256": "789c859727e31fcc1632477d5f52757f1743e97cf23cb87239b936cda81f0d95"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/session-store.d.ts",
-      "bytes": 1908,
-      "sha256": "d6877f4fde11d06e4c998181ac03db80900b6edc8dad56e856344355d1871af1"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/sidechat-core.d.ts",
-      "bytes": 19075,
-      "sha256": "fda6110dbfd00337a51b5ec9c73d9078c4c0a2d87fab546da843c1a6888eae70"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/sidechat-push.d.ts",
-      "bytes": 2141,
-      "sha256": "d0e9d2985a1b5a8819f085eb4940a10322b070c17a67e2600b7e9342c5698d8c"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/sidechat-routes.d.ts",
-      "bytes": 5114,
-      "sha256": "d018d02c7e324cbc76684d3424c04139d64157541c81c861f585e9c98a5ef8e3"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/subagent-live-route.d.ts",
-      "bytes": 2030,
-      "sha256": "a49adf8982a09b661bdae6297a7bc60b39253a8a7c867c062cbdb796601cdeb0"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/team-routes.d.ts",
-      "bytes": 2874,
-      "sha256": "21c1b6721e7e035f11726351f80b2ab590d4f069c2c14550bb7fb7f8a83f90dc"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/text-encoding.d.ts",
-      "bytes": 5939,
-      "sha256": "b053895d0083e8a8b38d826a9bd3140a6f196bf32b8ae47cf6bdaf6474aa8e3a"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/wire.d.ts",
-      "bytes": 3217,
-      "sha256": "f44ac54cc1a6edd49cd5336fc3d18e717579f57e842e9909ec5d69e0ae93e945"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/workflow-routes.d.ts",
-      "bytes": 2173,
-      "sha256": "6d5f24fc98bb29b815bf5970bd006948d0ee6b033ea25d6623ee9b707d279786"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/lib/types/workflow-runs.d.ts",
-      "bytes": 3609,
-      "sha256": "b9f4b0dde964fdcda1aed3afccb8000ff878199d4e90f6c49f4b1790e739fea3"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/locale/en.json",
-      "bytes": 195,
-      "sha256": "6b9d1ffb3c4cf70436fbe4ae15df7d6ccb1908375602db452573f975176f8b45"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/locale/zh.json",
-      "bytes": 214,
-      "sha256": "2a12195111442a74fa98de0cdedd54b2c3a076a37d0c542560a716628f087f5c"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/package.json",
-      "bytes": 21507,
-      "sha256": "375ac3f5d608ff16a4a7ecbf866713c7fe342df4c7c21dc87de62000b1c7e3dc"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/active-worktree.ts",
-      "bytes": 25576,
-      "sha256": "297240960701db80612865dcdbf595ceef28bb40228be09235a172094f863717"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/agent-opens.ts",
-      "bytes": 13138,
-      "sha256": "2aeb93a836e1805e23dbcb809e89d7488497cf53567727cf9f7f37229741157e"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/archive-route.ts",
-      "bytes": 15745,
-      "sha256": "58fbac87a259a5635f4c59d996cf37144f712ed0dccab199206a3fc61f543e45"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/archive-tools.ts",
-      "bytes": 12966,
-      "sha256": "c2704efb342568661b0629c8ae09628a6a6b3c2ddf92e6d1e3c6798172bdf1d9"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/assistant-live.ts",
-      "bytes": 6162,
-      "sha256": "9e86a69e28b682e6aa7470ba07d25c55f69db0a9b2c49e1ec6c8434aaf567ed8"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/bundle-route.ts",
-      "bytes": 5652,
-      "sha256": "82f37a7bad4a53c14a2d210493a9c7350f1232bdbeb5a5d42d4a31682b00b1c0"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/changes-ops.ts",
-      "bytes": 5496,
-      "sha256": "ea73d87992597df3cde30f9c6af2969be09a95663d81e649a66dbe4a071e93cd"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/AnchoredPopover.tsx",
-      "bytes": 8481,
-      "sha256": "25126511cf5fefa52cd3b7a84df84319869ba1e95584da4596d0f819eb356a89"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/DiffTab.tsx",
-      "bytes": 2568,
-      "sha256": "e72c02eeb1eaf53f9c34090db83bbea122f4e5cc2111e8c3035e78c88be61e5f"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/EditorHost.tsx",
-      "bytes": 37309,
-      "sha256": "f5ee18dc7c4489ca244be1b9b1bc8182ff819a5ba8503ad82894525e472c19f2"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/FileTree.tsx",
-      "bytes": 115062,
-      "sha256": "faceff73be1bde78d7812a201bd51a5800def710adf5ae56d7103b93339e7087"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/FloatingWindow.module.css",
-      "bytes": 3467,
-      "sha256": "7557ba56b0e89d07573b6632da337ca2b93b190c80bb2a0b9d820c5783a8a03f"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/FloatingWindow.tsx",
-      "bytes": 15120,
-      "sha256": "40eac97dfbfdbd5da26657eb4adb607b93b06cb7e444509283da057d29d40c85"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/JobsDrawer.tsx",
-      "bytes": 19137,
-      "sha256": "4bd7f4ebebf1f539a2bb5e850a21e82fbcd8892ca62af7d932dfdf49b94db607"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/LargeFileView.tsx",
-      "bytes": 12843,
-      "sha256": "aabf977669b4cbde2cd2443541a25684b0470ea6ec63f0662f08a936034901f1"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/MarkdownHtml.tsx",
-      "bytes": 17392,
-      "sha256": "9ba79779ac31d886eca410ff162684bb76bbbd1a6f0def4ead4f5776ae66b4fa"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/OrphanedTab.tsx",
-      "bytes": 1033,
-      "sha256": "3f416e20c7e4d754e3ce8072fd2601dade5c66be819cd3892187b0ceacb2d0b3"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/PdfView.tsx",
-      "bytes": 4802,
-      "sha256": "8438a2e26f45e943e345d6c54eab83cd067554b67bbd771ac1c46b58b06a50e8"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/RenderBoundary.tsx",
-      "bytes": 1884,
-      "sha256": "61266c63507b5ad8223ddc06a90eb4221e56d640d6d8091662ff46e55b57671e"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/SandboxStatusBar.tsx",
-      "bytes": 2166,
-      "sha256": "1e994eff3ad41c80a66843341da2fb773511ec1c8d567be20e47c13ae26b1012"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/SideCardSection.module.css",
-      "bytes": 25861,
-      "sha256": "aab9510276aeea393d561fb169017ba84e9f95b98d7e858248db502e4041460a"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/SideCardSection.tsx",
-      "bytes": 44727,
-      "sha256": "f67c20ac64ad25d8cc659865ee7b8af371436825650ae7cc58a25a0a0db0509d"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/SideChatView.module.css",
-      "bytes": 16697,
-      "sha256": "aeb2559ee946f983dc8780c3549cc4ee58dd974937f08ec2e233f5f77090ccef"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/SideChatView.tsx",
-      "bytes": 67813,
-      "sha256": "88ca1338dff2bc1a9406847386f3292084b34dbd0293eab63688337e5fa491e1"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/Sidebar.tsx",
-      "bytes": 39762,
-      "sha256": "fbe17423fe40ff8e900497e2867115b47c9757b7635d993a12d3a3e59e8d1559"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/SubagentView.module.css",
-      "bytes": 4046,
-      "sha256": "14d4e7dca64a654b8defacac2f95e70c671aa22b6e23430debf8802e4e91c161"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/SubagentView.tsx",
-      "bytes": 36705,
-      "sha256": "e8d3d7e8248bc7630b7199d9c1aa28b9336207d3d6f8de7416386ffbd29bff67"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/TabBar.tsx",
-      "bytes": 17326,
-      "sha256": "ae7045c320ae81ae17437afe9bf964235fb9f7882518eadc26dc4a4f61edccaa"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/TaskWindow.tsx",
-      "bytes": 19283,
-      "sha256": "f98e9011c4ba9b13b10e863d0cb5ab39e868ccb28720de8cce5a1767e8fe5563"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/TasksGraph.tsx",
-      "bytes": 36527,
-      "sha256": "8bf7cea9e36eb76c7ff1c54f684cef2dd02b570abd0c157754777c5b851b652c"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/TasksPopovers.tsx",
-      "bytes": 16140,
-      "sha256": "525cf6857815a536464a50691d4df99c07d7d5e7898fdb299158d9d98a0e2883"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/TasksTree.tsx",
-      "bytes": 15878,
-      "sha256": "71ea4c8950aa4303ca1779c6b75a102cc1005da4c1b3c199a20a5397225d2271"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/TeamBoard.tsx",
-      "bytes": 9780,
-      "sha256": "3bc1baee0dc1a8010515e4f246a2f26f0a5b5055384baa302ae621bebf1469fb"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/TerminalView.tsx",
-      "bytes": 13972,
-      "sha256": "a3b71e771927df48fabcfc459b80ffde38617696668c2386866a803745b6aad1"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/TextEditor.tsx",
-      "bytes": 54745,
-      "sha256": "289d072a6a75f4b78f24b9d27d0524a3ee3fc017308da03a2f703f5ca2d95a5b"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/TreePanel.tsx",
-      "bytes": 18695,
-      "sha256": "5553dbecf5d54c9c5405c735a84cfade94d2a8a5f350b57d7108dde57b1baf79"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/UploadOverlay.tsx",
-      "bytes": 2597,
-      "sha256": "d9a094ff46041bc8e1333e9124d1ea61bf2193d99d0bd1318d053488dbffdeb2"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/activity-icons.tsx",
-      "bytes": 2643,
-      "sha256": "7dd2860b3e9389fc2dac6636e897ba34ac9450b5cbea78dabfcc5216a138c3d6"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/add-plugin-modal.tsx",
-      "bytes": 8663,
-      "sha256": "455bdf32199951f091ea950d80dcbe6c1927fd3e1cc7f752e5b727039a836027"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/address-base.ts",
-      "bytes": 3518,
-      "sha256": "1e356c948ece6de877ea38b370a5e795c5a6554c2f7dae540b328138115d5425"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/api.ts",
-      "bytes": 37923,
-      "sha256": "f04af9246b2f34bc63af2b42e1e3cb6dd39359adf7f1cb43b1e8102a72b4e98c"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/binary-download.tsx",
-      "bytes": 903,
-      "sha256": "92877065ba1ae75a2419fb1a0d8d1ce2d3ea1190a869a70c63779c5b966c7eb7"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/block-labels.ts",
-      "bytes": 2494,
-      "sha256": "295ca84baa4ac874a67efd211f75cb24bfbf24bb7c4069ac103673b0a2aa8c20"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/breakpoints.ts",
-      "bytes": 2264,
-      "sha256": "78e99f444da05c305a146070898b8d92c5d16c457fc978cf5d53c09e969be3c5"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/builtins/index.ts",
-      "bytes": 1416,
-      "sha256": "664cecd2d75b07cfe042062ba809993f0a8f075972f80b606aa36f4bdf5d65a0"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/builtins/tab-icons.module.css",
-      "bytes": 1384,
-      "sha256": "720de40eb322baab96e53da955133046406fc3c7dd9250d6c5c3e68285ca7e8a"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/builtins/tab-icons.tsx",
-      "bytes": 3001,
-      "sha256": "b0b90c7a6b21968d7b23986ae4b947dea99a0078df0867d48c027dac5e45d6a3"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/builtins/tabs.tsx",
-      "bytes": 15163,
-      "sha256": "c494dc0eacdc1bb6e89d93a14c464cedf29ba22f1a62a5d2d5fee55d42c84904"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/builtins/viewers.tsx",
-      "bytes": 5623,
-      "sha256": "326847b809b2a7b3682a1b16c996824a1ad48e50b80b868f8c5dce019b4b6a63"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/center-column.ts",
-      "bytes": 4701,
-      "sha256": "d518e14df48a20861b45f3155f9ed49e82f6ffb51abe42f7fbb926ae16dfff07"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/changes/ChangesTab.tsx",
-      "bytes": 17391,
-      "sha256": "5e7e950577643461f9dd4888747b38129e03505228243d44d4454476d221b2bc"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/changes/CommitDetails.tsx",
-      "bytes": 4536,
-      "sha256": "c9fd51acd05df60da5f722c66b9fb8d02c0b646434c87f841b88e338c9e085dc"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/changes/CommitModelSettings.tsx",
-      "bytes": 10905,
-      "sha256": "920290ab8f04a368e079a2de5eabeaa68410fb36140dd2cfc83d018217598400"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/changes/DiffPane.tsx",
-      "bytes": 33225,
-      "sha256": "22f98c2a9b01a9ca52afa535b049d5859ac79e97942330056938e9c212fb6e56"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/changes/GitGraphSection.tsx",
-      "bytes": 21677,
-      "sha256": "e5b733a6a0c0c76645d7581d5bbf6f5125da1929e3585c1055fe8fe897c12d3e"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/changes/GitLens.tsx",
-      "bytes": 64707,
-      "sha256": "b276816c254920054b6b34858d063ee987d7b4fe73b420a797b3accff54e0411"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/changes/SessionLens.tsx",
-      "bytes": 4649,
-      "sha256": "58b03d77cb201ca9ba82a6eb3befd6a52df9750c1a9e0a58f1ba92d7e67f4b17"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/changes/change-tree.ts",
-      "bytes": 8415,
-      "sha256": "cb1a1a8f896a392070847f1ad473ac5817ae8b6ea9d9c3b6191b52b7e07345e0"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/changes/changes.module.css",
-      "bytes": 25769,
-      "sha256": "678b7439a45eee6e8037e0aeda8f8df965824a94272005e56b2c18c4f3ae4824"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/changes/git-graph-windowing.ts",
-      "bytes": 2706,
-      "sha256": "67feabe91350877bc3c2b97108ba5eb73a60fa54df30e10a19804661dfaa0b92"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/changes/graph-layout.ts",
-      "bytes": 8511,
-      "sha256": "24bf02a40b50320ea72a492f8ecc18e4a4a29d6cb9c8eb9957da42e02f446c9a"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/changes/graph.module.css",
-      "bytes": 8544,
-      "sha256": "94fe433b8a4fdf475e72ce5abe244b79b49a68cbf73e3b9bbb7f66077b11c0cc"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/changes/ops.ts",
-      "bytes": 11700,
-      "sha256": "92aed23850f7e5b160a719b2464fd809768ef88d25e37f14a62587c66557551c"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/chunk-loader.ts",
-      "bytes": 15226,
-      "sha256": "02cf7d7b8a6dd9b741826778e5b0d81b8bf4fd65148319f5e18c3b597d3cf83c"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/chunks/editor.tsx",
-      "bytes": 458,
-      "sha256": "3263d6ed95e31a7029e64b9efa639d5c53b7bdcd2eea500710f1c63e7759a60b"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/chunks/locale.tsx",
-      "bytes": 2328,
-      "sha256": "e2cb0b69ae1e4044821cbf177084d0fdfa4f15268881d08cbf6807f3523e875e"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/chunks/mermaid.tsx",
-      "bytes": 508,
-      "sha256": "2149c2f8f37654d9eb6b787b602f18372a07b82f862a7531a49e9f572d74e437"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/chunks/terminal.tsx",
-      "bytes": 487,
-      "sha256": "cdca0d50d048413a24b83ad05766a1080c999e2b5222c8c2e2755db5f5785cee"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/cm-search.ts",
-      "bytes": 5809,
-      "sha256": "7b0fb6aa57516cd62cb95293a6475b0da550150579551fa2c87a47441dbe5a3b"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/cm-themes.ts",
-      "bytes": 5863,
-      "sha256": "e3edf9b003787bf907fc9334ad998d4f9ce59437f5a7cb9ccefb96b157ed8d25"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/context-diagnostics-ui.tsx",
-      "bytes": 10110,
-      "sha256": "ed17b664c83a1b572c7f5751eaadcf27ae32bf4512f36a176faa18c0eb9cddf9"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/context-diagnostics.module.css",
-      "bytes": 2331,
-      "sha256": "26c7f6a24d12fda277477446b387300ec0cf7e5726331e254031b71a2dd85d7a"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/context-diagnostics.ts",
-      "bytes": 10321,
-      "sha256": "8eefb0d98d52c8483002d57c9678c4769495ea0bf789352e7479eefb51854b1e"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/conversation-draft.ts",
-      "bytes": 17804,
-      "sha256": "69a735a29539677bc94ffed028d1200d1ea40cc9fef0c275f53526b6b252afdc"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/css-modules.d.ts",
-      "bytes": 180,
-      "sha256": "ae4a6fc200e9bc81fee07d86e088a2158ede12e8317a0b66d68c6d040dce73b8"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/desktop-env.ts",
-      "bytes": 3205,
-      "sha256": "e0b75f6478877c874d52bfae3f2cfb9870bf8b3b4a21a0c16e251d5c4787981c"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/diff/DiffFiles.tsx",
-      "bytes": 8336,
-      "sha256": "da0d02b004bdc1d842bb73bb7218af2f9d4e32eaa1e91fa5f014d5f5e1b6b6b5"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/diff/DiffRows.tsx",
-      "bytes": 13449,
-      "sha256": "91c85f97fbfe5d1cbc702db09e855776b07f2912ed83140deef91b7c9871b91a"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/diff/diff.module.css",
-      "bytes": 6783,
-      "sha256": "7d5cf77790bfb7778e04af8b8638e7a56ea270647ae18e2da2279db177aff87b"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/diff/highlight.ts",
-      "bytes": 20261,
-      "sha256": "a3e8245586d3f7de72502d76a86cc396d8b533974e6ba34afd550d7cd2fe7248"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/diff/rows.ts",
-      "bytes": 27666,
-      "sha256": "9de4eeca76a2e48d063c133b88fca7aa825121bc6c13157cf344d739a7496315"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/diff/use-git-diff.ts",
-      "bytes": 9105,
-      "sha256": "c16caf6f22622f237a4fe38d6f89867add4ee4f2d44a2c5c71870ee1424c08de"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/editor-dirty.ts",
-      "bytes": 5077,
-      "sha256": "ed9ed97df7bd2283f2523a2ea40331e884b143bb86417c4f8e6db4ffd1d511cc"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/editor-git-gutter.ts",
-      "bytes": 16546,
-      "sha256": "563118a25e421c7fdaf9208345ff955030f6756398857c786267a26ad3a56188"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/editor-load.ts",
-      "bytes": 5058,
-      "sha256": "9290531f98c83ef3d6f80940aa1cd1ca145954afad75c19f103f1b1da20ca180"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/file-icons.tsx",
-      "bytes": 2805,
-      "sha256": "4abf849650a98ed445ce7b520f9a86438ba2576addc87d0318bfa4f475ce3ec8"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/file-tree-compact.ts",
-      "bytes": 5276,
-      "sha256": "23e15a73277e2b5e42c6e65aed64e0e720a39196c4880e2583e9e46c4ac9af34"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/file-tree-sort.ts",
-      "bytes": 3044,
-      "sha256": "6c38e888a507d1abd6754b9d7f99d8ca36cc247f8d0f5515437a36655932dcfd"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/frame-batcher.ts",
-      "bytes": 1698,
-      "sha256": "12ea39fffa8a08090052f41866506996740b28b4a7e2ee7e5108ae5230b23fab"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/host-route-url.ts",
-      "bytes": 3655,
-      "sha256": "ceffce97bded80788f4a170a712a3354f257822c3b561fba4b9d1c3b17e519e8"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/html-preview.ts",
-      "bytes": 705,
-      "sha256": "cc7c456ca5515c367ce6dcea4f0fa4c4e4217e6a9668890d31bfa754a5664718"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/icons.tsx",
-      "bytes": 6887,
-      "sha256": "0cdffe3fde6754e53582a7cc80df50cf62d2c8f5ed87705f2c5962d07b78b626"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/image-types.ts",
-      "bytes": 299,
-      "sha256": "b84183a2d0043cf836fc1136c8b58d9b974a40f4145e3d2418ee2e064219e21d"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/ime-guard.ts",
-      "bytes": 5993,
-      "sha256": "dc840135eb2936bca6e5cfc89e23834bf8be173eb863d7729e8e1332f3a1b5ce"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/index.tsx",
-      "bytes": 23369,
-      "sha256": "437ffed2923f81a9efc16f2ec915ae8bccd996f6538f7392f6a3d1e8f977e3ef"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/jobs-client.ts",
-      "bytes": 4919,
-      "sha256": "2eefbb3870f181176822f5bdb6f705710891c597327dd83739bf597b0030478a"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/jsonl.ts",
-      "bytes": 4069,
-      "sha256": "5be0e28f8229a223009c207e45ec74545ba6afeba59e435aa2424b1b008fd5b7"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/lang-jsonl.ts",
-      "bytes": 5786,
-      "sha256": "9fdb5f67c93879a1011e83d23266efa291326280e9429e68d3812577ea995017"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/lang.ts",
-      "bytes": 10510,
-      "sha256": "3bf924ad177aed13c569a9e1856f25daccdf9ff6aa7c9ce9bb89a758e02c7c8d"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/layout-push.ts",
-      "bytes": 1145,
-      "sha256": "acde7b7f1c3c35ed231c7aae4cf8d6fa9517fb03158213bd00295644f2f6aafc"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/layout.css",
-      "bytes": 7239,
-      "sha256": "520fad5b0282d66e7fcc970ac34301230b8b49ab2a3d06facfce5c3311cf75a9"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/lazy-chunk.tsx",
-      "bytes": 3419,
-      "sha256": "5e8dfd232117bd3a0f54c5da974c7a61604aa0b464231eb30f29f344e7e41862"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/link-intercept.ts",
-      "bytes": 6480,
-      "sha256": "c5ec1f6a72f7afbe2180828bb6d9670f77d47e8175e5bb695e4bf0dcdd6e7084"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/locales-ar.ts",
-      "bytes": 55241,
-      "sha256": "ef6b35183dbcb90fb5f4773c04e66bac32faf3c419e5779f388a5e00f755f2fd"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/locales-de.ts",
-      "bytes": 45276,
-      "sha256": "3e97262f39fab08dc5636f8cd057de3ddae9ecc121d2bb2fe8491dc2be967562"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/locales-fr.ts",
-      "bytes": 47842,
-      "sha256": "a577c45fef4d86e7dfa7b76119c6e2b44ba7aba5feb84d1493b3a085448eaff7"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/locales-hi.ts",
-      "bytes": 75305,
-      "sha256": "1708a96e32b404a547ad6118bcee0f77313877b0dec3a3a25f38768ea357d88b"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/locales-id.ts",
-      "bytes": 42354,
-      "sha256": "3581a2061dc2f373550327b194cdc3b611d65f42378f37c3ef141a1e9683e5b6"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/locales-it.ts",
-      "bytes": 45806,
-      "sha256": "6bd4ea66cadefbf2867dbde443e46c5f0aa06c46eb895132aa70275d7af4c2d9"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/locales-ja.ts",
-      "bytes": 51655,
-      "sha256": "00fcb01f14421bf7a84db9bf0754599e57f69840d237f38905953f69245c5168"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/locales-ko.ts",
-      "bytes": 46951,
-      "sha256": "c1597a02062d76f80da76f81f3d7b47b41915024bd18cbfb8e4733539b825034"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/locales-nl.ts",
-      "bytes": 43851,
-      "sha256": "3522b9bd94f607fc4734a7a9173f64f396b69155f470c0ce499b150e2c45c882"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/locales-pl.ts",
-      "bytes": 45090,
-      "sha256": "ed4238a513ab246803784634d015b6e39a33e92cc0d65fbc8f36bf40fc509d74"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/locales-pt.ts",
-      "bytes": 44431,
-      "sha256": "9cd6407380d0500089ff61f3b81c340d6318f5b1578cb8bb716edf5fdc3af9be"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/locales-ru.ts",
-      "bytes": 64715,
-      "sha256": "e2a2cbc9ca4dc001f3568f81ec8912e858f2d49aa1af259739e8630eb8fb311b"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/locales-sv.ts",
-      "bytes": 42136,
-      "sha256": "749c85e984df42c5ec2e306c194cd1816fbe38eb4fb6bcb6386154199de97593"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/locales-th.ts",
-      "bytes": 74992,
-      "sha256": "e4ab353c791f0588eef1cede852874369f626b6b63cdfcd2225bbbfdd94fc9b7"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/locales-tr.ts",
-      "bytes": 45023,
-      "sha256": "765cc5f1a32ea1d2400624c90012e93982760d60f9f6dc458ebc54ede25110ce"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/locales-vi.ts",
-      "bytes": 47433,
-      "sha256": "5e37d096587f82fef894b5aa34208134d20f00dfba9dc59161091f97ddd38b14"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/locales-zh-HK.ts",
-      "bytes": 40975,
-      "sha256": "9d1a0a04f29138d4d71f3b9179a1feb4e295e68eb851fd91d4de2d3b46b59efe"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/locales-zh-MO.ts",
-      "bytes": 40960,
-      "sha256": "cbeabfe59351bb235f3da4442e1af8c3e84a87e8085e4be80d01bb81f8d3be30"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/locales-zh-TW.ts",
-      "bytes": 40993,
-      "sha256": "00a9c7f3c11be0edb3e5a6f29d202651e07dc247a8aaf20acba942f0f0d5dde6"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/locales.ts",
-      "bytes": 90069,
-      "sha256": "6ba20c1b41d03baa1ad0c034402852b6a1c1fe2b9a92893f28d9140bb220c9dd"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/markdown-code.ts",
-      "bytes": 5623,
-      "sha256": "4762e2f8804658732bdd7d93ffcc6e1213f5a05258f20abdf12eff11144e7e58"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/markdown-frontmatter.ts",
-      "bytes": 1271,
-      "sha256": "1575dd2ae6876314d04f193a805fd3df8c9cec6ee7c42c6c3e8f15175afb29b2"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/markdown-html.ts",
-      "bytes": 13168,
-      "sha256": "1b26ac9f988b682b496601b7a368aa08314ce95b66e36e7f6229da025839b47e"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/markdown-images.ts",
-      "bytes": 11266,
-      "sha256": "b7dca6c324300a129a336c27e70dd869767a660356473b571c60a345ec32c9da"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/markdown-labels.tsx",
-      "bytes": 4262,
-      "sha256": "c7ca48878f8efa459f9be9ed253c6821301314e2bc9ea3cf59e80ec7f2f0028f"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/markdown-navigation.ts",
-      "bytes": 25554,
-      "sha256": "c56df63a8a5c85eb57de26fcb2cef1406fbff28c2cd27ab7b571721ad6d7f152"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/md-toc.tsx",
-      "bytes": 5696,
-      "sha256": "fce24b481ff21a11e63e259315b138033d858d3cccb9b59c68c38f2ba7bbb522"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/menu-flip.ts",
-      "bytes": 3191,
-      "sha256": "f4714cf726e5b34cbcc3a40afff8132a3e308385341f710c9a623c1cf1fccefd"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/mermaid-blocks.ts",
-      "bytes": 4455,
-      "sha256": "bd8bca05b5c30056785276cca671d54ce8bf5e818da68e47b9f615b4cf261a8f"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/mermaid-lazy.tsx",
-      "bytes": 800,
-      "sha256": "b5f7695e9582cf0dee6b57b079857c606eedbd4e81cda6f01bf2022e3536c6d0"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/mermaid-sanitize.ts",
-      "bytes": 4143,
-      "sha256": "837bec4a7469bc94a621333536dad04f75c4b59c249fd5b9a9efd29ac67d9c3b"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/mermaid.tsx",
-      "bytes": 17183,
-      "sha256": "a7eed7ae0ba68004fa3e60c785066f5e51b2cae1ac45bc1978a5c90d05c52f75"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/native/index.ts",
-      "bytes": 25939,
-      "sha256": "c6e967b1792af60d2161148b21d80bb374eb39778ab62590e546cd8ac6ec490f"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/native/surface.ts",
-      "bytes": 14103,
-      "sha256": "aee844f9d5e525f8b2584b97c09c143065242b06b8e8ed5d8d5498a32e4ed8f7"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/native/tab-adapter.tsx",
-      "bytes": 31987,
-      "sha256": "532b1036bd4abbd160409f441982249423e9829380016bdb9a2a0b89498c7511"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/one-dark-palette.ts",
-      "bytes": 2265,
-      "sha256": "f9fc69be62f075e18951364509747d1b79a4183a2c025bfd86a86c5d49fbc3c6"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/open-in-app.ts",
-      "bytes": 7767,
-      "sha256": "0985f464e2835a27a5fc863dfbdd68e0653d30b22f64bef41cfe6466624af4cb"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/open-when-sized.ts",
-      "bytes": 1560,
-      "sha256": "3ed1dd02f253c1ddd7c80ea1a9aace10c96f8cdf6c96bb7a41e388fd72f9c0a8"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/open-with-settings.tsx",
-      "bytes": 5144,
-      "sha256": "36d7e740082ac5499844bdd3fece31a1c24918f60ca60e205ce789b510ef6fbf"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/open-with.ts",
-      "bytes": 9049,
-      "sha256": "519a6f17ce8176bada1ba33c1f498b472382507497758c0e15dcadf1c55e9941"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/ops-stream.ts",
-      "bytes": 15031,
-      "sha256": "80a0b3fd170224c34bbd349ab80231101963b8f1f69e073a39dabebcb643bc92"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/path-line.ts",
-      "bytes": 3262,
-      "sha256": "c866a240371ca9f29f7553f3b93a09a7708deeb34dae8d760a548a945e26b58d"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/paths.ts",
-      "bytes": 5765,
-      "sha256": "0dcb6a4de800f7e5943855f9ae571f222b1359fd922446f3ea7075f9842967de"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/pdf-types.ts",
+      "path": "plugins/dsh-local--view-3d6103d7-d022-4183-b4e9-67af87730c58/cordis.patch.yml",
       "bytes": 149,
-      "sha256": "bed3758346f5ff6f8442e9de343b722c971413df84faa4e5a9c234105f9f5077"
+      "sha256": "58db0e195c9551578186c6b7045f0554a73c0969c7bf7398655a766fd832c564"
     },
     {
-      "path": "plugins/dsh-better-sidebar/src/client/plugin-settings.ts",
-      "bytes": 1897,
-      "sha256": "47c34bdc3313f7d89f52035ae621a1125fb218bda6bf717254632862fd446567"
+      "path": "plugins/dsh-local--view-3d6103d7-d022-4183-b4e9-67af87730c58/dist/client.js",
+      "bytes": 18055,
+      "sha256": "855b23e2d764b7e4138e1d94e0882c5288c75960188dd0e8bec278e291c65773"
     },
     {
-      "path": "plugins/dsh-better-sidebar/src/client/plugins-shared.ts",
-      "bytes": 1432,
-      "sha256": "9eeca218cf4cbd4d961229ebe3532d6a5190e6c95828c8ea35f9abe1abe9bf64"
+      "path": "plugins/dsh-local--view-3d6103d7-d022-4183-b4e9-67af87730c58/dist/host.js",
+      "bytes": 3142,
+      "sha256": "2a8625e697d09fe2cf500a6b4b6302862db9f0baafd3fa6cb865290538e8eeb5"
     },
     {
-      "path": "plugins/dsh-better-sidebar/src/client/plugins-tabs.ts",
-      "bytes": 12362,
-      "sha256": "70a940f280ff8366f6c29e9e4bf569f47eaa648b54bf98c24950b65d7ce5af65"
+      "path": "plugins/dsh-local--view-3d6103d7-d022-4183-b4e9-67af87730c58/icon.svg",
+      "bytes": 359,
+      "sha256": "be7dd879192b7ccf29df6322950178a10e1e54206b726d3db8fb95fdced154ac"
     },
     {
-      "path": "plugins/dsh-better-sidebar/src/client/plugins-viewers.ts",
-      "bytes": 2310,
-      "sha256": "81dd63907368683b0281eb47102149bb04dba956aeffbe2838f8086843cf4c34"
+      "path": "plugins/dsh-local--view-3d6103d7-d022-4183-b4e9-67af87730c58/locale/en.json",
+      "bytes": 165,
+      "sha256": "ae1a73b80427149de76efce08328d8f1a464b95d7618363d34f1361d6dee2d24"
     },
     {
-      "path": "plugins/dsh-better-sidebar/src/client/prefs.ts",
-      "bytes": 8581,
-      "sha256": "e75dd57bec11a7a3b97f488aef0eab0e5eebc4f1c5e12d7a3b0580829500eac3"
+      "path": "plugins/dsh-local--view-3d6103d7-d022-4183-b4e9-67af87730c58/locale/zh.json",
+      "bytes": 152,
+      "sha256": "f632b2588a2b8014b717eb66ee305e95c648579eb6d3601feeb646993af7d8d4"
     },
     {
-      "path": "plugins/dsh-better-sidebar/src/client/process-labels.ts",
-      "bytes": 5244,
-      "sha256": "d95577278b551bbd54cc5de5040312f6ad9b92c069ce2b4e04bbf0d3ef57db8a"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/redact.ts",
-      "bytes": 6085,
-      "sha256": "03ae96d7f065e722b2581ff192d6085e99cfe34c01bb55a87a450806c72b94c5"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/reference-in-chat.ts",
-      "bytes": 2061,
-      "sha256": "cf359286c227776471a5b7ea1772f48d77196d6fd94524e52ed5c1611b9b9801"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/resource-address.ts",
-      "bytes": 7205,
-      "sha256": "d90c0765203ffec197c44e23c543a2ddb46361b956336fcf1cde97648729631b"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/selection-payload.ts",
-      "bytes": 3605,
-      "sha256": "ca0418c20b820d18ee7ee078b76e6773e12fe3391cc8682a86b231bc55cb8775"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/selection-popup.ts",
-      "bytes": 6416,
-      "sha256": "cdec267a562a4d51cdc87f3faac9083565ad4b9a89b74f8c6816c1893cf83487"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/service.ts",
-      "bytes": 73098,
-      "sha256": "1d487bd3c9f2951a16c81e15a5882fb48c19bfa17d589c6cd8167cd078c244d6"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/session-metrics.ts",
-      "bytes": 3592,
-      "sha256": "c174462b0047cf9947a7a2cecabb8ae0e7e32ac53b803e94b75b2435d3945855"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/session-phase.ts",
-      "bytes": 3683,
-      "sha256": "9d882c4e7f6b3989d056a762f9668bfcd30401dffdf770ea9fa529ac53ea6ed1"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/session-scope.ts",
-      "bytes": 1689,
-      "sha256": "ab09e6c7fdf64da32789ca9a129aa62656911d6d8952a3e4b602ac6ff18b4915"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/settings-nav-icon.ts",
-      "bytes": 2746,
-      "sha256": "060f7f7c468a804be0f488e8e283362cf4463be5e8452be476aabd093bb6baa4"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/sidebar-file.ts",
-      "bytes": 8309,
-      "sha256": "e99859ce89f9c60968084f2635ff6a4bf3125d15faf953205ac8d433def693d9"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/sidebar.module.css",
-      "bytes": 75599,
-      "sha256": "eccad34ad9ebd15f4321d1441ea2408dbb9034f59ba45178e8d6c3f9de6dc136"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/sidebar/TabContent.tsx",
-      "bytes": 3881,
-      "sha256": "21e3745fca39c95ddcae8746c2ccbb294b9ff97554b1a695cef373c8762fffdd"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/sidebar/bottom-toggle.tsx",
-      "bytes": 1518,
-      "sha256": "0cf6589dfbfba15fac3e8a29ac6ef857217d9cc9a80b5d6a0bec927a1fcd0e65"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/sidebar/dock-fallback.tsx",
-      "bytes": 12577,
-      "sha256": "f60f1a1643641a53784e528f78f062ae06c231b24a5bf1c34d95d970c51c3e69"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/sidebar/right-panel-open.ts",
-      "bytes": 6619,
-      "sha256": "749ffb7131a3a4aaa5e8b4b8bdd8b40a9c0ed9f92dff0074bd1a07966d0819cd"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/sidebar/use-center-column.ts",
-      "bytes": 10439,
-      "sha256": "c98ce8306bc3bde6aefc94e7d364be85ca33f90f3e9329bead1e38e4cf0aaa42"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/sidebar/use-host-feeds.ts",
-      "bytes": 17857,
-      "sha256": "bd7e44662ebbec06ef6d6332869736cf93abf4554e5ab82e19ff6bc4d77310fd"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/sidechat-transcript.ts",
-      "bytes": 38516,
-      "sha256": "19e57592e568ee1ba56e09c799b80e9002c6589d25a90e1d0bda37cfeffb2ad0"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/split-pane.tsx",
-      "bytes": 14344,
-      "sha256": "049cc5bba225cc2b9b06500db0a41de6c6c0947b0f641bf1c5d64be777f6914a"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/state.ts",
-      "bytes": 54069,
-      "sha256": "c77eb0999e954002088227f8598d8ec04e670e449b0f3f6349ff6f88128b06ab"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/subagent-catalog.ts",
-      "bytes": 4631,
-      "sha256": "005e4bff4c002a97d48a7591e112ee30e1dc3641905f3b9ac4dd19de95490cbf"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/subagent-chat.ts",
-      "bytes": 3801,
-      "sha256": "ed9e6324a068af9a40e2745611e2054e6fe6feb759181a788e66aec0c82f9bf4"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/subagent-detect.ts",
-      "bytes": 2130,
-      "sha256": "0ea9244ab38f2f766fd13543dd4889e0acc9d4239f9356b21ef9a856d9e786c7"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/subagent-jobs.ts",
-      "bytes": 5246,
-      "sha256": "2af0fb91f54ae5992228ad4c6697ff7ef429aba834e8b4f694ff79d3eed20151"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/subagent-lineage.ts",
-      "bytes": 5381,
-      "sha256": "e9a574da6aaf5e7e0ca0bbf3c74c63179240ae34a171027a15a0d515a7f35be6"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/tab-content-memo.ts",
-      "bytes": 2105,
-      "sha256": "216946d6ae9c8183e606e037777cafa2a2aea11f67d2f5693d07649e04b66431"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/tasks-canvas.module.css",
-      "bytes": 2505,
-      "sha256": "a3a49918d79f95d615a18a5cdeb55733100ff6eca572f46f172f821895052cd1"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/tasks-card.tsx",
-      "bytes": 9939,
-      "sha256": "017391388ab9b083c01341ef21adfff6786fc77de9e2955ba3578c66c153917f"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/tasks-graph-layout.ts",
-      "bytes": 15709,
-      "sha256": "8722b7ff8f5ee463f4cea9315992a57127d4f1b6d2a028612457bf7c274fa492"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/tasks-graph.module.css",
-      "bytes": 60932,
-      "sha256": "59f764ca1919bb4b5159462dd631242c236ea08a6102c1091deaa4645ad20431"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/tasks-layout-tween.ts",
-      "bytes": 7034,
-      "sha256": "6790a04f087b4c4a5e6a731c73bccdaa5f1b418586ebf29d5a1241b973e2a8c6"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/tasks-model.ts",
-      "bytes": 29036,
-      "sha256": "2dce027e42e3bfb5ba74c308a8ec953846180b4ba83dadb7c68e01b5f563a453"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/tasks-shared.tsx",
-      "bytes": 15860,
-      "sha256": "93211a25d14561cae5c11ce6406c39d173c49569bd34670c61d71c399a8116b0"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/tasks-view-glide.ts",
-      "bytes": 2987,
-      "sha256": "c8ff66ca2656d49623a6ed3819c6c33fc21cef339b74ec43a673d4adf75537d6"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/team-projection.ts",
-      "bytes": 6487,
-      "sha256": "cf8fcdc5110f56cdf933ce8f81082d8ef86f80878a73e3e36f9316784d042b0a"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/terminal-client.ts",
-      "bytes": 11470,
-      "sha256": "2a98f254ad24b4f6912bcf96bb915e7b8507338c99a12e88f9b2a44a7dd92be2"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/terminal-lazy.tsx",
-      "bytes": 731,
-      "sha256": "c1b1d16d3f370fd4bd0eab56c4ecc6cd6fccaa8ca51ee6833c7b2db26f164b61"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/terminal.module.css",
-      "bytes": 2019,
-      "sha256": "fe56d70a90185c635f2e0e3264395d86dfd6faac1ca6fa3f74e6b5c9d36b2099"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/text-pages.ts",
-      "bytes": 11690,
-      "sha256": "bcae24b3a468dd4afef8b5890449f21647ed766e4396ff55e519386d68af8b02"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/theme.ts",
-      "bytes": 4837,
-      "sha256": "63ecfd1242d8cbc57855198f0cf5118f9451909696ef8f027e699639f8b028bc"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/tree-mutations.ts",
-      "bytes": 12473,
-      "sha256": "1dff814aba9797163bd3307b8e81e54e3c0bac93bbd7f1c1221db4fdf2498f6c"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/ui/git-status.ts",
-      "bytes": 21724,
-      "sha256": "f58f1a0eb6c85ab1b1ff5c75c9eae303dfcf3fef5941d3ba242c33118f380e1b"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/ui/index.ts",
-      "bytes": 474,
-      "sha256": "7a20e7d933bbd5118f3ed07306bb770d139111d711b4c064d868555a32121edb"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/ui/kit.module.css",
-      "bytes": 6079,
-      "sha256": "9151367e2e42d6b21960dea4c5ec12be7fdce5bb6c8af44ad36e6127757fc9c3"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/ui/kit.tsx",
-      "bytes": 6428,
-      "sha256": "f9acd1eb1b6193468593e04835aec3b5020ddc13b36c58403bcfd0bfc7ce6ea2"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/upload.ts",
-      "bytes": 7321,
-      "sha256": "7f0aa72ee3477a96ecb86b892472bda0daea6259c4ec4a26105a65401144feac"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/use-auto-animate.ts",
-      "bytes": 2482,
-      "sha256": "3b6764c5571ac0d64980217d36ffe43f900f8e1aa30fd7e0e10df15dc32ec0c2"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/use-dir-watch.ts",
-      "bytes": 7956,
-      "sha256": "d85cd9d5a9a8a16a144464bf5ca1f20d63498e783f07532e3b5cc3fe89556091"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/use-markdown-surface.ts",
-      "bytes": 8148,
-      "sha256": "27c8bf587132b4e548c96d85605cb3149d5f273368412a4e2bb02377812793c5"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/use-polling.ts",
-      "bytes": 3467,
-      "sha256": "7b30b0c1db9ae1606c607822bfebf53968964c2dcd66fd4aebbb95e4653ef6f9"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/use-session-root.ts",
-      "bytes": 7804,
-      "sha256": "44e8e6366cd43d3273657d3c5a8c53af713232f7dd05ad897822a481d37184dc"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/client/use-sidechat-push.ts",
-      "bytes": 6535,
-      "sha256": "298b384f74bd4e2f64dfe3e3020c258b6b17a5ac519a201423a5442ef315db19"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/commit-message.ts",
-      "bytes": 10806,
-      "sha256": "46635060c6148a42d4caee017c7f4f121a2442ef81e12e24211c9b16eba9dbca"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/config.ts",
-      "bytes": 6860,
-      "sha256": "35676960dfbb89f0589560a2f9d43e2a9b4f3ba56e6035667f05fa750ba24f26"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/context-types.ts",
-      "bytes": 39965,
-      "sha256": "bfeffb9b223177cbb6e06b380f754714e9010cf94f133251a86e5954b5de42f6"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/editor-limits.ts",
-      "bytes": 3146,
-      "sha256": "fb1ce6cfe7879e76303e657a4950282d55bb2abaedc9dc2d69f778b74c32b838"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/exclude-patterns.ts",
-      "bytes": 6916,
-      "sha256": "16001789bf883a9b1f43c095cdfde2fa2644ad6707b577dd1d54dc0fc9597466"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/file-stream.ts",
-      "bytes": 3226,
-      "sha256": "927a8d93e580a87cbc922742b1d1bf360c1f201af49ac38f53e36e2057c7ef4c"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/fs-batch.ts",
-      "bytes": 479,
-      "sha256": "f788204cb77c5ad5f9745fb73bf7cbc01defea2eeec8e45f85e893c76be204e5"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/fs-operations.ts",
-      "bytes": 23103,
-      "sha256": "1a0d84d4872f0fa42170dc1797bb3bd4d3a66b2186c94847b6e4ce2608de5511"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/fs-search.ts",
-      "bytes": 18115,
-      "sha256": "038db7da01e81de802ea861888a3f2048aa9d5e40a0d3ddf36709c361ff80d69"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/fs-tree.ts",
-      "bytes": 19009,
-      "sha256": "f48d5a900b0d97a19d5449fb831badf5a076bddafa2b99b6e2f4f80376b5998e"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/fs-watch.ts",
-      "bytes": 4678,
-      "sha256": "f8781bf9a2d7e593893611fece527a282439c697a58fbfc8dc9033c7e06bad34"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/git-graph.ts",
-      "bytes": 13167,
-      "sha256": "a9695e1f0c20eee6067195b87c3d4941a89821656dfd1eed5caad7f26b2725aa"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/git.ts",
-      "bytes": 51029,
-      "sha256": "8859f145d0b2d2bc96ffec73c915ff59ab2fe80f84874cd714521fe7a635d804"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/html-route.ts",
-      "bytes": 5604,
-      "sha256": "12e15f0cd055aab0e4b1bddd06cea1d73a7aa5356be8e77adaddd64b57fa1918"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/index.ts",
-      "bytes": 98436,
-      "sha256": "5938d2703c59570e2812de335fcb52250d6f608c8d73bbae368379f869e096a2"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/open-external.ts",
-      "bytes": 13383,
-      "sha256": "535a4d38c5ac2e4c33fc68b83b1c24ef1e1a4dacbbe7541f6098cc86fe0b10bf"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/path-security.ts",
-      "bytes": 3876,
-      "sha256": "b7298dc9f100700574a17b4246b587482e86c3d52ea87bf9081baf1b1effaf3f"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/prefs-shared.ts",
-      "bytes": 7893,
-      "sha256": "96aa700ff7dc153f2fe697ecc27e86b7521c25fdc40d62e7c0c1840dab8dc06e"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/process-activity.ts",
-      "bytes": 16684,
-      "sha256": "6bc3355d05cbd9764e9d9885560e6b38965375a641eea7de3896d20d7ebf0efd"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/search-debug.ts",
-      "bytes": 1446,
-      "sha256": "f034d7762ced93abab625333964c68f8e06d1352d2d60f7a551c63cea555bf85"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/search-engines.ts",
-      "bytes": 25753,
-      "sha256": "c30da75631541a8068a22e4402f86a17ada19bca4add733c7800a0ca5acb763f"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/session-path.ts",
-      "bytes": 5586,
-      "sha256": "b7b542c8ad569f629ce23e8bfa683f864fbc042e2c9bb9a4273fb9b4e015b0e5"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/session-store.ts",
-      "bytes": 2374,
-      "sha256": "9feecc1e9289017b7c30629782beefa2e43f217eee6646e904fc52653dd37bbf"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/sidechat-core.ts",
-      "bytes": 73794,
-      "sha256": "4e67e96e900bc2df2221d9a7026f58dd47f6f09841b38ac02cb4c917a1ca669e"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/sidechat-push.ts",
-      "bytes": 6391,
-      "sha256": "a12d56215cb7e91e8d2e1dcb9720b5026883ab32b20190577de613eb55381084"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/sidechat-routes.ts",
-      "bytes": 43982,
-      "sha256": "7409cde6fd2c3c6138bfbc973f986dacff11e59618566a7b2482a0efd7426e68"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/subagent-live-route.ts",
-      "bytes": 4689,
-      "sha256": "d04c71325ff806a904a2159491b9348f331389b78a9590430fa3105b33fd7305"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/team-routes.ts",
-      "bytes": 8315,
-      "sha256": "b672d7401493f885acb7296cecb5a14c267c3ba431781295a32be1710a678897"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/text-encoding.ts",
-      "bytes": 22453,
-      "sha256": "3b10b2c0d3746c2be3ee6c7f6e629481a1fca7741550be0232a808bfeb633152"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/wire.ts",
-      "bytes": 6480,
-      "sha256": "fb031cfa48f9c640dcdafc7e8bf79b5ca67baecfebffc74df3b9906c6d14cd81"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/workflow-routes.ts",
-      "bytes": 5790,
-      "sha256": "972d00aba6ed70f4df7eb61de8b77758218059fb3c9552b4263cac379bfd0a38"
-    },
-    {
-      "path": "plugins/dsh-better-sidebar/src/workflow-runs.ts",
-      "bytes": 7173,
-      "sha256": "fa1854c885b06ce7405025a9ce17e1df40ed5299059f50303bfc34fc82b45710"
+      "path": "plugins/dsh-local--view-3d6103d7-d022-4183-b4e9-67af87730c58/package.json",
+      "bytes": 776,
+      "sha256": "8d7fcf8d7616c64325c78cc218b307aa4531156e8bfbb33d86ccd33b0267763e"
     },
     {
       "path": "plugins/dsh-whale-widget/LICENSE",
@@ -3296,6 +996,41 @@
       "sha256": "b05826807f117032bbc5cc99e8ee388e8e5ffbacfff589e832f1a4e5f196d8cb"
     },
     {
+      "path": "plugins/harness-browser-auth/auth.js",
+      "bytes": 3076,
+      "sha256": "a960ce649f75ae0ff4bada20d919657f417b07eec566801aa205417ca5b92599"
+    },
+    {
+      "path": "plugins/harness-browser-auth/cordis.patch.yml",
+      "bytes": 100,
+      "sha256": "f889f718a89730bec8f17fe0d8ceabecebd77fdca262b626228b9bdb25ee6cd6"
+    },
+    {
+      "path": "plugins/harness-browser-auth/icon.svg",
+      "bytes": 353,
+      "sha256": "2e9f99e6485e8a1cf4688b79b83815926ed220897b8890f7dd104de4e84aedae"
+    },
+    {
+      "path": "plugins/harness-browser-auth/index.js",
+      "bytes": 4902,
+      "sha256": "2775878fc6e817e5ce0be3d2a9946da6e697b9ca4b82781eb7f35f1955af2347"
+    },
+    {
+      "path": "plugins/harness-browser-auth/locale/en.json",
+      "bytes": 424,
+      "sha256": "b05cea83b38848f32b7a68a1dad1e3c9d65bf83bde1fa184df615591f3577f8e"
+    },
+    {
+      "path": "plugins/harness-browser-auth/locale/zh.json",
+      "bytes": 401,
+      "sha256": "3ff14b4b6a922d70f405ebbaae352e71bfc214b974c280d74b8df9ac84d38f8f"
+    },
+    {
+      "path": "plugins/harness-browser-auth/package.json",
+      "bytes": 582,
+      "sha256": "ea5ed8a7afe9914ea4dc47ec1864d7e8106651031bb9b3e5f32276f0188b67c6"
+    },
+    {
       "path": "plugins/inspector-fetch-compat/cordis.patch.yml",
       "bytes": 113,
       "sha256": "7f72ca83d51fd92e764003b76bd71127608731dca0cb98ecca870d8619b03388"
@@ -3431,31 +1166,6 @@
       "sha256": "16f97bb79e56884719ac97c36dea344fd132b415404f72493e15bd1bb907f7bc"
     },
     {
-      "path": "plugins/pinterest-browser-headless/cordis.patch.yml",
-      "bytes": 522,
-      "sha256": "f8de33ab742e65aa8f00b9fb8156f40b7b2d8ec985868b6058142ac170491491"
-    },
-    {
-      "path": "plugins/pinterest-browser-headless/icon.svg",
-      "bytes": 322,
-      "sha256": "d4be30d83fb0506b106e9c34081a6f7268e6de8304b2d64e2cb84d75a218d369"
-    },
-    {
-      "path": "plugins/pinterest-browser-headless/locale/en.json",
-      "bytes": 139,
-      "sha256": "c6ae98fb224636437f8d2612b4f753fca110871c086a045fa19793927f202396"
-    },
-    {
-      "path": "plugins/pinterest-browser-headless/locale/zh.json",
-      "bytes": 147,
-      "sha256": "76b0e668b126bc5847818d4e428a4e8447f9d038fb8dd27511bda48df1172425"
-    },
-    {
-      "path": "plugins/pinterest-browser-headless/package.json",
-      "bytes": 478,
-      "sha256": "757ef6a7eff65588c51859536363ad822d2d2fe302fb16ee8efb505332a83e67"
-    },
-    {
       "path": "plugins/playwright-extension-mcp/cordis.patch.yml",
       "bytes": 565,
       "sha256": "069f99c746f58b84d8b41850d097d69f3899fe7708b1f9798e9c9314d25f3a90"
@@ -3482,8 +1192,8 @@
     },
     {
       "path": "plugins/session-categories/client-thumbnails-v3.js",
-      "bytes": 62609,
-      "sha256": "b1183696110d83e9274c8a8389e46f1dd1c2bb6d25c258dcb572048f016c2a38"
+      "bytes": 63111,
+      "sha256": "5d3a435a16ca4addc20e34552a6d1abdad56598fc4604a3dd03d9c6500d4589c"
     },
     {
       "path": "plugins/session-categories/cordis.patch.yml",
@@ -3636,44 +1346,9 @@
       "sha256": "6006f441265027048a47e397bbcac9720d4bcce0e9120f3932213fa3e8ccd959"
     },
     {
-      "path": "plugins/tool-call-compat/cordis.patch.yml",
-      "bytes": 328,
-      "sha256": "76e8c6257edfdc92b05754302fe7f62e05b84c6c007263ea7ab9487d15734915"
-    },
-    {
-      "path": "plugins/tool-call-compat/core.js",
-      "bytes": 2187,
-      "sha256": "13a1a3f52a70b29a26a4c0d105b67d0bf271e998624b66011cb2c960b0b290dd"
-    },
-    {
-      "path": "plugins/tool-call-compat/icon.svg",
-      "bytes": 281,
-      "sha256": "8f511632436c02398d0ae93856fb0757a53ff904c4000aade192543528dde2dc"
-    },
-    {
-      "path": "plugins/tool-call-compat/index.js",
-      "bytes": 396,
-      "sha256": "04bb1940d4643c41021dc8ca5750c3745159bc953a2397dcb6c5596a1a02ea0b"
-    },
-    {
-      "path": "plugins/tool-call-compat/locale/en.json",
-      "bytes": 155,
-      "sha256": "6e7059e52a66d21d43c5122b8b990ff6a260c38c201a83dd0620615bd74bd6f3"
-    },
-    {
-      "path": "plugins/tool-call-compat/locale/zh.json",
-      "bytes": 149,
-      "sha256": "cb54f71b392208fb4ee60e63af03b1663fe2c0b389e4f2dcd7b47f788727feba"
-    },
-    {
-      "path": "plugins/tool-call-compat/package.json",
-      "bytes": 502,
-      "sha256": "0db5d2095fdc68d2a8cf9c6bc4228d6cac6164e6ed05036b41fbb08a8cafd0b9"
-    },
-    {
       "path": "plugins/windows-desktop-control/cordis.patch.yml",
       "bytes": 546,
-      "sha256": "e11fa9b804486733e763845dbc58831d15525cdbd3e53fad3b40afb5f89c192d"
+      "sha256": "e0c49a8c7b7c7b5f3d61b36569170ead4ad0e56a4afd13471de386cc18f89c4a"
     },
     {
       "path": "plugins/windows-desktop-control/icon.svg",
@@ -3827,23 +1502,23 @@
     },
     {
       "path": "scripts/build.mjs",
-      "bytes": 13121,
-      "sha256": "751bff9633ca2ab9f32b2734575d91e5397eea5e1c532f456526626abad37b42"
+      "bytes": 15659,
+      "sha256": "658e299b096868c8ff19ef628bcb22e6b509caf616a1372ca56ef8662526b252"
     },
     {
       "path": "scripts/deployment.example.json",
-      "bytes": 15004,
-      "sha256": "c1bacf5b6dcd1e0a9752eaa33b027939e1a37eb27a6aa9630eed068fa73474a0"
+      "bytes": 12435,
+      "sha256": "e5f1caedba8bae342c0233c19ec897c42a3a204d29dbf751a4991a26b160c179"
     },
     {
       "path": "scripts/external-dependencies.json",
-      "bytes": 3386,
-      "sha256": "b7d3a9fded4e9002c741d7d9c0be2be8cfa13114b7c493e12e1483ee1f8af9d1"
+      "bytes": 3674,
+      "sha256": "b2b96f1b80466062bf80e8794b30e473d0cb2ec5a47cab43701e23cc0636aea8"
     },
     {
       "path": "scripts/feature-labels.json",
-      "bytes": 3352,
-      "sha256": "bb5ad16f06f60370e28a4b9c77f0b7bd29258d728417559de9df46e6f9e9699b"
+      "bytes": 3528,
+      "sha256": "499eff012554dcb24f0f749983720c6d32265f18e448971e306f028cae5545e2"
     },
     {
       "path": "scripts/inspect-local.cjs",
@@ -3852,28 +1527,43 @@
     },
     {
       "path": "scripts/package-release.mjs",
-      "bytes": 3282,
-      "sha256": "b2c39d01bcd577db491b36c660a409014fb156d123f42b6320595f670ef4c786"
+      "bytes": 3473,
+      "sha256": "d085e502eb21f8a45c99c109ec0b11579b4181d86c5c2105fdebb9c461a61b24"
+    },
+    {
+      "path": "scripts/preflight.mjs",
+      "bytes": 2630,
+      "sha256": "d60a2e1cca4049007b84b2736cb64bbdd59eaf42bbf4f17625d0860dc10c37a6"
     },
     {
       "path": "scripts/prepare.mjs",
-      "bytes": 3436,
-      "sha256": "4abf087b5e4a76e1d926d90d286da7980b82fe55d6e9e91b65837796e487a4e7"
+      "bytes": 5161,
+      "sha256": "3768ed7e5744b8488d12604d38212d0045cc2ba153c59e8ccdbf14e7939c2a67"
+    },
+    {
+      "path": "scripts/software-sources.json",
+      "bytes": 8284,
+      "sha256": "6e9105b681fa43f7021a7684f211f616eaa60de59815c9dab1bb826535b6ab9c"
     },
     {
       "path": "scripts/verification.json",
       "bytes": 491,
-      "sha256": "9d9a55c24033674663cf2c119f85eae040d8c7c8829ec56c173d9779e8765a0b"
+      "sha256": "c271a13e0514df915d42fc4c4ed351091ea97a48ce3a6bb1d3683c5499ac4e2c"
     },
     {
       "path": "scripts/verify.mjs",
-      "bytes": 3248,
-      "sha256": "c438daa3ace458a01294ed309d83cd831d5e453c8924030cc61aa6e92efccbad"
+      "bytes": 4229,
+      "sha256": "dd9967450b32b2bd28455903814e25760bcea5b93655c5b2bb47ec523c9e5f44"
     },
     {
       "path": "skills/README.md",
-      "bytes": 2900,
-      "sha256": "e05b60bf9461ddf180f0900d1f529a79ccca119303e9a95b74cf1c267a2ec17e"
+      "bytes": 3251,
+      "sha256": "aeeeab8e7825f337049b8e2f8c83dbd717acf6b05c7fc3a38a943591407df7be"
+    },
+    {
+      "path": "skills/concept-modeling/SKILL.md",
+      "bytes": 5858,
+      "sha256": "afbe5cc1353d82491bc974b60dad35b5296cc5d6b84e280ffa00bdd754729fd0"
     },
     {
       "path": "skills/drock-image/SKILL.md",
@@ -3889,6 +1579,31 @@
       "path": "skills/drock-image/image-api.mjs",
       "bytes": 5380,
       "sha256": "7d614204fc2f423cbac0cbe15e596dcf8be0885249d8641b2328b96b35655c97"
+    },
+    {
+      "path": "skills/industrial-form-match/SKILL.md",
+      "bytes": 7036,
+      "sha256": "9b3c26b1d2d067b12ecb47b5f9dde5957925b31a76f8a2e94e6fa546ee86e584"
+    },
+    {
+      "path": "skills/industrial-form-match/references/checks.md",
+      "bytes": 5415,
+      "sha256": "95ebd177ab0482e6d6560683694f0c268652e258eb8074c5dcf320a6458ae7a2"
+    },
+    {
+      "path": "skills/industrial-form-match/scripts/align_reference.py",
+      "bytes": 4003,
+      "sha256": "8ee93fea4bf4e0a454fc6bc9764ea037e67623d51598198fcea3983db081deb4"
+    },
+    {
+      "path": "skills/industrial-form-match/scripts/check_mesh.py",
+      "bytes": 6813,
+      "sha256": "49101f22c06fa429a2d7660e46295cbdd48ad106ec5f186e1455aeb4e1e4dae6"
+    },
+    {
+      "path": "skills/industrial-form-match/scripts/compare_contours.py",
+      "bytes": 7865,
+      "sha256": "8d4ee4791dad2b77b2fc1a594eb0431a89586409622dff31bd949f84dff03cf9"
     },
     {
       "path": "skills/photo-modeling-lite/EVALUATION.md",
@@ -3974,6 +1689,11 @@
       "path": "third-party/cc-safety-net/LICENSE",
       "bytes": 1063,
       "sha256": "f580a487f455c3dec68dbfbaff087addb4adfaef9b8b1d98283edcbdf7138503"
+    },
+    {
+      "path": "third-party/dsh-better-sidebar/LICENSE",
+      "bytes": 1069,
+      "sha256": "f4d265194e0824721af0592462a71fe750c04db3565c23c5d6c65fdee25fb4b0"
     },
     {
       "path": "third-party/dsh-context/LICENSE",

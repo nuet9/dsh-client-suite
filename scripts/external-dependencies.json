@@ -1,9 +1,15 @@
 {
   "policy": "No external software, browser, SDK, Python package, model, or paid service is installed or tested by these scripts.",
+  "targetRuntime": {
+    "harnessVersion": "0.2.2-rc.5",
+    "nodeEngine": ">=24.9.0",
+    "basis": "Installed @deepseek-ai/dsh package manifest; this does not certify compatibility of every bundle or another machine."
+  },
+  "softwareSourceRegistry": "software-sources.json",
   "integrations": {
     "background-browser-control": "Chrome plus chrome-devtools-mcp 1.9.0 ordinary dependency; configure Node executable, MCP entrypoint, Chrome executable, dedicated empty user-data directory and working directory independently.",
     "playwright-extension-mcp": "@playwright/mcp 0.0.83 ordinary dependency, Node, Chrome, dedicated user-data and work directory; browser extension/login is user-managed.",
-    "pinterest-browser-headless": "Target-compatible @playwright/mcp, Node and Chrome. User independently authenticates Pinterest; no cookies or profiles shipped.",
+    "pinterest-browser-headless": "Not included in the current release snapshot; the Playwright base patch is headed. Do not claim this overlay is available from this suite.",
     "blender-mcp": "Separate Python environment with blender_mcp.server, matching Blender add-on and Blender; configure exact Python executable and server repository cwd. No fixed workspace restore layout required.",
     "windows-desktop-control": "Windows and a separately installed windows-mcp Python environment; configure Python executable and cwd.",
     "dev-shell-environment": "Separately installed Git Bash executable configured explicitly; no UGit version-specific installation is required.",

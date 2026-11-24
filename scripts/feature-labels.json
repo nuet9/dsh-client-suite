@@ -42,7 +42,7 @@
  "@local/session-categories":"会话分类与缩略图",
  "@local/pinterest-browser-headless":"Pinterest 无头浏览器服务",
  "@local/workbuddy-experts":"WorkBuddy 专家与技能桥接",
- "dsh-better-sidebar":"增强文件与编辑侧栏（本地修改版）",
+ "dsh-better-sidebar":"增强文件与编辑侧栏（registry 精确版本）",
  "@deepseek-ai/dsh-experimental-forge-bundle":"GitHub 变更请求与工作树集成",
  "@local/art-toolbox":"美术工具箱与成果库",
  "dsh-deeppilot":"远程协作与主动任务集成",
@@ -50,5 +50,7 @@
  "@deepseek-ai/dsh-personalized-recommendations":"个性化页面与插件建议",
  "@local/subagent-safe-defaults":"子代理安全默认值（保留停用）",
  "@local/subagent-native-defaults":"原生子代理默认路由",
- "@drock/dsh-request-stats":"模型请求与缓存用量统计"
+ "@drock/dsh-request-stats":"模型请求与缓存用量统计",
+ "@local/harness-browser-auth":"专用浏览器官方登录认证",
+ "@dsh-local/view-3d6103d7-d022-4183-b4e9-67af87730c58":"当前会话技能目录与原说明查看"
 }
